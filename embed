@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrimeSrc - Movie and TV Embed Service</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="description"
+      content="Movie and TV Streaming Embedding API for free"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="PrimeSrc - Movie and TV Embed Service" />
+    <meta
+      property="og:description"
+      content="Movie and TV Streaming Embedding API for free"
+    />
+    <meta property="og:url" content="/" />
+    <script>
+      window.appTrigger = document.createEvent("Event");
+      window.appTrigger.initEvent("appTrigger", true, true);
+    </script>
+    <script async type="text/javascript" src="/js/primesrc-efaac0b671b4607ea460f61838232f1e.js?vsn=d"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/app-6d77a1cb7316d9f7576a7760d84fdaf5.css?vsn=d" type="text/css">
+    <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistration('/sw.js').then((registration) => {
+        if (registration) {
+          registration.unregister().then((success) => {
+            if (success) {
+              console.log('Service worker unregistered successfully.');
+            } else {
+              console.log('Service worker unregistration failed or was already unregistered.');
+            }
+          });
+        } else {
+          console.log('Service worker not found for the given scope.');
+        }
+      });
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+<script>
+  window.infoEvent = document.createEvent("Event");
+  window.infoEvent.initEvent("infoEvent", true, true);
+  const urlParams = new URLSearchParams(window.location.search);
+  let paramObj = Object.fromEntries(urlParams.entries());
+  if(window.location.pathname.startsWith("/embed/movie")){
+    paramObj["type"] = "movie"
+  }else{
+    paramObj["type"] = "tv"
+  }
+  paramObj["type"] = paramObj["type"] || props.type;
+  let url =  "/api/v1/s?" + new URLSearchParams(paramObj).toString();
+  fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        response.json().then((error) => {
+          window.sErr = error.error || "Error getting server list.";
+          document.dispatchEvent(window.infoEvent);
+          window.hasInfo = true
+        }).catch(() => {
+          window.sErr = "Error getting server list.";
+          document.dispatchEvent(window.infoEvent);
+          window.hasInfo = true
+        })
+      }else{
+        response.json().then((res) => {
+          window.sInfo = res
+          document.dispatchEvent(window.infoEvent);
+          window.hasInfo = true
+        })
+      }
+    })
+    .catch(error => console.log('Request failed', error));
+</script>
+<div id="ad-detector" class="ad-banner adsbox ads"
+     style="height:1px;width:1px;position:absolute;left:-9999px;">
+</div>
+<div id="embed-root"></div>
+
+    <script>
+      document.dispatchEvent(window.appTrigger);
+      window.appTriggered = true;
+    </script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"869c253f65404b43a4670ceb3640779c","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e2e7c0ade5f9f01',t:'MTc3NDYxNTQ0Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

@@ -1,0 +1,62 @@
+const { chromium } = require('playwright');
+
+async function main() {
+    console.log("🚀 Playwright başlatılıyor...");
+
+    const browser = await chromium.launch({
+        headless: false,      // Tarayıcıyı görerek aç (test için)
+        slowMo: 800           // Her adımda 0.8 saniye bekle (rahat görmek için)
+    });
+
+    const context = await browser.newContext({
+        viewport: { width: 1366, height: 768 }
+    });
+
+    const page = await context.newPage();
+
+    // Network isteklerini dinle
+    page.on('request', request => {
+        const url = request.url();
+        if (url.includes('.m3u8')) {
+            console.log("✅ .m3u8 LINK BULUNDU:", url);
+        }
+        if (url.includes('/api/v1/l') || url.includes('/player') || url.includes('/api/v1/')) {
+            console.log("🔥 KRİTİK İSTEK:", url);
+        }
+    });
+
+    // Response'ları da dinle
+    page.on('response', async response => {
+        const url = response.url();
+        if (url.includes('/api/v1/l') || url.includes('/player')) {
+            console.log("📥 RESPONSE STATUS:", response.status(), "URL:", url);
+            try {
+                const body = await response.text();
+                if (body.length < 1000) {
+                    console.log("📄 RESPONSE BODY:", body);
+                }
+            } catch (e) {}
+        }
+    });
+
+    console.log("📄 Hedef sayfaya gidiliyor...");
+
+    await page.goto('https://primesrc.me/embed/tv?tmdb=249597&season=1&episode=1', {
+        waitUntil: 'networkidle',
+        timeout: 60000
+    });
+
+    console.log("✅ Sayfa yüklendi. Player bekleniyor...");
+
+    // Player'ın yüklenmesini bekle
+    await page.waitForTimeout(10000);
+
+    console.log("⏳ 10 saniye bekledik. Şimdi player'ı manuel olarak başlatabilirsin.");
+    console.log("Script çalışıyor. Tarayıcıyı kapatmak için Ctrl+C yap.");
+
+    // Tarayıcıyı açık bırak (istediğin zaman kapat)
+}
+
+main().catch(err => {
+    console.error("Hata oluştu:", err);
+});
