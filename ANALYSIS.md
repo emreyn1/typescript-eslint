@@ -582,207 +582,75 @@ Katman 4 (opsiyonel): Segment gizleme
   → Rastgele CDN subdomain
 ```
 
-### 8.5 Neden hiçbiri Cloudflare R2 / Workers kullanmıyor?
+### 8.5 Oynatıcı seçimi
 
-Analiz edilen 7 provider'ın **hiçbiri** video depolama veya embed API için Cloudflare R2 veya Workers kullanmıyor. Bunun teknik ve operasyonel nedenleri var:
+| Seçenek | Lisans | HLS | DASH | DRM | Not |
+|---------|--------|-----|------|-----|-----|
+| **hls.js** (açık kaynak) | BSD | ✓ | - | - | Hafif, özelleştirilebilir |
+| **Shaka Player** (Google) | Apache 2.0 | ✓ | ✓ | ✓ | DRM desteği dahil |
+| **Video.js** (açık kaynak) | Apache 2.0 | ✓ | ✓ | Plugin | Geniş ekosistem |
+| **JWPlayer** (ticari) | Ücretli | ✓ | ✓ | ✓ | Analiz edilen 6/7 provider bunu kullanıyor |
 
-#### Cloudflare'i nasıl kullanıyorlar vs nasıl kullanmıyorlar
+**Öneri:** Meşru kullanımda **Shaka Player** (ücretsiz, DRM dahil) veya **Video.js + hls.js plugin**. JWPlayer güçlü ama ücretli ve telemetri gönderiyor.
 
-```
-Cloudflare'i KULLANIYORLAR (reverse proxy olarak):
-  ✓ StreamWish   → greenmountainventures.shop (server: cloudflare)
-  ✓ Upcloud      → stormfox27.live, icynebula71.pro (server: cloudflare)
-  ✓ Akcloud      → akmzed.cloud (server: cloudflare)
-  ✓ PrimeSrc     → primevid.click (server: cloudflare)
-  ✓ Filemoon     → bysejikuar.com (server: cloudflare)
+### 8.6 Maliyet karşılaştırması
 
-Cloudflare'i KULLANMIYORLAR (depolama/storage olarak):
-  ✗ Hiçbiri R2 kullanmıyor
-  ✗ Hiçbiri Workers'da manifest üretmiyor
-  ✗ Hiçbiri Cloudflare Stream kullanmıyor
-```
+100TB/ay trafik senaryosu (orta ölçekli site):
 
-Yani Cloudflare'i **kalkan** (origin IP gizleme, DDoS koruması, cache) olarak kullanıyorlar ama **depo** olarak kullanmıyorlar. Nedenleri:
+| Çözüm | Depolama | Egress | Toplam/ay | Not |
+|-------|----------|--------|-----------|-----|
+| **Cloudflare R2 + Workers** | ~$15 (1TB) | $0 | ~$20 | En ucuz, egress ücretsiz |
+| **Bunny CDN + Storage** | ~$5 (1TB) | ~$1,000 | ~$1,005 | Çok hızlı, ama egress var |
+| **S3 + CloudFront** | ~$23 (1TB) | ~$8,500 | ~$8,523 | Pahalı ama enterprise-grade |
+| **Mux** | - | ~$5-12/1000 dk | Değişken | Managed, encode dahil |
+| **TikTok CDN** | $0 | $0 | $0 | Yetkisiz, her an kapanabilir |
 
-#### Neden R2 / Workers değil?
+**Öneri:** Maliyet/kontrol dengesi için **Cloudflare R2 + Workers**. Egress ücretsiz olması büyük avantaj.
 
-| Neden | Açıklama | Provider örneği |
-|-------|----------|-----------------|
-| **DMCA uyumu** | Cloudflare ABD merkezli ve DMCA takedown'lara çok hızlı yanıt veriyor. R2'de depolanan içerik şikayet gelince **saatler içinde** silinir. | Hepsi — bu yüzden depolamayı Cloudflare'den ayırıyorlar |
-| **Hesap izlenebilirliği** | R2 hesabı ödeme bilgisi gerektirir; doğrudan kağıt izi oluşturur. Reverse proxy için ise ücretsiz plan yeterli, anonim kayıt mümkün. | Hepsi |
-| **TOS Bölüm 2.8** | Cloudflare'in Free/Pro planlarında büyük medya dosyası sunmak yasak (Self-Serve Subscription Agreement §2.8). R2 bundan muaf ama Cloudflare dikkatli izliyor. | PrimeSrc — TikTok CDN'i tercih ediyor |
-| **Tek nokta riski** | R2'de tüm içerik = Cloudflare hesap kapatılırsa **her şey** gider. Başka CDN = sadece o domain gider, içerik hâlâ depolarda. | VOE — Edgeon CDN, hesap bağımsız |
-| **Domain rotasyonu** | Cloudflare proxy arkasında domain değiştirmek kolay (DNS değişikliği). Ama R2 bucket'ı hesaba bağlı, domain değişince bucket değişmez. | StreamWish — random domain rotasyonu |
-| **"Bulletproof" hosting** | Bazı provider'lar DMCA'ya yavaş yanıt veren hosting kullanıyor (genelde Doğu Avrupa, Asya). Cloudflare böyle bir hizmet sunmuyor. | Filemoon (SprintCDN, Varşova) |
-
-#### Provider'ların gerçek depolama stratejileri
-
-| Provider | Depolama | Cloudflare rolü | Neden bu seçim |
-|----------|----------|-----------------|----------------|
-| **PrimeSrc** | TikTok CDN (ByteDance obje deposu) | Sadece manifest proxy | Sıfır maliyet, anonim upload |
-| **Filemoon** | SprintCDN (Polonya) | Embed sayfası proxy | AB dışı DMCA yavaşlığı |
-| **StreamWish** | Bilinmeyen origin (CF arkasında) | Proxy + cache | Random domain ile origin gizleme |
-| **Upcloud** | Bilinmeyen origin (CF arkasında, dual domain) | Proxy + cache | Playlist ve segment ayrı origin |
-| **Vidcloud** | Raffaello CDN (port 2223) | Yok (doğrudan CDN) | Non-standart port ile gizleme |
-| **Akcloud** | Bilinmeyen origin (CF arkasında) | Proxy + cache | İmzalı path + rate limit |
-| **VOE** | Edgeon/Limelight CDN | Turnstile için CF | Büyük ticari CDN, per-user subdomain |
-
-#### Önemli ayrım: Cloudflare proxy ≠ Cloudflare storage
+### 8.7 Reklam entegrasyonu (meşru)
 
 ```
-Cloudflare PROXY (ücretsiz, hepsi kullanıyor):
-  → DNS'i Cloudflare'e yönlendir
-  → Origin IP gizlenir
-  → DDoS koruması, WAF, cache
-  → Domain kapatılırsa: yeni domain aç, aynı origin'e yönlendir
-  → Hesap kapatılırsa: yeni hesap aç, 5 dakikada geri gel
+1. Google Ad Manager (DFP) + IMA SDK
+   → Pre-roll, mid-roll, post-roll video reklamları
+   → VAST/VPAID standardı
+   → Programmatic gelir
 
-Cloudflare R2 STORAGE (ücretli, hiçbiri kullanmıyor):
-  → İçerik Cloudflare'in disklerinde
-  → DMCA gelince Cloudflare siler
-  → Hesap kapatılırsa: TÜM İÇERİK KAYBOLUR
-  → Yedek yoksa geri dönüş yok
+2. Opsiyonel: Yandex Metrica
+   → Detaylı kullanıcı analitik
+   → Click map, scroll map
+
+3. Opsiyonel: Self-serve reklam paneli
+   → Doğrudan reklam veren ile çalışma
+   → Daha yüksek RPM
 ```
 
-### 8.6 Bu bilgiye göre gerçekçi stack seçenekleri
-
-İki farklı senaryo için iki farklı stack:
-
-#### Senaryo A: Meşru platform (lisanslı/kendi içerik)
-
-Bu durumda DMCA/takedown endişesi olmadığı için Cloudflare R2 en iyi seçim:
+### 8.8 Teknoloji stack önerisi
 
 ```
 Frontend:       Next.js 15 (App Router, SSR)
 Embed API:      Cloudflare Workers (TypeScript)
-Video storage:  Cloudflare R2 (egress ücretsiz)
-CDN:            Cloudflare (R2 ile entegre)
-Encode:         FFmpeg (self-hosted) veya Coconut.co / Mux (managed)
+Video storage:  Cloudflare R2
+CDN:            Cloudflare (R2 ile entegre, egress ücretsiz)
+Encode:         FFmpeg (self-hosted) veya Mux (managed)
 Oynatıcı:       Shaka Player veya Video.js + hls.js
 Bot koruması:   Cloudflare Turnstile
-URL imzalama:   HMAC-SHA256 (Worker'da, VOE modeli)
-Veritabanı:     PostgreSQL + Redis
-Analitik:       Plausible veya self-hosted Umami
-Reklam:         Google IMA SDK (VAST/VPAID)
+URL imzalama:   HMAC-SHA256 (Worker'da)
+Veritabanı:     PostgreSQL (içerik kataloğu) + Redis (oturum/cache)
+Analitik:       Plausible veya self-hosted Umami (GDPR uyumlu)
+Reklam:         Google IMA SDK
 ```
 
-**Maliyet (100TB/ay):** ~$20/ay (R2 egress ücretsiz)
+### 8.9 Analiz edilen sistemlerden çıkan dersler
 
-#### Senaryo B: Analiz edilen provider'ların gerçekte kullandığı stack
-
-Bu stack'i "en iyi pratik" olarak değil, "gerçekte ne yapıyorlar" olarak belgeliyoruz:
-
-```
-Frontend:       Custom SPA (React/Vue, minified + obfuscated)
-Embed API:      Elixir/Phoenix veya Node.js (kendi sunucu, CF proxy arkasında)
-Video storage:  Ayrı origin sunucu (bulletproof hosting veya TikTok CDN abuse)
-CDN proxy:      Cloudflare FREE plan (sadece reverse proxy, storage değil)
-                + Rastgele domain (greenmountainventures.shop, dianaavoidthey.com)
-Encode:         Muhtemelen FFmpeg (kendi sunucularında)
-Oynatıcı:       JWPlayer 8.x (lisanssız/cracked kullanım şüphesi)
-Bot koruması:   Cloudflare Turnstile + FingerprintJS + custom challenge/attest
-URL imzalama:   HMAC + IP + ASN + süre (VOE en kapsamlı)
-Segment gizleme: Fake uzantılar (.woff2, .jpg, .css), base64 path
-Veritabanı:     Bilinmiyor (muhtemelen PostgreSQL/MySQL)
-Reklam:         Adcash/iClick (ana gelir) + Google IMA (yan gelir) + Yandex
-Domain stratejisi: Rotasyon — domain kapatılınca yenisi açılır
-```
-
-**Maliyet:** Düşük ($50-200/ay sunucu + $0-50 CDN), ama operasyonel maliyet yüksek (domain yönetimi, takedown yanıtlama, hesap yenileme).
-
-### 8.7 Oynatıcı seçimi
-
-| Seçenek | Lisans | HLS | DASH | DRM | Analiz edilen kullanım |
-|---------|--------|-----|------|-----|------------------------|
-| **JWPlayer** (ticari) | Ücretli | ✓ | ✓ | ✓ | 6/7 provider bunu kullanıyor |
-| **hls.js** (açık kaynak) | BSD | ✓ | - | - | JWPlayer'ın HLS backend'i olarak |
-| **Shaka Player** (Google) | Apache 2.0 | ✓ | ✓ | ✓ | Hiçbiri kullanmıyor |
-| **Video.js** (açık kaynak) | Apache 2.0 | ✓ | ✓ | Plugin | Hiçbiri kullanmıyor |
-
-**Neden hepsi JWPlayer?**
-- Hazır UI, kontroller, Chromecast, VAST reklam entegrasyonu
-- Tek satır ile kurulum
-- HLS.js'i dahili olarak kullanıyor
-- Muhtemelen **lisanssız** kullanıyorlar (telemetri `prd.jwpltx.com`'a gidiyor ama ödeme yapılıp yapılmadığı belli değil)
-
-**Meşru kullanım için öneri:** Shaka Player (ücretsiz, DRM dahil) veya Video.js + hls.js. JWPlayer güçlü ama ücretli.
-
-### 8.8 Maliyet karşılaştırması
-
-100TB/ay trafik senaryosu:
-
-| Çözüm | Depolama | Egress | Toplam/ay | DMCA riski | Kim için |
-|-------|----------|--------|-----------|------------|----------|
-| **Cloudflare R2 + Workers** | ~$15 (1TB) | $0 | ~$20 | İçerik hemen silinir | Meşru platform |
-| **Bunny CDN + Storage** | ~$5 (1TB) | ~$1,000 | ~$1,005 | Orta (AB merkezli) | Meşru platform |
-| **S3 + CloudFront** | ~$23 (1TB) | ~$8,500 | ~$8,523 | İçerik hemen silinir | Enterprise |
-| **Mux** | - | ~$5-12/1000 dk | Değişken | Çok yüksek | Profesyonel |
-| **Bulletproof + CF proxy** | ~$50-200 | ~$0 (CF cache) | ~$50-200 | Düşük (yavaş yanıt) | Analiz edilen model |
-| **TikTok CDN** | $0 | $0 | $0 | N/A (kontrol yok) | PrimeSrc modeli |
-
-### 8.9 Reklam stratejisi karşılaştırması
-
-| Strateji | Kullanıcı | Avantaj | Dezavantaj |
-|----------|-----------|---------|------------|
-| **Google IMA/DFP** | PrimeSrc, StreamWish, VOE | Yüksek RPM, programmatic | Policy ihlalinde kalıcı ban |
-| **Adcash/iClick** | Hepsi (ana gelir) | Piracy sitelerine toleranslı | Düşük RPM, agresif reklamlar |
-| **Yandex Metrica + Ads** | PrimeSrc, StreamWish | Detaylı analitik, Rus pazar | Sınırlı küresel kapsam |
-| **Doğrudan affiliate** | StreamWish (gambling), VOE (Coolbet) | Yüksek CPA | Niş, güvenilirlik sorunu |
-| **Push notification** | Upcloud (OneSignal) | Geri dönüş trafiği | Kullanıcı deneyimi bozar |
-
-**Gerçek gelir modeli:** Analiz edilen provider'lar **Adcash/iClick'i ana gelir** olarak kullanıyor (piracy dostu), Google IMA'yı **yan gelir** olarak (domain katmanlama ile policy atlatma). Meşru bir platformda sadece **Google IMA + doğrudan satış** yeterli ve çok daha yüksek RPM verir.
-
-### 8.10 Teknoloji stack — nihai öneri
-
-```
-MEŞRU PLATFORM İÇİN (önerilen):
-──────────────────────────────────
-Frontend:         Next.js 15 (SSR, SEO)
-Embed API:        Cloudflare Workers (edge'de, düşük latency)
-Video storage:    Cloudflare R2 ($0.015/GB, egress ücretsiz)
-CDN:              Cloudflare (R2 ile entegre, otomatik)
-Encode:           FFmpeg pipeline (GPU ile hızlı) veya Coconut.co
-HLS paketleme:    Bento4 mp4dash veya FFmpeg
-Oynatıcı:         Shaka Player (ücretsiz, DRM dahil)
-Bot koruması:     Cloudflare Turnstile (ücretsiz)
-URL imzalama:     HMAC-SHA256 (Worker'da, süre + IP + ASN)
-Veritabanı:       PostgreSQL (Neon.tech serverless) + Upstash Redis
-Analitik:         Plausible veya self-hosted Umami
-Reklam:           Google IMA SDK (VAST/VPAID pre-roll, mid-roll)
-Ödeme (opsiyonel): Stripe (abonelik)
-```
-
-```
-ANALİZ EDİLEN PROVIDER'LARIN FİİLEN KULLANDIĞI:
-──────────────────────────────────────────────────
-Frontend:         Custom React/Vue SPA (minified + webpack)
-Embed API:        Elixir/Phoenix veya Node.js (CF proxy arkasında)
-Video storage:    Bulletproof hosting / TikTok CDN / SprintCDN / Edgeon
-CDN:              Cloudflare FREE (sadece reverse proxy, storage değil)
-Encode:           FFmpeg (kendi sunucu)
-Oynatıcı:         JWPlayer 8.x (muhtemelen lisanssız)
-Bot koruması:     Turnstile + reCAPTCHA + FingerprintJS + usrpubtrk
-URL imzalama:     HMAC + IP + ASN + süre + dosya ID + edge node
-Segment gizleme:  Fake uzantı (.woff2/.jpg/.css), base64 path, random domain
-Veritabanı:       Bilinmiyor
-Reklam:           Adcash/iClick (ana) + Google IMA (yan) + Yandex + affiliate
-Domain stratejisi: Sürekli rotasyon (DGA-tarzı isimler)
-```
-
-### 8.11 Analiz edilen sistemlerden çıkan dersler
-
-| Ders | Kaynak | Neden önemli |
-|------|--------|-------------|
-| İmzalı URL şart | VOE, Filemoon | Her segment URL'sine HMAC + süre + IP bağla — hotlink ve scraping engeli |
-| Cloudflare = proxy, storage değil | Hepsi | Proxy ücretsiz ve anonim; storage hesap bağlı ve DMCA'ya açık |
+| Ders | Kaynak | Uygulama |
+|------|--------|----------|
+| İmzalı URL şart | VOE, Filemoon | Her segment URL'sine HMAC + süre + IP bağla |
 | Segment gizleme etkili | StreamWish, Upcloud | Uzantı ve path randomizasyonu content filter'ları atlatır |
-| Tek CDN'e bağımlılık tehlikeli | PrimeSrc (TikTok) | Kontrol dışı altyapıya güvenmek sürdürülemez |
-| Bot koruması katmanlı olmalı | VOE | Tek Turnstile yetmez; fingerprint + VM detection ekle |
-| JWPlayer sektör standardı | 6/7 provider | Hazır UI + VAST + HLS + Chromecast = hızlı kurulum |
-| Adcash/iClick ana gelir | Hepsi | Piracy-tolerant reklam ağı; meşru platformda gerek yok |
-| Domain rotasyonu zorunlu | Hepsi | Meşru içerikle buna gerek kalmaz — en büyük avantaj |
+| Tek CDN'e bağımlılık tehlikeli | PrimeSrc (TikTok) | Kendi storage + CDN kullan |
+| Bot koruması gerekli | Hepsi | Turnstile veya reCAPTCHA embed API'nin önünde |
+| Domain rotasyonu sürdürülemez | Hepsi | Meşru içerikle domain rotasyonuna gerek kalmaz |
+| Multi-domain dikkat dağıtır | StreamWish, Filemoon | Playlist ve segment ayrı domain = daha zor analiz ama daha karmaşık bakım |
 | Rate limiting basit ama etkili | Akcloud | 10 req/60s gibi kurallar scraping'i yavaşlatır |
-| Multi-domain analizi zorlaştırır | StreamWish, Filemoon | Playlist ve segment ayrı domain = daha zor reverse engineering |
 
 ---
 
