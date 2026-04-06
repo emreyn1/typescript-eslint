@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Player</title>
+<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%;overflow:hidden;background:#000;font-family:system-ui,sans-serif}
+#player-wrap{width:100%;height:100%;position:relative}
+#player-wrap iframe{width:100%;height:100%;border:none}
+.server-bar{position:absolute;top:8px;right:8px;z-index:50;display:flex;gap:4px;opacity:0;transition:opacity .3s}
+#player-wrap:hover .server-bar{opacity:1}
+.server-btn{padding:4px 10px;border:1px solid rgba(255,255,255,.25);border-radius:4px;background:rgba(0,0,0,.7);color:#ccc;font-size:11px;cursor:pointer;backdrop-filter:blur(4px);transition:all .2s}
+.server-btn:hover,.server-btn.active{background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.5)}
+.server-btn.active{background:rgba(99,102,241,.5);border-color:#6366f1}
+.loading-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#000;z-index:40;transition:opacity .5s}
+.loading-overlay.hidden{opacity:0;pointer-events:none}
+.spinner{width:40px;height:40px;border:3px solid rgba(255,255,255,.1);border-top-color:#6366f1;border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.error-msg{color:#888;text-align:center;padding:20px}
+.error-msg h3{color:#e5e5e5;margin-bottom:8px;font-size:16px}
+.error-msg p{font-size:13px}
+</style>
+</head>
+<body>
+{{FINGERPRINT_SCRIPT}}
+{{ANTIDEBUG_SCRIPT}}
+
+<div id="player-wrap">
+  <div class="loading-overlay" id="loader">
+    <div class="spinner"></div>
+  </div>
+  <div class="server-bar" id="servers"></div>
+</div>
+
+<script>
+(function(){
+  var params=new URLSearchParams(location.search);
+  var tmdb=params.get('tmdb');
+  var type=params.get('type')||'movie';
+  var season=params.get('s')||'1';
+  var episode=params.get('e')||'1';
+
+  if(!tmdb){
+    document.getElementById('player-wrap').innerHTML=
+      '<div class="error-msg"><h3>Invalid Request</h3><p>Missing content ID</p></div>';
+    return;
+  }
+
+  var sources=JSON.parse('{{SOURCES_JSON}}');
+  var currentIdx=0;
+
+  function renderServers(){
+    var bar=document.getElementById('servers');
+    bar.innerHTML='';
+    sources.forEach(function(src,i){
+      var btn=document.createElement('button');
+      btn.className='server-btn'+(i===currentIdx?' active':'');
+      btn.textContent=src.name;
+      btn.onclick=function(){loadSource(i)};
+      bar.appendChild(btn);
+    });
+  }
+
+  function loadSource(idx){
+    currentIdx=idx;
+    renderServers();
+
+    var src=sources[idx];
+    var url=src.url;
+    var wrap=document.getElementById('player-wrap');
+    var loader=document.getElementById('loader');
+
+    var oldIframe=wrap.querySelector('iframe');
+    if(oldIframe)oldIframe.remove();
+
+    loader.classList.remove('hidden');
+
+    var iframe=document.createElement('iframe');
+    iframe.src=url;
+    iframe.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
+    iframe.allowFullscreen=true;
+    iframe.setAttribute('sandbox','allow-scripts allow-same-origin allow-forms allow-popups');
+
+    iframe.onload=function(){
+      setTimeout(function(){loader.classList.add('hidden')},500);
+    };
+
+    iframe.onerror=function(){
+      loader.classList.add('hidden');
+      if(currentIdx<sources.length-1){
+        loadSource(currentIdx+1);
+      } else {
+        wrap.innerHTML='<div class="error-msg"><h3>No Available Servers</h3><p>All servers are currently unavailable. Please try again later.</p></div>';
+      }
+    };
+
+    wrap.insertBefore(iframe,wrap.firstChild);
+  }
+
+  renderServers();
+  loadSource(0);
+})();
+</script>
+</body>
+</html>

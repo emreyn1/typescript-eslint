@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+  site:
+    build: ./NyumatFlix
+    ports:
+      - "127.0.0.1:3000:3000"
+    env_file:
+      - ./NyumatFlix/.env.local
+    environment:
+      - NEXT_PUBLIC_EMBED_API_URL=https://${EMBED_DOMAIN:-embed.example}
+    depends_on:
+      - embed
+      - db
+    restart: unless-stopped
+
+  embed:
+    build: ./embed-api
+    ports:
+      - "127.0.0.1:3001:3001"
+    env_file:
+      - ./embed-api/.env
+    restart: unless-stopped
+
+  db:
+    image: postgres:16-alpine
+    ports:
+      - "127.0.0.1:5432:5432"
+    environment:
+      - POSTGRES_DB=streamvault
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=${DB_PASSWORD:-postgres}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  pgdata:
