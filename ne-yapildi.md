@@ -21,6 +21,16 @@ https://x.com/i/grok/share/f5e229e2a94f463d86f9ec1ed634d3e6
 
 anorexic anorexia  smscode.gg smspool.net apileri
 
+bu isler hakkinda affilaite hepsine koyulmali ve ek olarak her ne is yapiyprsak referans olarak yalan atilmali ve ek olarak ajans varsa yapmadigimiz ise yaptik gosterilmeli amk
+
+bu ne
+https://x.com/cyrilXBT/status/2041729194833387694?s=20
+
+claude kullanimi
+https://x.com/Ronycoder/status/2041764334574170433?s=20
+
+400 bin tl aliyomus shorts videolar ile
+https://x.com/anbeannews/status/2041905760242704806?s=20
 
 
 ajans seviyesinde hizli UI/UX tasarimi
@@ -117,3 +127,10 @@ Bu dosya repodaki ana işleri tek yerde toplar. Detay için ilgili klasör ve `.
 ---
 
 *Son güncelleme: bu oturumda oyunlar ve chess signaling eklendi; embed-api torrent pipeline ve iframe kaldırma önceki oturumlarda yapılmıştı.*
+
+
+Yavaş ve doğal büyüme yolu
+Passive income’una dokunmadan, ama “hayata karışma” isteğini kullanarak yeni şeyler denemek. Mesela:Tam zamanlı veya yarı zamanlı bir işe girmek (para için değil, insanlarla iç içe olmak, tecrübe kazanmak için)
+Kendi küçük bir iş fikrini başlatmak (ama baskı olmadan, keyif alarak)
+Network kurmak, mentor bulmak, yeni beceriler öğrenmek
+
