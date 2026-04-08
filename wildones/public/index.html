@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wild Ones — Artillery Battle</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0d1117;--surface:#161b22;--accent:#f0a500;--danger:#f85149;--success:#3fb950;--text:#e6edf3;--sub:#8b949e;--border:#30363d}
+html,body{width:100%;height:100%;background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;overflow:hidden}
+
+/* Lobby */
+#lobby{width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:44px 52px;text-align:center;max-width:380px;width:100%}
+.logo{font-size:56px;margin-bottom:8px}
+h1{font-size:30px;font-weight:800;margin-bottom:4px;letter-spacing:-1px}
+h1 span{color:var(--accent)}
+.tagline{color:var(--sub);font-size:13px;margin-bottom:32px}
+input{width:100%;padding:12px 16px;background:#0d1117;border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:15px;margin-bottom:14px;outline:none}
+input:focus{border-color:var(--accent)}
+.animals{display:flex;justify-content:center;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.animal-btn{font-size:24px;background:#0d1117;border:2px solid var(--border);border-radius:8px;padding:6px 10px;cursor:pointer;transition:.2s}
+.animal-btn.sel,.animal-btn:hover{border-color:var(--accent);background:#1a1400}
+button.play{width:100%;padding:14px;background:var(--accent);color:#0d0800;font-weight:700;font-size:16px;border:none;border-radius:8px;cursor:pointer}
+button.play:hover{filter:brightness(1.1)}
+
+/* Game */
+#game{width:100%;height:100%;display:none;flex-direction:column}
+#topbar{height:48px;background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 12px;gap:10px}
+.p-chip{display:flex;align-items:center;gap:6px;padding:4px 10px;border-radius:20px;border:2px solid var(--border);font-size:12px}
+.p-chip.active{border-color:var(--accent)}
+.p-chip.dead{opacity:.35;text-decoration:line-through}
+.hp-bar{width:50px;height:5px;background:#222;border-radius:3px;overflow:hidden}
+.hp-fill{height:100%;background:var(--success);transition:.3s}
+#turn-info{margin-left:auto;font-size:13px;color:var(--accent);font-weight:600}
+
+#main{flex:1;display:flex;overflow:hidden}
+#canvas-wrap{flex:1;position:relative;overflow:hidden}
+canvas{display:block;width:100%;height:100%}
+
+/* Aim guide */
+#aim-line{position:absolute;top:0;left:0;pointer-events:none}
+
+/* Controls panel */
+#controls{width:220px;background:var(--surface);border-left:1px solid var(--border);display:flex;flex-direction:column;padding:12px;gap:10px}
+#controls h3{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--sub)}
+.weapon-list{display:flex;flex-direction:column;gap:6px}
+.weapon-btn{padding:8px 10px;background:#0d1117;border:2px solid var(--border);border-radius:8px;color:var(--text);font-size:13px;cursor:pointer;text-align:left;transition:.15s}
+.weapon-btn:hover,.weapon-btn.sel{border-color:var(--accent);color:var(--accent)}
+.weapon-btn .ammo{float:right;color:var(--sub);font-size:11px}
+.slider-wrap label{font-size:12px;color:var(--sub);display:flex;justify-content:space-between;margin-bottom:4px}
+input[type=range]{width:100%;accent-color:var(--accent)}
+#fire-btn{padding:12px;background:var(--danger);border:none;border-radius:8px;color:#fff;font-size:15px;font-weight:700;cursor:pointer}
+#fire-btn:hover{filter:brightness(1.1)}
+#fire-btn:disabled{opacity:.4;cursor:not-allowed}
+
+/* Chat */
+#chat-box{height:110px;background:#0d1117;border:1px solid var(--border);border-radius:8px;padding:6px;overflow-y:auto;font-size:11px;display:flex;flex-direction:column;gap:2px}
+#chat-input{display:flex;gap:4px}
+#chat-input input{flex:1;padding:6px 8px;background:#0d1117;border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:12px;outline:none}
+#chat-input button{padding:6px 10px;background:var(--border);border:none;border-radius:6px;color:var(--text);cursor:pointer;font-size:12px}
+
+/* Overlay */
+#overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:99;backdrop-filter:blur(6px)}
+#overlay.show{display:flex}
+.over-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:48px;text-align:center;max-width:340px}
+.over-card .big{font-size:64px;margin-bottom:12px}
+.over-card h2{font-size:26px;font-weight:800;margin-bottom:8px}
+.over-card p{color:var(--sub);margin-bottom:24px}
+</style>
+</head>
+<body>
+
+<div id="lobby">
+  <div class="card">
+    <div class="logo">🦊</div>
+    <h1><span>Wild</span> Ones</h1>
+    <p class="tagline">Turn-based artillery • Up to 4 players</p>
+    <input id="nameInput" type="text" placeholder="Your name" maxlength="16">
+    <button class="play" id="playBtn">Find Match</button>
+  </div>
+</div>
+
+<div id="game">
+  <div id="topbar">
+    <div id="player-chips"></div>
+    <div id="turn-info">Waiting...</div>
+  </div>
+  <div id="main">
+    <div id="canvas-wrap">
+      <canvas id="canvas"></canvas>
+    </div>
+    <div id="controls">
+      <h3>Weapons</h3>
+      <div class="weapon-list" id="weapon-list"></div>
+      <div class="slider-wrap">
+        <label>Angle <span id="angle-val">0°</span></label>
+        <input type="range" id="angle-slider" min="-90" max="90" value="30">
+      </div>
+      <div class="slider-wrap">
+        <label>Power <span id="power-val">70%</span></label>
+        <input type="range" id="power-slider" min="10" max="100" value="70">
+      </div>
+      <button id="fire-btn" disabled>🔥 Fire!</button>
+      <h3>Chat</h3>
+      <div id="chat-box"></div>
+      <div id="chat-input">
+        <input type="text" id="chat-msg" placeholder="Message..." maxlength="80">
+        <button id="chat-send">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="overlay">
+  <div class="over-card">
+    <div class="big" id="over-icon"></div>
+    <h2 id="over-title"></h2>
+    <p id="over-sub"></p>
+    <button class="play" onclick="location.reload()">Play Again</button>
+  </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

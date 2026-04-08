@@ -16,4 +16,27 @@ export const config = {
 
   adVastUrl: process.env.AD_VAST_URL || "",
   adBumperEnabled: process.env.AD_BUMPER_ENABLED === "true",
+  bumperAdPath: process.env.BUMPER_AD_PATH || "./assets/bumper.ts",
+
+  databaseUrl:
+    process.env.DATABASE_URL ||
+    "postgresql://postgres:postgres@localhost:5432/streamvault",
+
+  tgApiId: Number(process.env.TG_API_ID) || 0,
+  tgApiHash: process.env.TG_API_HASH || "",
+  tgSession: process.env.TG_SESSION || "",
+  tgChannelId: process.env.TG_CHANNEL_ID || "",
+
+  cfAccountId: process.env.CLOUDFLARE_ACCOUNT_ID || "",
+  cfR2AccessKey: process.env.CLOUDFLARE_R2_ACCESS_KEY || "",
+  cfR2SecretKey: process.env.CLOUDFLARE_R2_SECRET_KEY || "",
+  cfR2Bucket: process.env.CLOUDFLARE_R2_BUCKET || "",
+  cfR2PublicUrl: process.env.CLOUDFLARE_R2_PUBLIC_URL || "",
+
+  hlsCachePath: process.env.HLS_CACHE_PATH || "/tmp/hls-cache",
+
+  // Torrent pipeline (YTS + EZTV + isteğe bağlı Real-Debrid)
+  torrentPipelineEnabled: process.env.TORRENT_PIPELINE_ENABLED === "true",
+  realDebridApiKey: process.env.REAL_DEBRID_API_KEY || "",
+  tmdbApiKey: process.env.TMDB_API_KEY || "",
 } as const;

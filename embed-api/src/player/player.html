@@ -38,19 +38,12 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;font-family:sys
 
 <script>
 (function(){
-  var params=new URLSearchParams(location.search);
-  var tmdb=params.get('tmdb');
-  var type=params.get('type')||'movie';
-  var season=params.get('s')||'1';
-  var episode=params.get('e')||'1';
-
-  if(!tmdb){
+  var sources=JSON.parse('{{SOURCES_JSON}}');
+  if(!sources||!sources.length){
     document.getElementById('player-wrap').innerHTML=
-      '<div class="error-msg"><h3>Invalid Request</h3><p>Missing content ID</p></div>';
+      '<div class="error-msg"><h3>No Sources</h3><p>No servers available for this content.</p></div>';
     return;
   }
-
-  var sources=JSON.parse('{{SOURCES_JSON}}');
   var currentIdx=0;
 
   function renderServers(){

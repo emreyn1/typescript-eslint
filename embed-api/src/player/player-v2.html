@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Player</title>
+<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%;overflow:hidden;background:#000}
+.plyr{width:100%;height:100%}
+video{width:100%;height:100%;object-fit:contain}
+.loading-overlay{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#000;z-index:40;transition:opacity .5s}
+.loading-overlay.hidden{opacity:0;pointer-events:none}
+.spinner{width:40px;height:40px;border:3px solid rgba(255,255,255,.1);border-top-color:#6366f1;border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.error-msg{color:#888;text-align:center;padding:20px;position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.error-msg h3{color:#e5e5e5;margin-bottom:8px;font-size:16px}
+.error-msg p{font-size:13px}
+.quality-badge{position:fixed;top:10px;left:10px;background:rgba(99,102,241,.8);color:#fff;font-size:10px;padding:2px 6px;border-radius:3px;z-index:50;pointer-events:none;opacity:0;transition:opacity .3s}
+body:hover .quality-badge{opacity:1}
+</style>
+</head>
+<body>
+{{FINGERPRINT_SCRIPT}}
+{{ANTIDEBUG_SCRIPT}}
+
+<div class="loading-overlay" id="loader">
+  <div class="spinner"></div>
+</div>
+<div class="quality-badge" id="quality"></div>
+<video id="video" playsinline></video>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js"></script>
+<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+<script>
+(function(){
+  var hlsSource='{{HLS_SOURCE}}';
+  var video=document.getElementById('video');
+  var loader=document.getElementById('loader');
+  var qualityBadge=document.getElementById('quality');
+
+  if(!hlsSource||hlsSource==='{{HLS_SOURCE}}'){
+    document.body.innerHTML='<div class="error-msg"><h3>Unavailable</h3><p>Content not cached yet.</p></div>';
+    return;
+  }
+
+  var defaultOptions={
+    controls:['play-large','play','progress','current-time','duration','mute','volume','settings','pip','airplay','fullscreen'],
+    settings:['quality','speed'],
+    autoplay:true,
+    quality:{default:720,options:[1080,720,480]},
+    keyboard:{focused:true,global:true}
+  };
+
+  if(Hls.isSupported()){
+    var hls=new Hls({
+      maxBufferLength:30,
+      maxMaxBufferLength:60,
+      startLevel:-1,
+      capLevelToPlayerSize:true,
+      progressive:true,
+    });
+
+    hls.loadSource(hlsSource);
+    hls.attachMedia(video);
+
+    hls.on(Hls.Events.MANIFEST_PARSED,function(ev,data){
+      loader.classList.add('hidden');
+
+      var qualities=hls.levels.map(function(l){return l.height});
+      defaultOptions.quality={
+        default:qualities[0],
+        options:qualities,
+        forced:true,
+        onChange:function(q){
+          hls.levels.forEach(function(level,i){
+            if(level.height===q) hls.currentLevel=i;
+          });
+        }
+      };
+
+      new Plyr(video,defaultOptions);
+      video.play().catch(function(){});
+    });
+
+    hls.on(Hls.Events.LEVEL_SWITCHED,function(ev,data){
+      var level=hls.levels[data.level];
+      if(level) qualityBadge.textContent=level.height+'p';
+    });
+
+    hls.on(Hls.Events.ERROR,function(ev,data){
+      if(data.fatal){
+        switch(data.type){
+          case Hls.ErrorTypes.NETWORK_ERROR:
+            hls.startLoad();
+            break;
+          case Hls.ErrorTypes.MEDIA_ERROR:
+            hls.recoverMediaError();
+            break;
+          default:
+            document.body.innerHTML='<div class="error-msg"><h3>Playback Error</h3><p>Please try again later.</p></div>';
+        }
+      }
+    });
+  } else if(video.canPlayType('application/vnd.apple.mpegurl')){
+    video.src=hlsSource;
+    video.addEventListener('loadedmetadata',function(){
+      loader.classList.add('hidden');
+      new Plyr(video,defaultOptions);
+      video.play().catch(function(){});
+    });
+  } else {
+    document.body.innerHTML='<div class="error-msg"><h3>Unsupported Browser</h3><p>Your browser does not support HLS playback.</p></div>';
+  }
+})();
+</script>
+</body>
+</html>

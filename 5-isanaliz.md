@@ -232,6 +232,9 @@ Film sitesi kullanıcılarına çapraz satış: "VIP için anonim kartla öde"
 
 ## 4. SMS Doğrulama Servisi (getsmsnow.com)
 
+
+
+
 ### Ne
 
 Geçici telefon numarası satma servisi. Kullanıcı ülke + servis seçer,

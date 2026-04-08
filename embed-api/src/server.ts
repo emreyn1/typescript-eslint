@@ -5,6 +5,8 @@ import { config } from "./config.js";
 import { apiRoutes } from "./routes/api.js";
 import { embedRoutes } from "./routes/embed.js";
 import { siteRoutes } from "./routes/site.js";
+import { hlsRoutes } from "./routes/hls.js";
+import { initDb } from "./db/index.js";
 
 const app = Fastify({
   logger: {
@@ -20,12 +22,12 @@ await app.register(cors, {
     if (config.allowedOrigins.includes(origin)) return cb(null, true);
     return cb(new Error("CORS blocked"), false);
   },
-  methods: ["GET"],
+  methods: ["GET", "POST"],
   credentials: false,
 });
 
 await app.register(rateLimit, {
-  max: 60,
+  max: 120,
   timeWindow: "1 minute",
   keyGenerator: (req) =>
     (req.headers["cf-connecting-ip"] as string) ||
@@ -43,9 +45,11 @@ app.addHook("onSend", async (_req, reply) => {
 
 await app.register(apiRoutes);
 await app.register(embedRoutes);
+await app.register(hlsRoutes);
 await app.register(siteRoutes);
 
 try {
+  await initDb();
   await app.listen({ port: config.port, host: config.host });
   console.log(`Embed API running on http://${config.host}:${config.port}`);
 } catch (err) {
