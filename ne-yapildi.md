@@ -16,6 +16,31 @@ yada biraz belki cp
 
 veya tor sitesi
 
+bu wolfteam seyinin linkleri ve virus gelmesin diye de utm kurulumu hakkinda konusma
+https://x.com/i/grok/share/f5e229e2a94f463d86f9ec1ed634d3e6
+
+anorexic anorexia  smscode.gg smspool.net apileri
+
+
+
+ajans seviyesinde hizli UI/UX tasarimi
+
+https://x.com/i/grok/share/af8943a1c1714e29bf02cd7b1d50dff2
+
+
+
+custom rag gucu
+
+https://x.com/i/grok/share/cfd45f61475b40fdb6676dff778326f6
+
+
+wild ones hakkindaki repo
+
+https://x.com/i/grok/share/fc3f9855de2d4ca78306ee885d5e5b3b
+
+
+
+
 
 
 > Nor Tack:
