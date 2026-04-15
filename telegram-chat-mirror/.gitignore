@@ -1,0 +1,27 @@
+# Session files
+*.session*
+
+# Copy progress (last message id)
+last_id.txt
+copy_progress.json
+
+# Local env (never commit)
+.env
+.env.local
+
+# Credentials
+credentials.txt
+config.ini
+config.py
+
+# Cache files
+__pycache__/
+*.pyc
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# System-specific files
+.DS_Store
+Thumbs.db

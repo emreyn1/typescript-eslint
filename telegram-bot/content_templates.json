@@ -1,0 +1,124 @@
+{
+  "film": {
+    "reddit": [
+      {
+        "subreddit": "MovieSuggestions",
+        "type": "list",
+        "title_template": "{count} hidden gem movies from {year} that nobody talks about",
+        "body_template": "I watch 3-4 movies a week and keep a running list of the ones that deserve way more attention. Here's this month's picks:\n\n{movie_list}\n\nTrailers and streaming links for all of them: {site_url}\n\nWhat hidden gems did I miss?"
+      },
+      {
+        "subreddit": "movies",
+        "type": "discussion",
+        "title_template": "Unpopular opinion: {movie} is the most overrated movie of {year}",
+        "body_template": "I know this is going to be controversial, but hear me out.\n\n{analysis}\n\nAm I alone on this?\n\nMore reviews: {site_url}"
+      },
+      {
+        "subreddit": "NetflixBestOf",
+        "type": "list",
+        "title_template": "Best movies leaving Netflix this month + where else to watch them",
+        "body_template": "Here's a quick guide to what's leaving and where you can still find them:\n\n{movie_list}\n\nFull list with links: {site_url}"
+      }
+    ],
+    "x": [
+      {
+        "type": "thread",
+        "tweets": [
+          "I watched {count} movies this month. Here are the only {top_count} worth your time 🧵",
+          "1. {movie1} — {desc1}",
+          "2. {movie2} — {desc2}",
+          "3. {movie3} — {desc3}",
+          "Full reviews + where to watch → {site_url}\n\nWhat did I miss? Drop your picks below 👇"
+        ]
+      },
+      {
+        "type": "engagement",
+        "tweet": "Name a movie that's a 10/10 but nobody knows about it"
+      },
+      {
+        "type": "single",
+        "tweet": "🎬 Movie of the day: {movie} ({year})\n⭐ {rating}/10\n\n{desc}\n\n▶️ {site_url}/watch/movie/{id}"
+      }
+    ],
+    "telegram": {
+      "daily_template": "🎬 *Movie of the Day*\n\n*{title}* ({year})\n⭐ {rating}/10\n\n{overview}\n\n▶️ [Watch Now]({site_url}/watch/movie/{id})"
+    }
+  },
+  "card": {
+    "reddit": [
+      {
+        "subreddit": "privacy",
+        "type": "guide",
+        "title_template": "Complete guide to anonymous online payments in {year}",
+        "body_template": "Here's everything I've learned about keeping your payment info private:\n\n1. Virtual cards — single-use numbers for each merchant\n2. Crypto → fiat bridges\n3. No-KYC options — yes, they exist legally in the EU\n4. AMLD5 exemptions — €150 limit, no ID required\n\nI've been testing several services. The one that works best: {site_url}\n\nAMA about anonymous payments."
+      },
+      {
+        "subreddit": "cryptocurrency",
+        "type": "howto",
+        "title_template": "How I use crypto for everyday purchases without converting to fiat",
+        "body_template": "Virtual card → crypto top-up → use anywhere Visa is accepted.\n\nNo bank involved, no KYC under €150 (EU AMLD5).\n\nService I use: {site_url}"
+      }
+    ],
+    "x": [
+      {
+        "type": "single",
+        "tweet": "Your credit card number is stored on 47+ websites on average. Most people don't even know which ones. 🔒\n\nVirtual cards = unique number per merchant = zero risk.\n\n{site_url}"
+      },
+      {
+        "type": "thread",
+        "tweets": [
+          "5 privacy mistakes you're making with online payments 🧵",
+          "1. Using the same card everywhere — if one site gets hacked, all your accounts are at risk",
+          "2. Saving cards in browsers — Chrome stores them in plaintext on disk",
+          "3. No alerts — you don't know when charges happen",
+          "4. Using real name for trials — they charge after 'free' period",
+          "5. No virtual cards — the easiest fix for all of the above\n\nFix it → {site_url}"
+        ]
+      }
+    ]
+  },
+  "sms": {
+    "reddit": [
+      {
+        "subreddit": "privacy",
+        "type": "comparison",
+        "title_template": "I tested 5 SMS verification services — here's which ones actually work",
+        "body_template": "Tried: Google Voice (US only), TextNow (blocks verifications), MySudo ($$$), SMSPool (hit or miss), GetSMSNow (crypto, instant)\n\nResults:\n- Google Voice: ❌ Most services block VoIP\n- TextNow: ❌ Same problem\n- MySudo: ✅ Works but $15/month\n- SMSPool: ⚠️ 50/50\n- GetSMSNow: ✅ Real non-VoIP numbers, crypto payment, worked every time\n\nFull comparison: {site_url}"
+      },
+      {
+        "subreddit": "degoogle",
+        "type": "tutorial",
+        "title_template": "How to verify {service} without your real phone number",
+        "body_template": "If you're privacy-conscious:\n\n1. Go to {site_url}\n2. Select country (US/UK/DE available)\n3. Pay with crypto ($0.50-2.00)\n4. Get a real non-VoIP number\n5. Use it for verification\n6. Number expires after use\n\nWorks for: WhatsApp, Telegram, Instagram, Twitter/X, Gmail, and 200+ services."
+      }
+    ],
+    "x": [
+      {
+        "type": "single",
+        "tweet": "Every app wants your phone number now. Your real number is basically your SSN at this point. 📱\n\nTemporary numbers = privacy + security.\n\n{site_url}"
+      }
+    ]
+  },
+  "games": {
+    "reddit": [
+      {
+        "subreddit": "WebGames",
+        "type": "launch",
+        "title_template": "I made a free browser {game_type} — play with friends, no download",
+        "body_template": "Hey r/WebGames!\n\nBuilt this over the past few weeks:\n🎮 {description}\n👥 Multiplayer (up to {max_players} players)\n📱 Works on mobile + desktop\n🔗 No login, no download\n\nPlay now: {game_url}\n\nWould love your feedback! What features should I add next?"
+      },
+      {
+        "subreddit": "chess",
+        "type": "launch",
+        "title_template": "I forked Lichess and added video chat — play chess face to face",
+        "body_template": "Always wanted to see my opponent's reaction when I blunder. So I added WebRTC video/audio chat to a Lichess fork.\n\n- Full Lichess experience\n- Video + audio chat during games\n- Toggle on/off\n- Free, no ads\n\nTry it: {game_url}\n\nOpen source, AGPL-3.0 compliant."
+      }
+    ],
+    "x": [
+      {
+        "type": "single",
+        "tweet": "Browser games are making a comeback in 2026 🎮\n\nNo download. No login. Just play.\n\n💣 Bomberman clone\n🎯 Artillery battle\n♟️ Chess with video chat\n\n{site_url}"
+      }
+    ]
+  }
+}

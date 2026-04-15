@@ -127,41 +127,62 @@ export async function apiRoutes(app: FastifyInstance) {
       return reply.send({ coins: 0, reason: "daily_cap" });
     }
 
-    // Upsert watch session
-    const session = await pool.query(
+    // Upsert watch session (UNIQUE on fingerprint+tmdb_id)
+    await pool.query(
       `INSERT INTO watch_sessions (fingerprint, tmdb_id, content_type)
        VALUES ($1, $2, $3)
-       ON CONFLICT DO NOTHING
-       RETURNING id`,
+       ON CONFLICT (fingerprint, tmdb_id) DO NOTHING`,
       [fingerprint, tmdbId, contentType || "movie"],
     );
 
-    // Update existing session or create new
-    await pool.query(
+    // Increment watch time (+30s per heartbeat call)
+    const updated = await pool.query<{
+      watch_seconds: number;
+      coins_awarded: number;
+    }>(
       `UPDATE watch_sessions SET last_heartbeat = NOW(),
          watch_seconds = watch_seconds + 30
        WHERE fingerprint = $1 AND tmdb_id = $2
-         AND started_at > NOW() - INTERVAL '4 hours'`,
+         AND started_at > NOW() - INTERVAL '4 hours'
+       RETURNING watch_seconds, coins_awarded`,
       [fingerprint, tmdbId],
     );
 
-    // Award coins every 60 seconds of watch time
+    if (!updated.rows[0]) {
+      return reply.send({ coins: 0, reason: "session_expired" });
+    }
+
+    const { watch_seconds, coins_awarded } = updated.rows[0];
+    const coinsDeserved = Math.floor(watch_seconds / 60) * COINS_PER_MINUTE;
+    const coinsToAward = coinsDeserved - coins_awarded;
+
+    if (coinsToAward <= 0) {
+      return reply.send({ coins: 0, awarded: false });
+    }
+
+    // Mark coins as awarded in the session
+    await pool.query(
+      `UPDATE watch_sessions SET coins_awarded = $3
+       WHERE fingerprint = $1 AND tmdb_id = $2`,
+      [fingerprint, tmdbId, coinsDeserved],
+    );
+
     await pool.query(
       `INSERT INTO coin_balances (fingerprint, balance, total_earned)
        VALUES ($1, $2, $2)
        ON CONFLICT (fingerprint) DO UPDATE SET
          balance = coin_balances.balance + $2,
          total_earned = coin_balances.total_earned + $2`,
-      [fingerprint, COINS_PER_MINUTE],
+      [fingerprint, coinsToAward],
     );
 
     await pool.query(
       `INSERT INTO coin_transactions (fingerprint, amount, type, description)
        VALUES ($1, $2, 'watch', $3)`,
-      [fingerprint, COINS_PER_MINUTE, `Watch TMDB ${tmdbId}`],
+      [fingerprint, coinsToAward, `Watch TMDB ${tmdbId}`],
     );
 
-    return reply.send({ coins: COINS_PER_MINUTE, awarded: true });
+    return reply.send({ coins: coinsToAward, awarded: true });
   });
 
   app.get<{
@@ -210,6 +231,100 @@ export async function apiRoutes(app: FastifyInstance) {
     );
 
     return reply.send({ ok: true, remaining: current - amount });
+  });
+
+  app.get<{
+    Querystring: { fp: string };
+  }>("/api/v1/referral/stats", async (req, reply) => {
+    const fp = req.query.fp;
+    if (!fp) return reply.status(400).send({ error: "fp required" });
+
+    const referralCode = fp.slice(0, 8);
+
+    const [referred, commission] = await Promise.all([
+      pool.query<{ count: string }>(
+        `SELECT COUNT(*)::text AS count FROM referral_codes WHERE referred_by = $1`,
+        [fp],
+      ),
+      pool.query<{ total: string }>(
+        `SELECT COALESCE(SUM(amount), 0)::text AS total FROM coin_transactions
+         WHERE fingerprint = $1 AND type = 'referral'`,
+        [fp],
+      ),
+    ]);
+
+    return reply.send({
+      referralCode,
+      referredCount: Number(referred.rows[0]?.count) || 0,
+      commissionEarned: Number(commission.rows[0]?.total) || 0,
+    });
+  });
+
+  app.post<{
+    Body: { fingerprint: string; referralCode: string };
+  }>("/api/v1/referral/link", async (req, reply) => {
+    const { fingerprint, referralCode } = req.body as {
+      fingerprint?: string;
+      referralCode?: string;
+    };
+
+    if (!fingerprint || !referralCode) {
+      return reply.status(400).send({ error: "fingerprint and referralCode required" });
+    }
+
+    const codeNorm = String(referralCode).trim();
+    if (codeNorm.length < 8) {
+      return reply.status(400).send({ error: "referralCode must be at least 8 characters" });
+    }
+
+    const codePrefix = codeNorm.slice(0, 8);
+    if (fingerprint.slice(0, 8) === codePrefix) {
+      return reply.status(400).send({ error: "Cannot refer yourself" });
+    }
+
+    const referrers = await pool.query<{ fingerprint: string }>(
+      `SELECT fingerprint FROM referral_codes WHERE LEFT(fingerprint, 8) = $1`,
+      [codePrefix],
+    );
+
+    if (referrers.rows.length === 0) {
+      return reply.status(404).send({ error: "Invalid referral code" });
+    }
+    if (referrers.rows.length > 1) {
+      return reply.status(409).send({ error: "Ambiguous referral code" });
+    }
+
+    const referrerFp = referrers.rows[0].fingerprint;
+
+    const existing = await pool.query<{ referred_by: string | null }>(
+      `SELECT referred_by FROM referral_codes WHERE fingerprint = $1`,
+      [fingerprint],
+    );
+
+    if (existing.rows[0]?.referred_by) {
+      return reply.status(400).send({ error: "Already linked to a referrer" });
+    }
+
+    const refereeCode = fingerprint.slice(0, 20);
+    await pool.query(
+      `INSERT INTO referral_codes (fingerprint, code, referred_by)
+       VALUES ($1, $2, $3)
+       ON CONFLICT (fingerprint) DO UPDATE SET
+         referred_by = EXCLUDED.referred_by
+       WHERE referral_codes.referred_by IS NULL`,
+      [fingerprint, refereeCode, referrerFp],
+    );
+
+    const verify = await pool.query<{ referred_by: string | null }>(
+      `SELECT referred_by FROM referral_codes WHERE fingerprint = $1`,
+      [fingerprint],
+    );
+
+    if (verify.rows[0]?.referred_by !== referrerFp) {
+      return reply.status(400).send({ error: "Already linked to a referrer" });
+    }
+
+    return reply.send({ ok: true, referrerFingerprint: referrerFp });
   });
 
   app.get("/api/v1/health", async (_req, reply) => {

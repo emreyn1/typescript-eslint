@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Syntax check
+        run: |
+          python3 -c "compile(open('telegram_mirror.py').read(),'telegram_mirror.py','exec')"
+          python3 -c "compile(open('diagnose.py').read(),'diagnose.py','exec')"
+      - name: Install telethon
+        run: pip install -r requirements.txt

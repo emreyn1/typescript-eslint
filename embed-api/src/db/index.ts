@@ -46,7 +46,8 @@ export async function initDb() {
       started_at TIMESTAMPTZ DEFAULT NOW(),
       last_heartbeat TIMESTAMPTZ DEFAULT NOW(),
       watch_seconds INTEGER DEFAULT 0,
-      coins_awarded INTEGER DEFAULT 0
+      coins_awarded INTEGER DEFAULT 0,
+      UNIQUE(fingerprint, tmdb_id)
     );
 
     CREATE TABLE IF NOT EXISTS referral_codes (
