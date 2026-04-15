@@ -17,6 +17,8 @@ export async function createInvoice(params: {
   successUrl?: string;
   cancelUrl?: string;
 }) {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3002";
+
   const res = await fetch(`${API_URL}/invoice`, {
     method: "POST",
     headers: {
@@ -28,8 +30,9 @@ export async function createInvoice(params: {
       price_currency: params.currency,
       order_id: params.orderId,
       order_description: "Card top-up",
-      success_url: params.successUrl,
-      cancel_url: params.cancelUrl,
+      ipn_callback_url: `${siteUrl}/api/payments/webhook`,
+      success_url: params.successUrl ?? `${siteUrl}/dashboard?topup=success`,
+      cancel_url: params.cancelUrl ?? `${siteUrl}/dashboard?topup=cancelled`,
     }),
   });
 
