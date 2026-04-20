@@ -1,81 +1,32 @@
+version: "3.8"
+
 services:
-  site:
-    build: ./NyumatFlix
+  cinepro:
+    build: ./cinepro
+    restart: unless-stopped
     ports:
       - "127.0.0.1:3000:3000"
-    env_file:
-      - ./NyumatFlix/.env.local
-    environment:
-      - NEXT_PUBLIC_EMBED_API_URL=https://${EMBED_DOMAIN:-embed.example}
-    depends_on:
-      - embed
-      - db
-    restart: unless-stopped
+    env_file: ./cinepro/.env
+    networks:
+      - internal
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
-  embed:
+  embed-api:
     build: ./embed-api
+    restart: unless-stopped
     ports:
       - "127.0.0.1:3001:3001"
-    env_file:
-      - ./embed-api/.env
-    environment:
-      - DATABASE_URL=postgresql://postgres:${DB_PASSWORD:-postgres}@db:5432/streamvault
+    env_file: ./embed-api/.env
     depends_on:
-      - db
-    restart: unless-stopped
+      cinepro:
+        condition: service_healthy
+    networks:
+      - internal
 
-  kart:
-    build: ./kart-site
-    ports:
-      - "127.0.0.1:3002:3002"
-    env_file:
-      - ./kart-site/.env.local
-    restart: unless-stopped
-
-  sms:
-    build: ./getsmsnow.com
-    ports:
-      - "127.0.0.1:3003:3003"
-    env_file:
-      - ./getsmsnow.com/.env.local
-    restart: unless-stopped
-
-  bombom:
-    build: ./bombom
-    ports:
-      - "127.0.0.1:3010:3010"
-    environment:
-      - PORT=3010
-    restart: unless-stopped
-
-  wildones:
-    build: ./wildones
-    ports:
-      - "127.0.0.1:3011:3011"
-    environment:
-      - PORT=3011
-    restart: unless-stopped
-
-  chess-signal:
-    build: ./chess-lichess-fork/signaling-server
-    ports:
-      - "127.0.0.1:3012:3012"
-    environment:
-      - PORT=3012
-      - LICHESS_ORIGIN=${LICHESS_ORIGIN:-http://localhost:9663}
-    restart: unless-stopped
-
-  db:
-    image: postgres:16-alpine
-    ports:
-      - "127.0.0.1:5432:5432"
-    environment:
-      - POSTGRES_DB=streamvault
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=${DB_PASSWORD:-postgres}
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-    restart: unless-stopped
-
-volumes:
-  pgdata:
+networks:
+  internal:
+    driver: bridge

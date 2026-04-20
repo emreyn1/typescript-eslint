@@ -39,4 +39,7 @@ export const config = {
   torrentPipelineEnabled: process.env.TORRENT_PIPELINE_ENABLED === "true",
   realDebridApiKey: process.env.REAL_DEBRID_API_KEY || "",
   tmdbApiKey: process.env.TMDB_API_KEY || "",
+
+  // CinePro scraper backend
+  cineproUrl: process.env.CINEPRO_URL || "http://localhost:3000",
 } as const;

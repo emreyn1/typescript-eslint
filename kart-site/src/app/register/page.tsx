@@ -1,18 +1,61 @@
 "use client";
 
 import { useState } from "react";
+import { signIn } from "next-auth/react";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { CreditCard, Mail, Lock, User } from "lucide-react";
+import { CreditCard, Mail, Lock } from "lucide-react";
+import { Suspense } from "react";
 
-export default function RegisterPage() {
+function RegisterForm() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const refCode = searchParams.get("ref");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError("");
-    setError("Registration not configured yet");
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.error || "Registration failed");
+        setLoading(false);
+        return;
+      }
+
+      if (refCode && data.userId) {
+        await fetch("/api/referral", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ userId: data.userId, refCode }),
+        });
+      }
+
+      const signInRes = await signIn("credentials", {
+        email,
+        password,
+        redirect: false,
+      });
+      if (signInRes?.error) {
+        router.push("/login");
+      } else {
+        router.push("/dashboard");
+      }
+    } catch {
+      setError("Network error");
+      setLoading(false);
+    }
   }
 
   return (
@@ -29,10 +72,7 @@ export default function RegisterPage() {
           <div>
             <label className="text-sm text-gray-400 block mb-1">Email</label>
             <div className="relative">
-              <Mail
-                size={16}
-                className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
-              />
+              <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
               <input
                 type="email"
                 value={email}
@@ -45,14 +85,9 @@ export default function RegisterPage() {
           </div>
 
           <div>
-            <label className="text-sm text-gray-400 block mb-1">
-              Password
-            </label>
+            <label className="text-sm text-gray-400 block mb-1">Password</label>
             <div className="relative">
-              <Lock
-                size={16}
-                className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
-              />
+              <Lock size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" />
               <input
                 type="password"
                 value={password}
@@ -73,22 +108,28 @@ export default function RegisterPage() {
 
           <button
             type="submit"
-            className="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 rounded-lg font-medium transition-colors"
+            disabled={loading}
+            className="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 disabled:opacity-50 rounded-lg font-medium transition-colors"
           >
-            Create Account
+            {loading ? "Creating account..." : "Create Account"}
           </button>
         </form>
 
         <p className="text-center text-sm text-gray-500 mt-6">
           Already have an account?{" "}
-          <Link
-            href="/login"
-            className="text-emerald-500 hover:text-emerald-400"
-          >
+          <Link href="/login" className="text-emerald-500 hover:text-emerald-400">
             Sign In
           </Link>
         </p>
       </div>
     </div>
+  );
+}
+
+export default function RegisterPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-gray-400">Loading...</div>}>
+      <RegisterForm />
+    </Suspense>
   );
 }

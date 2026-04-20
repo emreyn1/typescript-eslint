@@ -1,15 +1,20 @@
 import { NextRequest, NextResponse } from "next/server";
 import { supabase } from "@/lib/supabase";
+import { z } from "zod";
+
+const Schema = z.object({
+  userId: z.string().uuid(),
+  refCode: z.string().min(1).max(20),
+});
 
 export async function POST(req: NextRequest) {
-  const body = (await req.json()) as { userId?: string; refCode?: string };
-  const { userId, refCode } = body;
-  if (!userId || !refCode) {
-    return NextResponse.json(
-      { error: "userId and refCode required" },
-      { status: 400 },
-    );
+  const body = await req.json();
+  const parsed = Schema.safeParse(body);
+  if (!parsed.success) {
+    return NextResponse.json({ error: "userId and refCode required" }, { status: 400 });
   }
+
+  const { userId, refCode } = parsed.data;
 
   if (!supabase) {
     return NextResponse.json({ ok: true, message: "DB not configured" });
@@ -22,16 +27,10 @@ export async function POST(req: NextRequest) {
     .single();
 
   if (!referrer?.user_id) {
-    return NextResponse.json(
-      { error: "Invalid referral code" },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: "Invalid referral code" }, { status: 400 });
   }
   if (referrer.user_id === userId) {
-    return NextResponse.json(
-      { error: "Cannot refer yourself" },
-      { status: 400 },
-    );
+    return NextResponse.json({ error: "Cannot refer yourself" }, { status: 400 });
   }
 
   const { error } = await supabase.from("referral_links").insert({
@@ -43,12 +42,8 @@ export async function POST(req: NextRequest) {
   if (error?.code === "23505") {
     return NextResponse.json({ ok: true, existing: true });
   }
-
   if (error) {
-    return NextResponse.json(
-      { error: error.message },
-      { status: 500 },
-    );
+    return NextResponse.json({ error: error.message }, { status: 500 });
   }
 
   return NextResponse.json({ ok: true, existing: false });

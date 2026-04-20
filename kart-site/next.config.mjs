@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   poweredByHeader: false,
-  output: "standalone",
+  // output: "standalone", // VPS deploy icin ac, Vercel icin kapali
   headers: async () => [
     {
       source: "/(.*)",

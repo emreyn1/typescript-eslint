@@ -1,84 +1,105 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createCard, listCards } from "@/lib/wanttopay";
+import { createCard } from "@/lib/wanttopay";
 import { supabase } from "@/lib/supabase";
+import { auth } from "@/auth";
+import { z } from "zod";
 
-export async function GET(req: NextRequest) {
+const CreateCardSchema = z.object({
+  type: z.enum(["basic", "smart"]),
+  label: z.string().max(50).optional(),
+});
+
+export async function GET() {
   try {
-    const userId = req.headers.get("x-user-id");
-    if (!userId) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-
-    if (supabase) {
-      const { data } = await supabase
-        .from("cards")
-        .select("*")
-        .eq("user_id", userId)
-        .order("created_at", { ascending: false });
-      return NextResponse.json(data ?? []);
+    const session = await auth();
+    if (!session?.user?.id) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+    if (!supabase) {
+      return NextResponse.json([]);
     }
 
-    const cards = await listCards();
-    return NextResponse.json(cards);
+    const { data } = await supabase
+      .from("cards")
+      .select("*")
+      .eq("user_id", session.user.id)
+      .order("created_at", { ascending: false });
+
+    return NextResponse.json(data ?? []);
   } catch (e) {
-    return NextResponse.json(
-      { error: e instanceof Error ? e.message : "Unknown error" },
-      { status: 500 },
-    );
+    return NextResponse.json({ error: e instanceof Error ? e.message : "Unknown error" }, { status: 500 });
   }
 }
 
 export async function POST(req: NextRequest) {
   try {
-    const userId = req.headers.get("x-user-id");
-    if (!userId) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    const session = await auth();
+    if (!session?.user?.id) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+    if (!supabase) {
+      return NextResponse.json({ error: "Database not configured" }, { status: 503 });
+    }
 
     const body = await req.json();
-    const { type, label } = body as { type: "basic" | "smart"; label?: string };
-
-    if (!type || !["basic", "smart"].includes(type)) {
-      return NextResponse.json({ error: "Invalid card type" }, { status: 400 });
+    const parsed = CreateCardSchema.safeParse(body);
+    if (!parsed.success) {
+      return NextResponse.json({ error: parsed.error.issues[0]?.message ?? "Invalid input" }, { status: 400 });
     }
 
-    // Check user balance for card purchase
+    const { type, label } = parsed.data;
     const cardCost = type === "basic" ? 8 : 15;
-    if (supabase) {
-      const { data: user } = await supabase
-        .from("users")
-        .select("balance")
-        .eq("id", userId)
-        .single();
-      if ((user?.balance ?? 0) < cardCost) {
-        return NextResponse.json(
-          { error: "Insufficient balance", required: cardCost },
-          { status: 402 },
-        );
-      }
+
+    // 1. Check balance
+    const { data: user } = await supabase
+      .from("users")
+      .select("balance")
+      .eq("id", session.user.id)
+      .single();
+
+    const currentBalance = Number(user?.balance ?? 0);
+    if (currentBalance < cardCost) {
+      return NextResponse.json(
+        { error: "Insufficient balance", required: cardCost, current: currentBalance },
+        { status: 402 },
+      );
     }
 
-    const card = await createCard({ type, label });
-
-    if (supabase) {
-      // Deduct balance
+    // 2. Deduct balance FIRST (atomic via RPC)
+    try {
       await supabase.rpc("deduct_balance", {
-        p_user_id: userId,
+        p_user_id: session.user.id,
         p_amount: cardCost,
       });
-
-      // Save card reference
-      await supabase.from("cards").insert({
-        user_id: userId,
-        provider_card_id: card.id,
-        type,
-        label: label || `${type} card`,
-        last_four: card.card_number.slice(-4),
-        status: "active",
-      });
+    } catch {
+      return NextResponse.json({ error: "Balance deduction failed" }, { status: 402 });
     }
+
+    // 3. Create card with provider
+    let card;
+    try {
+      card = await createCard({ type, label });
+    } catch (providerErr) {
+      // Refund on provider failure
+      await supabase.rpc("add_balance", {
+        p_user_id: session.user.id,
+        p_amount: cardCost,
+      });
+      throw providerErr;
+    }
+
+    // 4. Save card to DB
+    await supabase.from("cards").insert({
+      user_id: session.user.id,
+      provider_card_id: card.id,
+      type,
+      label: label || `${type} card`,
+      last_four: card.card_number.slice(-4),
+      status: "active",
+    });
 
     return NextResponse.json(card);
   } catch (e) {
-    return NextResponse.json(
-      { error: e instanceof Error ? e.message : "Unknown error" },
-      { status: 500 },
-    );
+    return NextResponse.json({ error: e instanceof Error ? e.message : "Unknown error" }, { status: 500 });
   }
 }

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>{{TITLE}}</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%;overflow:hidden;background:#000;font-family:system-ui,-apple-system,sans-serif}
+
+.player-container{width:100%;height:100%;position:relative}
+video{width:100%;height:100%;object-fit:contain;background:#000}
+
+/* Loading */
+.loader{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#000;z-index:40;transition:opacity .4s}
+.loader.hide{opacity:0;pointer-events:none}
+.spinner{width:44px;height:44px;border:3px solid rgba(255,255,255,.08);border-top-color:#818cf8;border-radius:50%;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Controls overlay */
+.controls{position:fixed;bottom:0;left:0;right:0;padding:12px 16px;background:linear-gradient(transparent,rgba(0,0,0,.85));opacity:0;transition:opacity .3s;z-index:30;display:flex;flex-direction:column;gap:8px}
+body:hover .controls,.controls.show{opacity:1}
+
+.progress-bar{width:100%;height:4px;background:rgba(255,255,255,.15);border-radius:2px;cursor:pointer;position:relative}
+.progress-bar:hover{height:6px}
+.progress-fill{height:100%;background:#818cf8;border-radius:2px;width:0%;transition:width .1s linear}
+.progress-buffer{position:absolute;top:0;left:0;height:100%;background:rgba(255,255,255,.1);border-radius:2px}
+
+.btn-row{display:flex;align-items:center;gap:12px}
+.btn{background:none;border:none;color:#fff;cursor:pointer;padding:4px;display:flex;align-items:center;opacity:.85;transition:opacity .2s}
+.btn:hover{opacity:1}
+.btn svg{width:22px;height:22px;fill:currentColor}
+.time{color:#aaa;font-size:12px;font-variant-numeric:tabular-nums}
+.spacer{flex:1}
+
+/* Quality selector */
+.quality-menu{position:absolute;bottom:56px;right:16px;background:rgba(15,15,15,.95);border:1px solid #222;border-radius:8px;padding:4px 0;z-index:50;display:none;min-width:140px;backdrop-filter:blur(12px)}
+.quality-menu.open{display:block}
+.q-item{padding:8px 16px;color:#ccc;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:8px}
+.q-item:hover{background:rgba(255,255,255,.06);color:#fff}
+.q-item.active{color:#818cf8}
+.q-item .dot{width:6px;height:6px;border-radius:50%;background:#818cf8;opacity:0}
+.q-item.active .dot{opacity:1}
+
+/* Source selector */
+.source-menu{position:absolute;bottom:56px;right:60px;background:rgba(15,15,15,.95);border:1px solid #222;border-radius:8px;padding:4px 0;z-index:50;display:none;min-width:200px;max-height:300px;overflow-y:auto;backdrop-filter:blur(12px)}
+.source-menu.open{display:block}
+.s-item{padding:8px 16px;color:#ccc;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:8px}
+.s-item:hover{background:rgba(255,255,255,.06);color:#fff}
+.s-item.active{color:#818cf8}
+.s-item .badge{padding:1px 6px;border-radius:3px;font-size:10px;font-weight:700;text-transform:uppercase}
+.s-item .badge.hls{background:#7c3aed20;color:#a78bfa}
+.s-item .badge.mp4{background:#3b82f620;color:#60a5fa}
+
+/* Quality badge top-left */
+.q-badge{position:fixed;top:12px;left:12px;background:rgba(129,140,248,.8);color:#fff;font-size:10px;padding:2px 8px;border-radius:4px;z-index:35;pointer-events:none;opacity:0;transition:opacity .3s}
+body:hover .q-badge{opacity:1}
+
+/* Error */
+.error{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#888;text-align:center;padding:20px}
+.error h3{color:#e5e5e5;margin-bottom:8px;font-size:16px}
+.error p{font-size:13px}
+</style>
+</head>
+<body>
+{{FINGERPRINT_SCRIPT}}
+{{ANTIDEBUG_SCRIPT}}
+
+<div class="loader" id="loader"><div class="spinner"></div></div>
+<div class="q-badge" id="qBadge"></div>
+
+<div class="player-container">
+  <video id="video" playsinline></video>
+
+  <div class="controls" id="controls">
+    <div class="progress-bar" id="progressBar">
+      <div class="progress-buffer" id="bufferBar"></div>
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <div class="btn-row">
+      <button class="btn" id="playBtn" title="Play/Pause">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+      <button class="btn" id="muteBtn" title="Mute">
+        <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3z"/><path d="M16.5 12A4.5 4.5 0 0014 7.97v8.05A4.47 4.47 0 0016.5 12z"/></svg>
+      </button>
+      <span class="time" id="timeDisplay">0:00 / 0:00</span>
+      <div class="spacer"></div>
+      <button class="btn" id="sourceBtn" title="Sources">
+        <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+      </button>
+      <button class="btn" id="qualityBtn" title="Quality">
+        <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.31.06-.63.06-.94 0-.31-.02-.63-.06-.94l2.03-1.58a.49.49 0 00.12-.61l-1.92-3.32a.49.49 0 00-.59-.22l-2.39.96a7.04 7.04 0 00-1.62-.94l-.36-2.54a.48.48 0 00-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.49.49 0 00-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94l-2.03 1.58a.49.49 0 00-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6A3.6 3.6 0 1115.6 12 3.6 3.6 0 0112 15.6z"/></svg>
+      </button>
+      <button class="btn" id="pipBtn" title="Picture-in-Picture">
+        <svg viewBox="0 0 24 24"><path d="M19 11h-8v6h8v-6zm4 8V4.98C23 3.88 22.1 3 21 3H3c-1.1 0-2 .88-2 1.98V19c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2zm-2 .02H3V4.97h18v14.05z"/></svg>
+      </button>
+      <button class="btn" id="fsBtn" title="Fullscreen">
+        <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="quality-menu" id="qualityMenu"></div>
+  <div class="source-menu" id="sourceMenu"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.17/dist/hls.min.js"></script>
+<script>
+(function(){
+  var SOURCES='{{SOURCES}}';
+  var VAST_URL='{{VAST_URL}}';
+
+  if(!SOURCES||SOURCES==="'{{SOURCES}}'"){
+    document.body.innerHTML='<div class="error"><h3>No Sources</h3><p>Content unavailable.</p></div>';
+    return;
+  }
+
+  var sources=typeof SOURCES==='string'?JSON.parse(SOURCES):SOURCES;
+  if(!sources.length){
+    document.body.innerHTML='<div class="error"><h3>No Sources</h3><p>Content unavailable.</p></div>';
+    return;
+  }
+
+  var video=document.getElementById('video');
+  var loader=document.getElementById('loader');
+  var playBtn=document.getElementById('playBtn');
+  var muteBtn=document.getElementById('muteBtn');
+  var timeDisplay=document.getElementById('timeDisplay');
+  var progressBar=document.getElementById('progressBar');
+  var progressFill=document.getElementById('progressFill');
+  var bufferBar=document.getElementById('bufferBar');
+  var qualityBtn=document.getElementById('qualityBtn');
+  var qualityMenu=document.getElementById('qualityMenu');
+  var sourceBtn=document.getElementById('sourceBtn');
+  var sourceMenu=document.getElementById('sourceMenu');
+  var fsBtn=document.getElementById('fsBtn');
+  var pipBtn=document.getElementById('pipBtn');
+  var qBadge=document.getElementById('qBadge');
+  var hls=null;
+  var currentIdx=0;
+
+  // Build source menu
+  function buildSourceMenu(){
+    sourceMenu.innerHTML='';
+    sources.forEach(function(s,i){
+      var div=document.createElement('div');
+      div.className='s-item'+(i===currentIdx?' active':'');
+      var badgeClass=s.type==='hls'?'hls':'mp4';
+      div.innerHTML='<span class="badge '+badgeClass+'">'+s.type.toUpperCase()+'</span>'+
+        '<span>'+s.quality+'</span>'+
+        '<span style="color:#666;font-size:11px">'+s.provider.name+'</span>';
+      div.onclick=function(){loadSource(i)};
+      sourceMenu.appendChild(div);
+    });
+  }
+
+  // Pick best source to start
+  function pickBest(){
+    var best=0,bestScore=0;
+    sources.forEach(function(s,i){
+      var sc=0;
+      if(s.type==='hls')sc+=100;
+      else if(s.type==='mp4')sc+=50;
+      var q=parseInt(s.quality)||0;
+      if(q>=1080)sc+=30;else if(q>=720)sc+=20;
+      if(sc>bestScore){bestScore=sc;best=i;}
+    });
+    return best;
+  }
+
+  function loadSource(idx){
+    currentIdx=idx;
+    var src=sources[idx];
+    loader.classList.remove('hide');
+    qBadge.textContent=src.quality+(src.quality.toString().match(/p$/)?'':'p');
+
+    document.querySelectorAll('.s-item').forEach(function(el,i){
+      el.classList.toggle('active',i===idx);
+    });
+
+    if(hls){hls.destroy();hls=null;}
+    video.removeAttribute('src');
+
+    if(src.type==='hls'){
+      if(Hls.isSupported()){
+        hls=new Hls({maxBufferLength:30,maxMaxBufferLength:60,startLevel:-1,capLevelToPlayerSize:true});
+        hls.loadSource(src.url);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED,function(ev,data){
+          loader.classList.add('hide');
+          buildQualityMenu();
+          video.play().catch(function(){});
+        });
+        hls.on(Hls.Events.LEVEL_SWITCHED,function(ev,data){
+          var lv=hls.levels[data.level];
+          if(lv)qBadge.textContent=lv.height+'p';
+        });
+        hls.on(Hls.Events.ERROR,function(ev,data){
+          if(data.fatal){
+            if(data.type===Hls.ErrorTypes.NETWORK_ERROR)hls.startLoad();
+            else if(data.type===Hls.ErrorTypes.MEDIA_ERROR)hls.recoverMediaError();
+            else tryNextSource();
+          }
+        });
+      } else if(video.canPlayType('application/vnd.apple.mpegurl')){
+        video.src=src.url;
+        video.addEventListener('loadedmetadata',function(){loader.classList.add('hide');video.play().catch(function(){});},{once:true});
+      }
+    } else {
+      video.src=src.url;
+      video.addEventListener('loadeddata',function(){
+        loader.classList.add('hide');
+        video.play().catch(function(){});
+      },{once:true});
+      video.addEventListener('error',function(){tryNextSource();},{once:true});
+    }
+  }
+
+  function tryNextSource(){
+    if(currentIdx<sources.length-1){
+      loadSource(currentIdx+1);
+    } else {
+      document.body.innerHTML='<div class="error"><h3>Playback Error</h3><p>All sources failed. Try again later.</p></div>';
+    }
+  }
+
+  function buildQualityMenu(){
+    if(!hls||!hls.levels||hls.levels.length<2)return;
+    qualityMenu.innerHTML='';
+    var auto=document.createElement('div');
+    auto.className='q-item'+(hls.autoLevelEnabled?' active':'');
+    auto.innerHTML='<span class="dot"></span>Auto';
+    auto.onclick=function(){hls.currentLevel=-1;updateQualityActive();qualityMenu.classList.remove('open');};
+    qualityMenu.appendChild(auto);
+
+    hls.levels.forEach(function(lv,i){
+      var div=document.createElement('div');
+      div.className='q-item'+(hls.currentLevel===i?' active':'');
+      div.innerHTML='<span class="dot"></span>'+lv.height+'p';
+      div.onclick=function(){hls.currentLevel=i;updateQualityActive();qualityMenu.classList.remove('open');};
+      qualityMenu.appendChild(div);
+    });
+  }
+
+  function updateQualityActive(){
+    var items=qualityMenu.querySelectorAll('.q-item');
+    items.forEach(function(el,i){
+      el.classList.toggle('active',i===0?hls.autoLevelEnabled:hls.currentLevel===(i-1));
+    });
+  }
+
+  // Controls
+  var playSvg='<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
+  var pauseSvg='<svg viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+  video.addEventListener('play',function(){playBtn.innerHTML=pauseSvg;});
+  video.addEventListener('pause',function(){playBtn.innerHTML=playSvg;});
+  playBtn.onclick=function(){video.paused?video.play():video.pause();};
+  video.onclick=function(){video.paused?video.play():video.pause();};
+
+  muteBtn.onclick=function(){video.muted=!video.muted;};
+  fsBtn.onclick=function(){
+    if(document.fullscreenElement)document.exitFullscreen();
+    else document.documentElement.requestFullscreen().catch(function(){});
+  };
+  pipBtn.onclick=function(){
+    if(document.pictureInPictureElement)document.exitPictureInPicture();
+    else video.requestPictureInPicture().catch(function(){});
+  };
+
+  qualityBtn.onclick=function(e){e.stopPropagation();sourceMenu.classList.remove('open');qualityMenu.classList.toggle('open');};
+  sourceBtn.onclick=function(e){e.stopPropagation();qualityMenu.classList.remove('open');sourceMenu.classList.toggle('open');};
+  document.addEventListener('click',function(){qualityMenu.classList.remove('open');sourceMenu.classList.remove('open');});
+
+  function fmt(s){var m=Math.floor(s/60);var ss=Math.floor(s%60);return m+':'+(ss<10?'0':'')+ss;}
+  video.addEventListener('timeupdate',function(){
+    if(video.duration){
+      progressFill.style.width=(video.currentTime/video.duration*100)+'%';
+      timeDisplay.textContent=fmt(video.currentTime)+' / '+fmt(video.duration);
+    }
+  });
+  video.addEventListener('progress',function(){
+    if(video.buffered.length>0&&video.duration){
+      bufferBar.style.width=(video.buffered.end(video.buffered.length-1)/video.duration*100)+'%';
+    }
+  });
+  progressBar.onclick=function(e){
+    if(video.duration){
+      var rect=progressBar.getBoundingClientRect();
+      video.currentTime=(e.clientX-rect.left)/rect.width*video.duration;
+    }
+  };
+
+  // Keyboard
+  document.addEventListener('keydown',function(e){
+    switch(e.key){
+      case ' ':case 'k':e.preventDefault();video.paused?video.play():video.pause();break;
+      case 'ArrowLeft':video.currentTime=Math.max(0,video.currentTime-10);break;
+      case 'ArrowRight':video.currentTime=Math.min(video.duration,video.currentTime+10);break;
+      case 'ArrowUp':e.preventDefault();video.volume=Math.min(1,video.volume+.1);break;
+      case 'ArrowDown':e.preventDefault();video.volume=Math.max(0,video.volume-.1);break;
+      case 'f':fsBtn.onclick();break;
+      case 'm':muteBtn.onclick();break;
+    }
+  });
+
+  // Hide controls after 3s idle
+  var hideTimer;
+  function showControls(){
+    document.getElementById('controls').classList.add('show');
+    clearTimeout(hideTimer);
+    hideTimer=setTimeout(function(){document.getElementById('controls').classList.remove('show');},3000);
+  }
+  document.addEventListener('mousemove',showControls);
+  document.addEventListener('touchstart',showControls);
+
+  // Init
+  buildSourceMenu();
+  loadSource(pickBest());
+})();
+</script>
+</body>
+</html>

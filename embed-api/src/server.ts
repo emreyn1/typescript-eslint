@@ -6,6 +6,7 @@ import { apiRoutes } from "./routes/api.js";
 import { embedRoutes } from "./routes/embed.js";
 import { siteRoutes } from "./routes/site.js";
 import { hlsRoutes } from "./routes/hls.js";
+import { cineproRoutes } from "./routes/cinepro.js";
 import { initDb } from "./db/index.js";
 
 const app = Fastify({
@@ -46,10 +47,17 @@ app.addHook("onSend", async (_req, reply) => {
 await app.register(apiRoutes);
 await app.register(embedRoutes);
 await app.register(hlsRoutes);
+await app.register(cineproRoutes);
 await app.register(siteRoutes);
 
 try {
   await initDb();
+  console.log("Database connected");
+} catch (err) {
+  console.warn("Database unavailable — running without DB (CinePro routes still work)");
+}
+
+try {
   await app.listen({ port: config.port, host: config.host });
   console.log(`Embed API running on http://${config.host}:${config.port}`);
 } catch (err) {

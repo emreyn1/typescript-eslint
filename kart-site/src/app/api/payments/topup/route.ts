@@ -1,20 +1,28 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createInvoice } from "@/lib/nowpayments";
+import { auth } from "@/auth";
+import { z } from "zod";
+
+const TopUpSchema = z.object({
+  amount: z.number().min(5).max(10000),
+});
 
 export async function POST(req: NextRequest) {
   try {
-    const userId = req.headers.get("x-user-id");
-    if (!userId) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    const session = await auth();
+    if (!session?.user?.id) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
 
     const body = await req.json();
-    const { amount } = body as { amount: number };
-
-    if (!amount || amount < 5) {
+    const parsed = TopUpSchema.safeParse(body);
+    if (!parsed.success) {
       return NextResponse.json({ error: "Minimum top-up is $5" }, { status: 400 });
     }
 
+    const { amount } = parsed.data;
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3002";
-    const orderId = `topup_${userId}_${Date.now()}`;
+    const orderId = `topup_${session.user.id}_${Date.now()}`;
 
     const invoice = await createInvoice({
       amount,
@@ -29,9 +37,6 @@ export async function POST(req: NextRequest) {
       order_id: orderId,
     });
   } catch (e) {
-    return NextResponse.json(
-      { error: e instanceof Error ? e.message : "Unknown error" },
-      { status: 500 },
-    );
+    return NextResponse.json({ error: e instanceof Error ? e.message : "Unknown error" }, { status: 500 });
   }
 }
