@@ -1,19 +1,7 @@
 /**
- * WebRTC module extracted from Play-chess-Now.
- * Portable code for integrating video chat into the Lichess fork.
- *
- * Integration strategy:
- * - Lichess uses WebSocket for game signaling. The WebRTC signaling (SDP offer/answer,
- *   ICE candidates) should be piped through this same WebSocket channel rather than
- *   Firebase Firestore (which was the original approach).
- * - The video chat is OPTIONAL per game — only activated when both players consent.
- * - This module handles ICE server resolution, peer connection lifecycle, and media streams.
+ * WebRTC ICE / PeerConnection helpers for Lichess fork.
+ * Browser config via window.lichessRtConfig (injected from Scala template).
  */
-
-const EXPRESSTURN_USERNAME = process.env.NEXT_PUBLIC_EXPRESSTURN_USERNAME || "";
-const EXPRESSTURN_PASSWORD = process.env.NEXT_PUBLIC_EXPRESSTURN_PASSWORD || "";
-const EXPRESSTURN_SERVER =
-  process.env.NEXT_PUBLIC_EXPRESSTURN_SERVER || "free.expressturn.com";
 
 export interface IceServer {
   urls: string | string[];
@@ -21,34 +9,64 @@ export interface IceServer {
   credential?: string;
 }
 
+export interface LichessRtConfig {
+  turnUser?: string;
+  turnPass?: string;
+  turnServer?: string;
+  signalUrl?: string;
+}
+
+declare global {
+  interface Window {
+    lichessRtConfig?: LichessRtConfig;
+    lichessRtUrl?: string;
+  }
+}
+
+function readRtConfig(): LichessRtConfig {
+  return window.lichessRtConfig ?? {};
+}
+
 export async function getIceServers(): Promise<IceServer[]> {
-  if (EXPRESSTURN_USERNAME && EXPRESSTURN_PASSWORD) {
+  const cfg = readRtConfig();
+  const username = cfg.turnUser ?? "";
+  const password = cfg.turnPass ?? "";
+  const server = cfg.turnServer ?? "free.expressturn.com";
+
+  const stun: IceServer = {
+    urls: [
+      "stun:stun.l.google.com:19302",
+      "stun:stun1.l.google.com:19302",
+    ],
+  };
+
+  // Open Relay fallback — no credentials needed, 20 GB/mo free
+  const openRelay: IceServer = {
+    urls: [
+      "turn:openrelay.metered.ca:80",
+      "turn:openrelay.metered.ca:443",
+      "turns:openrelay.metered.ca:443?transport=tcp",
+    ],
+    username: "openrelayproject",
+    credential: "openrelayproject",
+  };
+
+  if (username && password) {
     return [
+      stun,
       {
         urls: [
-          "stun:stun1.l.google.com:19302",
-          "stun:stun2.l.google.com:19302",
+          `turn:${server}:3478`,
+          `turns:${server}:5349`,
         ],
+        username,
+        credential: password,
       },
-      {
-        urls: [
-          `turn:${EXPRESSTURN_SERVER}:3478`,
-          `turns:${EXPRESSTURN_SERVER}:5349`,
-        ],
-        username: EXPRESSTURN_USERNAME,
-        credential: EXPRESSTURN_PASSWORD,
-      },
+      openRelay,
     ];
   }
 
-  return [
-    {
-      urls: [
-        "stun:stun1.l.google.com:19302",
-        "stun:stun2.l.google.com:19302",
-      ],
-    },
-  ];
+  return [stun, openRelay];
 }
 
 export function createPeerConnection(
@@ -58,4 +76,13 @@ export function createPeerConnection(
     iceServers,
     iceCandidatePoolSize: 10,
   });
+}
+
+export function getSignalUrl(): string {
+  const cfg = readRtConfig();
+  if (cfg.signalUrl) return cfg.signalUrl;
+  if (window.lichessRtUrl) return window.lichessRtUrl;
+
+  const proto = location.protocol === "https:" ? "wss:" : "ws:";
+  return `${proto}//${location.hostname}:3012/lichess-rt`;
 }

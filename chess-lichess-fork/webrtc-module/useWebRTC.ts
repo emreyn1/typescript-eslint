@@ -1,10 +1,6 @@
 /**
- * React hook for WebRTC video chat.
- * Extracted from Play-chess-Now, adapted for Lichess integration.
- *
- * For Lichess: replace the Firebase signaling with Lichess WebSocket messages.
- * The hook itself remains the same — it manages local/remote streams,
- * peer connection lifecycle, and data channels.
+ * @deprecated Use VideoChatCtrl.ts for Lichess (Mithril/vanilla UI).
+ * This React hook remains for reference / Play-chess-Now style apps.
  */
 
 import { useState, useCallback, useRef, useEffect } from "react";
