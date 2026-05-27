@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CinePro Test Player</title>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.17/dist/hls.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0a0a0a; color: #fff; font-family: system-ui, sans-serif; padding: 20px; }
+    h1 { font-size: 22px; margin-bottom: 16px; color: #3b82f6; }
+    .controls { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+    input { padding: 10px 14px; border-radius: 8px; border: 1px solid #333; background: #1a1a1a; color: #fff; font-size: 14px; }
+    #tmdb { flex: 1; min-width: 200px; }
+    select { padding: 10px; border-radius: 8px; border: 1px solid #333; background: #1a1a1a; color: #fff; }
+    button { padding: 10px 20px; border-radius: 8px; border: none; background: #3b82f6; color: #fff; font-weight: 600; cursor: pointer; white-space: nowrap; }
+    button:hover { background: #2563eb; }
+    button:disabled { background: #333; cursor: wait; }
+    .player-wrap { max-width: 900px; margin-bottom: 16px; background: #000; border-radius: 12px; overflow: hidden; aspect-ratio: 16/9; position: relative; }
+    video { width: 100%; height: 100%; }
+    .loading { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #666; font-size: 14px; }
+    .sources { display: grid; gap: 6px; max-width: 900px; }
+    .source { display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: #1a1a1a; border: 1px solid #262626; border-radius: 8px; cursor: pointer; transition: all 0.2s; }
+    .source:hover { border-color: #3b82f6; background: #111; }
+    .source.active { border-color: #22c55e; background: #0a2010; }
+    .source.error { border-color: #ef4444; background: #1a0a0a; }
+    .badge { padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+    .b-hls { background: #7c3aed20; color: #a78bfa; }
+    .b-mp4 { background: #3b82f620; color: #60a5fa; }
+    .b-mkv { background: #f59e0b20; color: #fbbf24; }
+    .quality { font-weight: 700; min-width: 55px; color: #e5e5e5; }
+    .provider { color: #888; font-size: 12px; flex: 1; }
+    .src-status { font-size: 11px; color: #666; }
+    .status { padding: 10px; color: #999; font-size: 13px; }
+    .status.error { color: #ef4444; }
+    #count { color: #22c55e; font-weight: 700; }
+    .log { max-width: 900px; margin-top: 16px; padding: 12px; background: #111; border: 1px solid #222; border-radius: 8px; font-family: monospace; font-size: 12px; color: #888; max-height: 150px; overflow-y: auto; }
+    .log .err { color: #ef4444; }
+    .log .ok { color: #22c55e; }
+  </style>
+</head>
+<body>
+  <h1>CinePro Test Player</h1>
+  <div class="controls">
+    <input id="tmdb" type="text" placeholder="TMDB ID (ör: 27205 = Inception)" value="27205">
+    <select id="type">
+      <option value="movie">Film</option>
+      <option value="tv">Dizi</option>
+    </select>
+    <input id="season" type="text" placeholder="S" value="1" style="max-width:50px;display:none">
+    <input id="episode" type="text" placeholder="E" value="1" style="max-width:50px;display:none">
+    <button id="searchBtn" onclick="loadSources()">Kaynak Bul</button>
+  </div>
+  <div class="player-wrap">
+    <div class="loading" id="playerMsg">Kaynak sec...</div>
+    <video id="player" controls></video>
+  </div>
+  <p class="status" id="status">TMDB ID gir ve "Kaynak Bul"a tikla.</p>
+  <div class="sources" id="sources"></div>
+  <div class="log" id="log"></div>
+
+  <script>
+    const API = 'http://localhost:3000';
+    const typeSelect = document.getElementById('type');
+    const video = document.getElementById('player');
+    const logDiv = document.getElementById('log');
+    let hls = null;
+    let allSources = [];
+
+    typeSelect.addEventListener('change', () => {
+      const isTv = typeSelect.value === 'tv';
+      document.getElementById('season').style.display = isTv ? '' : 'none';
+      document.getElementById('episode').style.display = isTv ? '' : 'none';
+    });
+
+    function log(msg, type) {
+      const span = document.createElement('div');
+      span.className = type || '';
+      span.textContent = `[${new Date().toLocaleTimeString()}] ${msg}`;
+      logDiv.prepend(span);
+    }
+
+    async function loadSources() {
+      const tmdb = document.getElementById('tmdb').value.trim();
+      if (!tmdb) return;
+      const type = document.getElementById('type').value;
+      const btn = document.getElementById('searchBtn');
+      const status = document.getElementById('status');
+      const container = document.getElementById('sources');
+
+      btn.disabled = true;
+      btn.textContent = 'Araniyor...';
+      container.innerHTML = '';
+      status.textContent = 'Kaynaklar aranıyor...';
+      log(`${type === 'movie' ? 'Film' : 'Dizi'} TMDB:${tmdb} aranıyor...`);
+
+      let url;
+      if (type === 'movie') {
+        url = `${API}/v1/movies/${tmdb}`;
+      } else {
+        const s = document.getElementById('season').value || '1';
+        const e = document.getElementById('episode').value || '1';
+        url = `${API}/v1/tv/${tmdb}/seasons/${s}/episodes/${e}`;
+      }
+
+      try {
+        const t0 = Date.now();
+        const res = await fetch(url);
+        const data = await res.json();
+        const elapsed = ((Date.now() - t0) / 1000).toFixed(1);
+        allSources = data.sources || [];
+        status.innerHTML = `<span id="count">${allSources.length}</span> kaynak bulundu (${elapsed}s)`;
+        log(`${allSources.length} kaynak bulundu (${elapsed}s)`, 'ok');
+
+        const mp4s = allSources.filter(s => s.type === 'mp4');
+        const hlss = allSources.filter(s => s.type === 'hls');
+        const mkv = allSources.filter(s => s.type === 'mkv');
+        log(`MP4: ${mp4s.length} | HLS: ${hlss.length} | MKV: ${mkv.length}`);
+
+        allSources.forEach((src, i) => {
+          const div = document.createElement('div');
+          div.className = 'source';
+          div.id = `src-${i}`;
+          const badgeClass = src.type === 'hls' ? 'b-hls' : src.type === 'mp4' ? 'b-mp4' : 'b-mkv';
+          div.innerHTML = `
+            <span class="quality">${src.quality || '?'}</span>
+            <span class="badge ${badgeClass}">${src.type.toUpperCase()}</span>
+            <span class="provider">${src.provider?.name || '?'}</span>
+            <span class="src-status" id="ss-${i}"></span>
+          `;
+          div.onclick = () => playSrc(src, i);
+          container.appendChild(div);
+        });
+
+        if (mp4s.length > 0) {
+          const bestMp4 = mp4s.find(s => s.provider?.name === 'MafiaEmbed') || mp4s[0];
+          const idx = allSources.indexOf(bestMp4);
+          log(`Otomatik: MP4 ${bestMp4.quality} (${bestMp4.provider?.name}) deneniyor...`);
+          playSrc(bestMp4, idx);
+        }
+      } catch (err) {
+        status.className = 'status error';
+        status.textContent = 'Hata: ' + err.message;
+        log('Hata: ' + err.message, 'err');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Kaynak Bul';
+      }
+    }
+
+    async function playSrc(src, idx) {
+      document.querySelectorAll('.source').forEach(s => { s.classList.remove('active'); s.classList.remove('error'); });
+      const el = document.getElementById(`src-${idx}`);
+      if (el) el.classList.add('active');
+      const ss = document.getElementById(`ss-${idx}`);
+
+      document.getElementById('playerMsg').textContent = 'Yukleniyor...';
+      document.getElementById('playerMsg').style.display = 'flex';
+      log(`Oynatılıyor: ${src.type.toUpperCase()} ${src.quality} — ${src.provider?.name}`);
+
+      if (hls) { hls.destroy(); hls = null; }
+      video.removeAttribute('src');
+      video.load();
+
+      if (src.type === 'hls') {
+        if (typeof Hls === 'undefined') {
+          log('HLS.js yuklenemedi!', 'err');
+          if (ss) ss.textContent = 'HLS.js yok';
+          if (el) el.classList.add('error');
+          return;
+        }
+        if (Hls.isSupported()) {
+          hls = new Hls({
+            maxBufferLength: 30,
+            maxMaxBufferLength: 60,
+          });
+          hls.loadSource(src.url);
+          hls.attachMedia(video);
+          hls.on(Hls.Events.MANIFEST_PARSED, () => {
+            document.getElementById('playerMsg').style.display = 'none';
+            video.play().catch(() => {});
+            log('HLS manifest yuklendi, oynatiliyor', 'ok');
+            if (ss) ss.textContent = 'OK';
+          });
+          hls.on(Hls.Events.ERROR, (e, data) => {
+            log(`HLS hata: ${data.type} — ${data.details}`, 'err');
+            if (data.fatal) {
+              if (ss) ss.textContent = 'Hata';
+              if (el) el.classList.add('error');
+              document.getElementById('playerMsg').textContent = 'HLS hata — baska kaynak dene';
+              document.getElementById('playerMsg').style.display = 'flex';
+            }
+          });
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+          video.src = src.url;
+          video.addEventListener('loadedmetadata', () => {
+            document.getElementById('playerMsg').style.display = 'none';
+            video.play().catch(() => {});
+          }, { once: true });
+        }
+      } else {
+        video.src = src.url;
+        video.addEventListener('loadeddata', () => {
+          document.getElementById('playerMsg').style.display = 'none';
+          log(`${src.type.toUpperCase()} yuklendi`, 'ok');
+          if (ss) ss.textContent = 'OK';
+          video.play().catch(() => {});
+        }, { once: true });
+        video.addEventListener('error', () => {
+          const err = video.error;
+          log(`Video hata: ${err ? err.message : 'bilinmeyen'}`, 'err');
+          if (ss) ss.textContent = 'Hata';
+          if (el) el.classList.add('error');
+          document.getElementById('playerMsg').textContent = 'Yuklenemedi — baska kaynak dene';
+          document.getElementById('playerMsg').style.display = 'flex';
+        }, { once: true });
+      }
+    }
+  </script>
+</body>
+</html>

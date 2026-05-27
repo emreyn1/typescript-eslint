@@ -1,0 +1,4 @@
+* text=auto eol=lf
+
+*.shot linguist-generated
+packages/scope-manager/src/lib/**/* linguist-generated

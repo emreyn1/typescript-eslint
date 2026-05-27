@@ -1,0 +1,139 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import process from 'node:process';
+import {ESLint} from 'eslint';
+import styleText from 'node-style-text';
+import {outdent} from 'outdent';
+import prettyMilliseconds from 'pretty-ms';
+import {
+	typescriptEslintParser,
+	vueEslintParser,
+} from '../../scripts/parsers.js';
+import eslintPluginUnicorn from '../../index.js';
+
+class UnicornIntegrationTestError extends AggregateError {
+	name = 'UnicornIntegrationTestError';
+
+	constructor(project, errors) {
+		super(errors, `Error thrown when linting '${project.name}' project.`);
+
+		this.project = project;
+	}
+}
+
+class UnicornEslintFatalError extends SyntaxError {
+	name = 'UnicornEslintFatalError';
+
+	constructor(message, file) {
+		super(message.message);
+
+		this.eslintMessage = message;
+		this.eslintFile = file;
+	}
+
+	get codeFrame() {
+		const {source, output} = this.eslintFile;
+		const {line, column, message, ruleId} = this.eslintMessage;
+		const code = source ?? output;
+		const lines = code.split('\n');
+		const frameMessage = ruleId ? `[${ruleId}]: ${message}` : message;
+
+		const result = [];
+		for (const [index, line_] of lines.entries()) {
+			const lineNumber = index + 1;
+			result.push(`${lineNumber.toString().padStart(3)} | ${line_}`);
+		}
+
+		result.push(`    | ${frameMessage}`);
+		return result.join('\n');
+	}
+}
+
+const sum = (collection, fieldName) =>
+	collection.reduce((total, {[fieldName]: value}) => total + value, 0);
+
+const patterns = ['js', 'mjs', 'cjs', 'ts', 'mts', 'cts', 'jsx', 'tsx', 'vue'].map(extension => `**/*.${extension}`);
+const basicConfigs = [
+	eslintPluginUnicorn.configs.all,
+	{
+		rules: {
+			// This rule crashing on replace string inside `jsx` or `Unicode escape sequence`
+			'unicorn/string-content': 'off',
+		},
+	},
+	{
+		files: ['**/*.ts', '**/*.mts', '**/*.cts', '**/*.tsx'],
+		languageOptions: {
+			parser: typescriptEslintParser,
+			parserOptions: {
+				project: [],
+			},
+		},
+	},
+	{
+		files: ['**/*.vue'],
+		languageOptions: {
+			parser: vueEslintParser,
+			parserOptions: {
+				parser: '@typescript-eslint/parser',
+				ecmaFeatures: {
+					jsx: true,
+				},
+				project: [],
+			},
+		},
+	},
+];
+
+async function runEslint(project) {
+	const eslintIgnoreFile = path.join(project.location, '.eslintignore');
+	const ignore = fs.existsSync(eslintIgnoreFile)
+		? fs.readFileSync(eslintIgnoreFile, 'utf8').split('\n').filter(line => line && !line.startsWith('#'))
+		: [];
+
+	const eslint = new ESLint({
+		cwd: project.location,
+		overrideConfigFile: true,
+		overrideConfig: [
+			...basicConfigs,
+			{ignores: [...ignore, ...project.ignore]},
+		],
+		fix: true,
+		errorOnUnmatchedPattern: false,
+		/*
+		TODO: Try to figure out how to make it work, currently it throws error
+		"The option "overrideConfig" cannot be cloned. When concurrency is enabled, all options must be cloneable values (JSON values). Remove uncloneable options or use an options module."
+		*/
+		// concurrency: 'auto',
+	});
+
+	const startTime = process.hrtime.bigint();
+	const results = await eslint.lintFiles(patterns);
+
+	const errors = results
+		.filter(file => file.fatalErrorCount > 0)
+		.flatMap(file => file.messages
+			.filter(message => message.fatal)
+			.map(message => new UnicornEslintFatalError(message, file)));
+
+	if (errors.length > 0) {
+		throw new UnicornIntegrationTestError(project, errors);
+	}
+
+	const errorCount = sum(results, 'errorCount');
+	const warningCount = sum(results, 'warningCount');
+	const fixableErrorCount = sum(results, 'fixableErrorCount');
+	const fixableWarningCount = sum(results, 'fixableWarningCount');
+	console.log();
+	console.log(outdent`
+		${styleText.green.bold.underline`[${project.name}]`} ${results.length} files linted:
+		- error: ${styleText.gray(String(errorCount))}
+		- warning: ${styleText.gray(String(warningCount))}
+		- fixable error: ${styleText.gray(String(fixableErrorCount))}
+		- fixable warning: ${styleText.gray(String(fixableWarningCount))}
+		- duration: ${styleText.gray(prettyMilliseconds((process.hrtime.bigint() - startTime) / 1_000_000n))}
+	`);
+}
+
+export default runEslint;
+export {UnicornEslintFatalError, UnicornIntegrationTestError};

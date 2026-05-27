@@ -1,0 +1,445 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+/* Dark mode için custom variant – shadcn/ui ile uyumlu */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Custom theme tanımları (Tailwind v4 standartı) - Profesyonel Palette */
+@theme {
+  /* Font Family */
+  --font-generalsans: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Profesyonel Black Shades - Daha yumuşak geçişler */
+  --color-black-50: #0a0a0f;
+  --color-black-100: #0f0f15;
+  --color-black-200: #14141a;
+  --color-black-300: #1a1a21;
+  --color-black-400: #25252e;
+  --color-black-500: #3a3a49;
+  --color-black-600: #1a1a1a;
+  --color-black: #000000; /* DEFAULT */
+
+  /* Profesyonel White Shades - Daha iyi kontrast */
+  --color-white-400: #4a4a54;
+  --color-white-500: #62646c;
+  --color-white-600: #8a8c96;
+  --color-white-700: #afb0b6;
+  --color-white-800: #d6d9e9;
+  --color-white-900: #e4e4e6;
+  --color-white: #ffffff; /* DEFAULT */
+
+  /* Accent Colors - Modern Gradient System */
+  --color-accent-purple: #a855f7;
+  --color-accent-pink: #ec4899;
+  --color-accent-blue: #3b82f6;
+  --color-accent-cyan: #06b6d4;
+
+  /* Background Image */
+  --bg-terminal: url("/assets/terminal.png");
+
+  /* Border Radius - Daha yumuşak köşeler */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+}
+
+/* shadcn/ui CSS Variables – Profesyonel Dark Theme */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 84% 4.9%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.9 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    /* Profesyonel Dark Theme - Modern & Elegant */
+    --background: 220 20% 4%;
+    --foreground: 210 40% 98%;
+    
+    /* Card & Surface Colors */
+    --card: 222 47% 6%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 6%;
+    --popover-foreground: 210 40% 98%;
+    
+    /* Primary - Blue System */
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 4%;
+
+    /* Secondary - Cyan System */
+    --secondary: 187 85% 53%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Muted - For Subtle Text */
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    /* Accent - Light Cyan */
+    --accent: 200 98% 48%;
+    --accent-foreground: 222 47% 4%;
+    
+    /* Destructive */
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    
+    /* Borders & Inputs */
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 217 91% 60%;
+    
+    /* Gradient Colors - Blue/Cyan Professional Palette */
+    --gradient-from: 220 90% 56%;
+    --gradient-via: 187 85% 53%;
+    --gradient-to: 200 98% 48%;
+  }
+
+  /* Base stiller – Doğrudan CSS variables */
+  * {
+    border-color: hsl(var(--border));
+    outline-color: hsl(var(--ring) / 0.5);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-feature-settings: "kern" 1, "liga" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Profesyonel Typography Scale */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw + 1rem, 4.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 4vw + 0.5rem, 3.5rem);
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem);
+    line-height: 1.3;
+  }
+
+  p {
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+  }
+
+  /* Özel body override */
+  body {
+    background: hsl(var(--background)) !important;
+  }
+}
+
+/* Font import */
+@import url("https://fonts.cdnfonts.com/css/general-sans");
+
+/* Custom utilities – Profesyonel Utility Classes */
+@layer utilities {
+  /* Spacing System */
+  .c-space { @apply sm:px-10 px-5; }
+  
+  /* Navigation */
+  .nav-ul { @apply flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-20; }
+  .nav-li { 
+    color: hsl(var(--muted-foreground));
+    @apply w-full rounded-lg py-2 px-5 transition-all duration-200;
+  }
+  .nav-li:hover { 
+    color: hsl(var(--foreground));
+    background-color: hsl(var(--accent) / 0.1);
+  }
+  .nav-li_a { @apply text-base md:text-sm font-medium transition-colors; }
+  .nav-li_a:hover { color: hsl(var(--foreground)); }
+  .nav-sidebar { 
+    background-color: hsl(var(--card) / 0.95);
+    border-bottom: 1px solid hsl(var(--border));
+    @apply absolute left-0 right-0 backdrop-blur-md transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block;
+  }
+
+  /* Buttons */
+  .btn { 
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    @apply flex gap-3 items-center justify-center cursor-pointer px-4 py-2.5 rounded-lg transition-all active:scale-95 font-medium;
+  }
+  .btn-ping { @apply animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75; }
+  .btn-ping_dot { @apply relative inline-flex rounded-full h-3 w-3 bg-green-500; }
+
+  /* Typography */
+  .hero_tag { @apply text-center xl:text-6xl md:text-5xl sm:text-4xl text-3xl font-bold leading-tight tracking-tight; }
+  .heading-gradient { @apply bg-gradient-to-r from-blue-400 via-cyan-400 to-sky-400 bg-clip-text text-transparent; }
+
+  /* Cards & Containers */
+  .grid-container { 
+    background-color: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    @apply w-full h-full rounded-xl sm:p-7 p-4 flex flex-col gap-5 backdrop-blur-sm;
+  }
+  .grid-headtext { 
+    color: hsl(var(--foreground));
+    @apply text-xl font-semibold mb-2;
+  }
+  .grid-subtext { 
+    color: hsl(var(--muted-foreground));
+    @apply text-base leading-relaxed;
+  }
+  .copy-container { @apply cursor-pointer flex justify-center items-center gap-2 transition-opacity hover:opacity-80; }
+
+  /* Force timeline event items to always be visible - prevent flicker */
+  .timeline-event-item {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  .timeline-event-card {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  .timeline-event-card * {
+    opacity: inherit !important;
+  }
+
+  /* Tech Logos */
+  .tech-logo { 
+    background-color: hsl(var(--accent) / 0.1);
+    border: 1px solid hsl(var(--border) / 0.5);
+    @apply w-10 h-10 rounded-lg p-2 backdrop-filter backdrop-blur-lg flex justify-center items-center transition-all;
+  }
+  .tech-logo:hover { background-color: hsl(var(--accent) / 0.2); }
+
+  /* Client Reviews */
+  .client-container { @apply grid md:grid-cols-2 grid-cols-1 gap-6 mt-12; }
+  .client-review { 
+    background-color: hsl(var(--card) / 0.5);
+    border: 1px solid hsl(var(--border));
+    @apply rounded-xl md:p-10 p-6 col-span-1 backdrop-blur-sm transition-all;
+  }
+  .client-review:hover { border-color: hsl(var(--primary) / 0.5); }
+  .client-content { @apply flex lg:flex-row flex-col justify-between lg:items-center items-start gap-5 mt-7; }
+
+  /* Work/Projects */
+  .work-container { @apply grid lg:grid-cols-3 grid-cols-1 gap-6 mt-12; }
+  .work-canvas { 
+    background-color: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    @apply col-span-1 rounded-xl overflow-hidden;
+  }
+  .work-content { 
+    background-color: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    @apply col-span-2 rounded-xl;
+  }
+  .work-content_container { 
+    @apply grid grid-cols-[auto_1fr] items-start gap-5 transition-all ease-in-out duration-300 cursor-pointer rounded-lg sm:px-5 px-3 py-3;
+  }
+  .work-content_container:hover { background-color: hsl(var(--accent) / 0.05); }
+  .work-content_logo { 
+    background-color: hsl(var(--accent) / 0.1);
+    border: 1px solid hsl(var(--border));
+    @apply rounded-2xl w-16 h-16 p-2;
+  }
+  .work-content_bar { 
+    background-color: hsl(var(--border));
+    @apply flex-1 w-0.5 mt-4 h-full group-last:hidden transition-colors;
+  }
+  .work-content_bar.group-hover\:bg-primary\/50:hover { background-color: hsl(var(--primary) / 0.5); }
+
+  /* Contact Form */
+  .contact-container { @apply max-w-xl relative z-10 sm:px-10 px-5 mt-12; }
+  .field-label { 
+    color: hsl(var(--foreground));
+    @apply text-base font-medium mb-2 block;
+  }
+  .field-input { 
+    background-color: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    color: hsl(var(--foreground));
+    @apply w-full px-5 py-3 min-h-14 rounded-lg text-base transition-all focus:outline-none focus:ring-2;
+  }
+  .field-input::placeholder { color: hsl(var(--muted-foreground)); }
+  .field-input:focus { 
+    border-color: hsl(var(--primary));
+    ring-color: hsl(var(--primary) / 0.5);
+  }
+  .field-btn { 
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    @apply px-6 py-3 min-h-12 rounded-lg flex justify-center items-center text-base font-medium gap-3 transition-all hover:opacity-90 active:scale-95;
+  }
+  .field-btn_arrow { @apply w-2.5 h-2.5 object-contain; }
+
+  /* Social Icons */
+  .social-icon { 
+    background-color: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    @apply w-12 h-12 rounded-full flex justify-center items-center transition-all;
+  }
+  .social-icon:hover { 
+    border-color: hsl(var(--primary) / 0.5);
+    background-color: hsl(var(--accent) / 0.1);
+  }
+
+  /* Gradient Utilities */
+  .gradient-primary { @apply bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600; }
+  .gradient-text { @apply bg-gradient-to-r from-blue-400 via-cyan-400 to-sky-400 bg-clip-text text-transparent; }
+  .gradient-border { @apply border border-transparent bg-gradient-to-r from-blue-500 via-cyan-500 to-sky-500 bg-clip-border; }
+}
+
+/* Manuel CSS – Değişiklik yok */
+.waving-hand {
+  animation: wave-animation 2.5s infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+.arrow-gradient {
+  background-image: linear-gradient(to right, rgba(255,255,255,0.1) 10%, rgba(255,255,255,0.000025) 50%, rgba(255,255,255,0.025) 100%);
+}
+
+@keyframes wave-animation {
+  0%   { transform: rotate(0deg); }
+  15%  { transform: rotate(14deg); }
+  30%  { transform: rotate(-8deg); }
+  40%  { transform: rotate(14deg); }
+  50%  { transform: rotate(-4deg); }
+  60%  { transform: rotate(10deg); }
+  70%  { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #020617;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background: radial-gradient(circle at top, #0a0a2a, #000);
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+}
+
+.trail {
+  position: absolute;
+  width: 10px;
+  height: 1px;
+  background: white;
+  opacity: 0;
+  transform-origin: left center;
+}
+
+.trail:nth-child(1) { transform: rotate(-20deg); top: 0; left: -5px; animation-delay: 0s; }
+.trail:nth-child(2) { transform: rotate(0deg);    top: 2px; left: -5px; animation-delay: 0.2s; }
+.trail:nth-child(3) { transform: rotate(20deg);  top: 4px; left: -5px; animation-delay: 0.4s; }
+
+.trail { animation: blink 1s infinite; }
+
+@keyframes blink {
+  0%, 70%, 100% { opacity: 0; }
+  35% { opacity: 0.5; }
+}
+
+.subliminal-logo {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  pointer-events: none;
+  animation: showLogo 5s infinite;
+  animation-delay: var(--random-delay);
+}
+
+@keyframes showLogo {
+  0%, 80%, 100% { opacity: 0; transform: scale(0.8) rotate(0deg); }
+  40%, 60% { opacity: 0.2; transform: scale(1) rotate(5deg); }
+}
+
+/* Hide BentoCard title and description for CalBooking card */
+.hide-bento-content > div.p-4 {
+  display: none !important;
+}
+
+/* GSAP Animation Performance Optimization */
+.stagger-item,
+.contact-item,
+.about-item,
+.testimonial-title,
+.testimonial-card {
+  will-change: transform, opacity;
+}
+
+@theme inline {
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  @keyframes marquee {
+  from {
+    transform: translateX(0);
+    }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+    }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+}
+

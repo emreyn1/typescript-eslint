@@ -1,0 +1,39 @@
+# prefer-set-has
+
+📝 Prefer `Set#has()` over `Array#includes()` when checking for existence or non-existence.
+
+💼 This rule is enabled in the following [configs](https://github.com/sindresorhus/eslint-plugin-unicorn#recommended-config): ✅ `recommended`, ☑️ `unopinionated`.
+
+🔧💡 This rule is automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/latest/user-guide/command-line-interface#--fix) and manually fixable by [editor suggestions](https://eslint.org/docs/latest/use/core-concepts#rule-suggestions).
+
+<!-- end auto-generated rule header -->
+<!-- Do not manually modify this header. Run: `npm run fix:eslint-docs` -->
+
+[`Set#has()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) is faster than [`Array#includes()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes).
+
+## Examples
+
+```js
+// ❌
+const array = [1, 2, 3];
+const hasValue = value => array.includes(value);
+
+// ✅
+const set = new Set([1, 2, 3]);
+const hasValue = value => set.has(value);
+```
+
+```js
+// ✅
+// This array is not only checking existence.
+const array = [1, 2];
+const hasValue = value => array.includes(value);
+array.push(3);
+```
+
+```js
+// ✅
+// This array is only checked once.
+const array = [1, 2, 3];
+const hasOne = array.includes(1);
+```

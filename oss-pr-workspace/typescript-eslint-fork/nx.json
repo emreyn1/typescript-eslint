@@ -1,0 +1,92 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "plugins": [
+    {
+      "plugin": "@nx/js/typescript",
+      "exclude": ["packages/integration-tests/fixtures/**"],
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        },
+        "build": {
+          "targetName": "build",
+          "configName": "tsconfig.build.json"
+        }
+      }
+    },
+    {
+      "plugin": "@nx/vitest",
+      "exclude": ["*"],
+      "options": {
+        "testTargetName": "test",
+        "typecheckTargetName": "vitest:typecheck"
+      }
+    }
+  ],
+  "release": {
+    "projects": [
+      "!repo",
+      "!website*",
+      "!integration-tests",
+      "!eslint-plugin-internal"
+    ],
+    "changelog": {
+      "workspaceChangelog": {
+        "createRelease": "github",
+        "renderer": "{workspaceRoot}/tools/release/changelog-renderer"
+      },
+      "projectChangelogs": {
+        "renderer": "{workspaceRoot}/tools/release/changelog-renderer"
+      }
+    },
+    "version": {
+      "conventionalCommits": true,
+      "preserveMatchingDependencyRanges": false
+    }
+  },
+  "targetDefaults": {
+    "lint": {
+      "cache": false,
+      "dependsOn": ["eslint-plugin-internal:build", "typescript-eslint:build"],
+      "options": {
+        "cwd": "{workspaceRoot}",
+        "config": "{workspaceRoot}/eslint.config.mjs",
+        "args": ["{projectRoot}"]
+      }
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "options": {
+        "config": "vitest.config.mts"
+      },
+      "outputs": ["{projectRoot}/coverage"]
+    }
+  },
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "sharedGlobals": [
+      "{workspaceRoot}/.github/workflows/ci.yml",
+      {
+        "runtime": "node -v"
+      },
+      {
+        "runtime": "pnpm -v"
+      },
+      {
+        "runtime": "echo $NETLIFY"
+      }
+    ],
+    "production": [
+      "default",
+      "!{projectRoot}/**/?(*.)+(test).?(m|c)[jt]s?(x)?(.snap|.shot)",
+      "!{projectRoot}/tests",
+      "!{projectRoot}/tools",
+      "!{projectRoot}/tsconfig.spec.json",
+      "!{projectRoot}/vitest.config.mts"
+    ]
+  },
+  "nxCloudId": "60b38765e74d975e3faae5ad",
+  "sync": {
+    "applyChanges": true
+  }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>STUN/TURN Test</title>
+</head>
+<body>
+    <h1>STUN/TURN Server Test</h1>
+    <button onclick="testSTUN()">Test STUN</button>
+    <button onclick="testTURN()">Test TURN</button>
+    <div id="results"></div>
+
+    <script>
+        async function testSTUN() {
+            const results = document.getElementById('results');
+            results.innerHTML = '<p>Testing STUN servers...</p>';
+            
+            const pc = new RTCPeerConnection({
+                iceServers: [
+                    { urls: 'stun:stun1.l.google.com:19302' },
+                    { urls: 'stun:stun2.l.google.com:19302' }
+                ]
+            });
+            
+            let candidates = [];
+            pc.onicecandidate = (event) => {
+                if (event.candidate) {
+                    candidates.push(event.candidate);
+                    console.log('STUN candidate:', event.candidate);
+                } else {
+                    results.innerHTML += `<p>✅ STUN Test Complete. Found ${candidates.length} candidates.</p>`;
+                    results.innerHTML += `<pre>${candidates.map(c => c.candidate).join('\n')}</pre>`;
+                    pc.close();
+                }
+            };
+            
+            try {
+                await pc.createDataChannel('test');
+                const offer = await pc.createOffer();
+                await pc.setLocalDescription(offer);
+            } catch (error) {
+                results.innerHTML += `<p>❌ STUN Test Error: ${error.message}</p>`;
+            }
+        }
+        
+        async function testTURN() {
+            const results = document.getElementById('results');
+            results.innerHTML += '<p>Testing TURN server...</p>';
+            
+            try {
+                const response = await fetch(
+                    'https://naber.metered.live/api/v1/turn/credential?secretKey=OlX6F4mEY5xdUkSB2S4-eoi-XCIPSXF_yGbSG3lpDwGiuem7',
+                    {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ expiryInSeconds: 3600, label: 'test' })
+                    }
+                );
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${await response.text()}`);
+                }
+                
+                const credential = await response.json();
+                results.innerHTML += `<p>✅ TURN Credentials Received:</p>`;
+                results.innerHTML += `<pre>Username: ${credential.username}\nPassword: ${credential.password ? '***' : 'missing'}</pre>`;
+                
+                // Test TURN connection
+                const pc = new RTCPeerConnection({
+                    iceServers: [
+                        { 
+                            urls: [`turn:naber.metered.live:3478`, `turns:naber.metered.live:5349`],
+                            username: credential.username,
+                            credential: credential.password
+                        }
+                    ]
+                });
+                
+                let candidates = [];
+                pc.onicecandidate = (event) => {
+                    if (event.candidate) {
+                        candidates.push(event.candidate);
+                        console.log('TURN candidate:', event.candidate);
+                        if (event.candidate.candidate.includes('relay')) {
+                            results.innerHTML += `<p>✅ TURN relay candidate found!</p>`;
+                        }
+                    } else {
+                        results.innerHTML += `<p>✅ TURN Test Complete. Found ${candidates.length} candidates.</p>`;
+                        results.innerHTML += `<pre>${candidates.map(c => c.candidate).join('\n')}</pre>`;
+                        pc.close();
+                    }
+                };
+                
+                await pc.createDataChannel('test');
+                const offer = await pc.createOffer();
+                await pc.setLocalDescription(offer);
+                
+            } catch (error) {
+                results.innerHTML += `<p>❌ TURN Test Error: ${error.message}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,7 @@
+{
+  "packages/eslint-plugin/tests/rules/prefer-optional-chain/prefer-optional-chain.test.ts": {
+    "@typescript-eslint/internal/no-dynamic-tests": {
+      "count": 17
+    }
+  }
+}

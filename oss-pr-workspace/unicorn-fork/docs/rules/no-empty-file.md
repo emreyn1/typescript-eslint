@@ -1,0 +1,74 @@
+# no-empty-file
+
+📝 Disallow empty files.
+
+💼 This rule is enabled in the following [configs](https://github.com/sindresorhus/eslint-plugin-unicorn#recommended-config): ✅ `recommended`, ☑️ `unopinionated`.
+
+<!-- end auto-generated rule header -->
+<!-- Do not manually modify this header. Run: `npm run fix:eslint-docs` -->
+
+Meaningless files clutter a codebase.
+
+Disallow any files only containing the following:
+
+- Whitespace
+- Comments
+- Directives
+- Empty statements
+- Empty block statements
+- Hashbang
+
+## Examples
+
+These files fail:
+
+```js
+
+```
+
+```js
+// Comment
+```
+
+```js
+/* Comment */
+```
+
+```js
+'use strict';
+```
+
+```js
+;
+```
+
+```js
+{
+}
+```
+
+```js
+#!/usr/bin/env node
+```
+
+These files pass:
+
+```js
+const x = 0;
+```
+
+```js
+'use strict';
+const x = 0;
+```
+
+```js
+;;
+const x = 0;
+```
+
+```js
+{
+	const x = 0;
+}
+```
