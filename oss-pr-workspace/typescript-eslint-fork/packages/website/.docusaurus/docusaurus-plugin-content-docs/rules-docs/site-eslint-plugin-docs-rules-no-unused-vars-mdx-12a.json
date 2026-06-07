@@ -1,0 +1,26 @@
+{
+  "id": "no-unused-vars",
+  "title": "no-unused-vars",
+  "description": "Disallow unused variables.",
+  "source": "@site/../eslint-plugin/docs/rules/no-unused-vars.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-unused-vars",
+  "permalink": "/rules/no-unused-vars",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-unused-vars.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow unused variables."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-unused-private-class-members",
+    "permalink": "/rules/no-unused-private-class-members"
+  },
+  "next": {
+    "title": "no-use-before-define",
+    "permalink": "/rules/no-use-before-define"
+  }
+}

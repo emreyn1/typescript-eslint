@@ -1,0 +1,27 @@
+{
+  "id": "packages/eslint-plugin-tslint",
+  "title": "@typescript-eslint/eslint-plugin-tslint",
+  "description": "ESLint plugin that allows running TSLint rules within ESLint to help you migrate from TSLint to ESLint. ✨",
+  "source": "@site/../../docs/packages/ESLint_Plugin_TSLint.mdx",
+  "sourceDirName": "packages",
+  "slug": "/packages/eslint-plugin-tslint",
+  "permalink": "/packages/eslint-plugin-tslint",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/packages/ESLint_Plugin_TSLint.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "eslint-plugin-tslint",
+    "sidebar_label": "eslint-plugin-tslint"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "eslint-plugin",
+    "permalink": "/packages/eslint-plugin"
+  },
+  "next": {
+    "title": "parser",
+    "permalink": "/packages/parser"
+  }
+}

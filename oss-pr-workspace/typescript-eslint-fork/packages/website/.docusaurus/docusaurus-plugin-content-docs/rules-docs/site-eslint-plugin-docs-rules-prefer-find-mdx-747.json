@@ -1,0 +1,26 @@
+{
+  "id": "prefer-find",
+  "title": "prefer-find",
+  "description": "Enforce the use of Array.prototype.find() over Array.prototype.filter() followed by [0] when looking for a single result.",
+  "source": "@site/../eslint-plugin/docs/rules/prefer-find.mdx",
+  "sourceDirName": ".",
+  "slug": "/prefer-find",
+  "permalink": "/rules/prefer-find",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/prefer-find.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce the use of Array.prototype.find() over Array.prototype.filter() followed by [0] when looking for a single result."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "prefer-enum-initializers",
+    "permalink": "/rules/prefer-enum-initializers"
+  },
+  "next": {
+    "title": "prefer-for-of",
+    "permalink": "/rules/prefer-for-of"
+  }
+}

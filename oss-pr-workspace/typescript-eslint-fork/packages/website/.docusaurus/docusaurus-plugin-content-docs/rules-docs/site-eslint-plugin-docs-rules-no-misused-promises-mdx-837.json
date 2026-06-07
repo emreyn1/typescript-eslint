@@ -1,0 +1,26 @@
+{
+  "id": "no-misused-promises",
+  "title": "no-misused-promises",
+  "description": "Disallow Promises in places not designed to handle them.",
+  "source": "@site/../eslint-plugin/docs/rules/no-misused-promises.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-misused-promises",
+  "permalink": "/rules/no-misused-promises",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-misused-promises.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow Promises in places not designed to handle them."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-misused-new",
+    "permalink": "/rules/no-misused-new"
+  },
+  "next": {
+    "title": "no-misused-spread",
+    "permalink": "/rules/no-misused-spread"
+  }
+}

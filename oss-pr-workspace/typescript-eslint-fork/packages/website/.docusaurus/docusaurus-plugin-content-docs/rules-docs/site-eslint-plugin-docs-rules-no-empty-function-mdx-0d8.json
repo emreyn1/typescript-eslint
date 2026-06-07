@@ -1,0 +1,26 @@
+{
+  "id": "no-empty-function",
+  "title": "no-empty-function",
+  "description": "Disallow empty functions.",
+  "source": "@site/../eslint-plugin/docs/rules/no-empty-function.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-empty-function",
+  "permalink": "/rules/no-empty-function",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-empty-function.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow empty functions."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-dynamic-delete",
+    "permalink": "/rules/no-dynamic-delete"
+  },
+  "next": {
+    "title": "no-empty-interface",
+    "permalink": "/rules/no-empty-interface"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "no-unnecessary-type-parameters",
+  "title": "no-unnecessary-type-parameters",
+  "description": "Disallow type parameters that aren't used multiple times.",
+  "source": "@site/../eslint-plugin/docs/rules/no-unnecessary-type-parameters.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-unnecessary-type-parameters",
+  "permalink": "/rules/no-unnecessary-type-parameters",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-unnecessary-type-parameters.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow type parameters that aren't used multiple times."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-unnecessary-type-conversion",
+    "permalink": "/rules/no-unnecessary-type-conversion"
+  },
+  "next": {
+    "title": "no-unsafe-argument",
+    "permalink": "/rules/no-unsafe-argument"
+  }
+}

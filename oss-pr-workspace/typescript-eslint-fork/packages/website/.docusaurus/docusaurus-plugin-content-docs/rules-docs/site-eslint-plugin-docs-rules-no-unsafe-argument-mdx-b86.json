@@ -1,0 +1,26 @@
+{
+  "id": "no-unsafe-argument",
+  "title": "no-unsafe-argument",
+  "description": "Disallow calling a function with a value with type `any`.",
+  "source": "@site/../eslint-plugin/docs/rules/no-unsafe-argument.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-unsafe-argument",
+  "permalink": "/rules/no-unsafe-argument",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-unsafe-argument.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow calling a function with a value with type `any`."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-unnecessary-type-parameters",
+    "permalink": "/rules/no-unnecessary-type-parameters"
+  },
+  "next": {
+    "title": "no-unsafe-assignment",
+    "permalink": "/rules/no-unsafe-assignment"
+  }
+}

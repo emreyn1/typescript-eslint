@@ -1,0 +1,15 @@
+{
+  "id": "packages/ast-spec/generated/index",
+  "title": "index",
+  "description": "Enumerations",
+  "source": "@site/../../docs/packages/ast-spec/generated/index.md",
+  "sourceDirName": "packages/ast-spec/generated",
+  "slug": "/packages/ast-spec/generated/",
+  "permalink": "/packages/ast-spec/generated/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/packages/ast-spec/generated/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

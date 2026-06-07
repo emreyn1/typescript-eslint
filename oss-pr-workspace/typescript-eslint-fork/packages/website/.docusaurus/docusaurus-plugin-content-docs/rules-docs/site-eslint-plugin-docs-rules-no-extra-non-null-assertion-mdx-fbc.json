@@ -1,0 +1,26 @@
+{
+  "id": "no-extra-non-null-assertion",
+  "title": "no-extra-non-null-assertion",
+  "description": "Disallow extra non-null assertions.",
+  "source": "@site/../eslint-plugin/docs/rules/no-extra-non-null-assertion.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-extra-non-null-assertion",
+  "permalink": "/rules/no-extra-non-null-assertion",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-extra-non-null-assertion.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow extra non-null assertions."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-explicit-any",
+    "permalink": "/rules/no-explicit-any"
+  },
+  "next": {
+    "title": "no-extraneous-class",
+    "permalink": "/rules/no-extraneous-class"
+  }
+}

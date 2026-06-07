@@ -1,0 +1,26 @@
+{
+  "id": "no-wrapper-object-types",
+  "title": "no-wrapper-object-types",
+  "description": "Disallow using confusing built-in primitive class wrappers.",
+  "source": "@site/../eslint-plugin/docs/rules/no-wrapper-object-types.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-wrapper-object-types",
+  "permalink": "/rules/no-wrapper-object-types",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-wrapper-object-types.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow using confusing built-in primitive class wrappers."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-var-requires",
+    "permalink": "/rules/no-var-requires"
+  },
+  "next": {
+    "title": "non-nullable-type-assertion-style",
+    "permalink": "/rules/non-nullable-type-assertion-style"
+  }
+}

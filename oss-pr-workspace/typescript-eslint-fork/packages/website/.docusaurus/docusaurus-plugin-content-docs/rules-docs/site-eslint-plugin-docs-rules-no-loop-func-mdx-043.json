@@ -1,0 +1,26 @@
+{
+  "id": "no-loop-func",
+  "title": "no-loop-func",
+  "description": "Disallow function declarations that contain unsafe references inside loop statements.",
+  "source": "@site/../eslint-plugin/docs/rules/no-loop-func.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-loop-func",
+  "permalink": "/rules/no-loop-func",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-loop-func.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow function declarations that contain unsafe references inside loop statements."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-invalid-void-type",
+    "permalink": "/rules/no-invalid-void-type"
+  },
+  "next": {
+    "title": "no-loss-of-precision",
+    "permalink": "/rules/no-loss-of-precision"
+  }
+}

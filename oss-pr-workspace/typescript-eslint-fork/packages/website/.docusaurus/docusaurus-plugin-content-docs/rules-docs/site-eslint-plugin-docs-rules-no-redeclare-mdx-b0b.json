@@ -1,0 +1,26 @@
+{
+  "id": "no-redeclare",
+  "title": "no-redeclare",
+  "description": "Disallow variable redeclaration.",
+  "source": "@site/../eslint-plugin/docs/rules/no-redeclare.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-redeclare",
+  "permalink": "/rules/no-redeclare",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-redeclare.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow variable redeclaration."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-non-null-assertion",
+    "permalink": "/rules/no-non-null-assertion"
+  },
+  "next": {
+    "title": "no-redundant-type-constituents",
+    "permalink": "/rules/no-redundant-type-constituents"
+  }
+}

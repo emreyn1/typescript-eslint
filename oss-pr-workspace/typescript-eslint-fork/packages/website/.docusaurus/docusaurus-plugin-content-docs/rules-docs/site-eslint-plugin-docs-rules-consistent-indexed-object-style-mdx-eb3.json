@@ -1,0 +1,26 @@
+{
+  "id": "consistent-indexed-object-style",
+  "title": "consistent-indexed-object-style",
+  "description": "Require or disallow the `Record` type.",
+  "source": "@site/../eslint-plugin/docs/rules/consistent-indexed-object-style.mdx",
+  "sourceDirName": ".",
+  "slug": "/consistent-indexed-object-style",
+  "permalink": "/rules/consistent-indexed-object-style",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/consistent-indexed-object-style.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Require or disallow the `Record` type."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "consistent-generic-constructors",
+    "permalink": "/rules/consistent-generic-constructors"
+  },
+  "next": {
+    "title": "consistent-return",
+    "permalink": "/rules/consistent-return"
+  }
+}

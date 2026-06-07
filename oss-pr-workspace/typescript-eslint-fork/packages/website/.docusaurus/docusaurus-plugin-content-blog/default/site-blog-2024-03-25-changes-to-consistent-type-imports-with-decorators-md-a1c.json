@@ -1,0 +1,62 @@
+{
+  "permalink": "/blog/changes-to-consistent-type-imports-with-decorators",
+  "source": "@site/blog/2024-03-25-changes-to-consistent-type-imports-with-decorators.md",
+  "title": "Changes to `consistent-type-imports` with Legacy Decorators and Decorator Metadata",
+  "description": "Changes to consistent-type-imports when used with decorators, experimentalDecorators, and emitDecoratorMetadata",
+  "date": "2024-03-25T00:00:00.000Z",
+  "tags": [
+    {
+      "inline": true,
+      "label": "consistent-type-imports",
+      "permalink": "/blog/tags/consistent-type-imports"
+    },
+    {
+      "inline": true,
+      "label": "experimentalDecorators",
+      "permalink": "/blog/tags/experimental-decorators"
+    },
+    {
+      "inline": true,
+      "label": "emitDecoratorMetadata",
+      "permalink": "/blog/tags/emit-decorator-metadata"
+    },
+    {
+      "inline": true,
+      "label": "typescript-eslint",
+      "permalink": "/blog/tags/typescript-eslint"
+    }
+  ],
+  "readingTime": 6.325,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Brad Zacher",
+      "title": "typescript-eslint Maintainer",
+      "url": "https://github.com/bradzacher",
+      "imageURL": "/img/team/bradzacher.jpg",
+      "key": "bradzacher",
+      "page": null
+    }
+  ],
+  "frontMatter": {
+    "authors": "bradzacher",
+    "description": "Changes to consistent-type-imports when used with decorators, experimentalDecorators, and emitDecoratorMetadata",
+    "slug": "changes-to-consistent-type-imports-with-decorators",
+    "tags": [
+      "consistent-type-imports",
+      "experimentalDecorators",
+      "emitDecoratorMetadata",
+      "typescript-eslint"
+    ],
+    "title": "Changes to `consistent-type-imports` with Legacy Decorators and Decorator Metadata"
+  },
+  "unlisted": false,
+  "prevItem": {
+    "title": "Announcing typescript-eslint v8 Beta",
+    "permalink": "/blog/announcing-typescript-eslint-v8-beta"
+  },
+  "nextItem": {
+    "title": "Announcing typescript-eslint v7",
+    "permalink": "/blog/announcing-typescript-eslint-v7"
+  }
+}

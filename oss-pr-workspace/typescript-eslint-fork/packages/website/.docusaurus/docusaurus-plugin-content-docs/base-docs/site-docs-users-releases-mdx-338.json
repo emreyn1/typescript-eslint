@@ -1,0 +1,28 @@
+{
+  "id": "users/releases",
+  "title": "Releases",
+  "description": "Latest",
+  "source": "@site/../../docs/users/Releases.mdx",
+  "sourceDirName": "users",
+  "slug": "/users/releases",
+  "permalink": "/users/releases",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/users/Releases.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "releases",
+    "sidebar_label": "Releases",
+    "title": "Releases"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Dependency Versions",
+    "permalink": "/users/dependency-versions"
+  },
+  "next": {
+    "title": "Versioning",
+    "permalink": "/users/versioning"
+  }
+}

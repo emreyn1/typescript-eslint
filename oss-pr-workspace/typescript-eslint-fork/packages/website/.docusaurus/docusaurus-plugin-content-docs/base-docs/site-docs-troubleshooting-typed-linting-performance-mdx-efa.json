@@ -1,0 +1,28 @@
+{
+  "id": "troubleshooting/typed-linting/performance",
+  "title": "Performance",
+  "description": "As mentioned in Linting with Type Information, if you're using type-aware linting, your lint times should be roughly the same as your build times.",
+  "source": "@site/../../docs/troubleshooting/typed-linting/Performance.mdx",
+  "sourceDirName": "troubleshooting/typed-linting",
+  "slug": "/troubleshooting/typed-linting/performance",
+  "permalink": "/troubleshooting/typed-linting/performance",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/troubleshooting/typed-linting/Performance.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "performance",
+    "slug": "/troubleshooting/typed-linting/performance",
+    "title": "Performance"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Monorepo Configuration",
+    "permalink": "/troubleshooting/typed-linting/monorepos"
+  },
+  "next": {
+    "title": "Users",
+    "permalink": "/users/"
+  }
+}

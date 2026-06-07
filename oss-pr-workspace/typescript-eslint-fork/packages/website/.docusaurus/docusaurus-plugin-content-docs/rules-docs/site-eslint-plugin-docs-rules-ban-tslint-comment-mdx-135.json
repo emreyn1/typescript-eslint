@@ -1,0 +1,26 @@
+{
+  "id": "ban-tslint-comment",
+  "title": "ban-tslint-comment",
+  "description": "Disallow `// tslint:<rule-flag>` comments.",
+  "source": "@site/../eslint-plugin/docs/rules/ban-tslint-comment.mdx",
+  "sourceDirName": ".",
+  "slug": "/ban-tslint-comment",
+  "permalink": "/rules/ban-tslint-comment",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/ban-tslint-comment.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow `// tslint:<rule-flag>` comments."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "ban-ts-comment",
+    "permalink": "/rules/ban-ts-comment"
+  },
+  "next": {
+    "title": "class-literal-property-style",
+    "permalink": "/rules/class-literal-property-style"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "troubleshooting/typed-linting/index",
+  "title": "Typed Linting",
+  "description": "Editor ESLint reports become out-of-date after file changes",
+  "source": "@site/../../docs/troubleshooting/typed-linting/index.mdx",
+  "sourceDirName": "troubleshooting/typed-linting",
+  "slug": "/troubleshooting/typed-linting",
+  "permalink": "/troubleshooting/typed-linting",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/troubleshooting/typed-linting/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "index",
+    "title": "Typed Linting",
+    "slug": "/troubleshooting/typed-linting"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "TypeScript",
+    "permalink": "/troubleshooting/faqs/typescript"
+  },
+  "next": {
+    "title": "Monorepo Configuration",
+    "permalink": "/troubleshooting/typed-linting/monorepos"
+  }
+}

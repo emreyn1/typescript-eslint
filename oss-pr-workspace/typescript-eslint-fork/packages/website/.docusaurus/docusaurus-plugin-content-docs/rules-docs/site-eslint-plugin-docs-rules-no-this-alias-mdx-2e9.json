@@ -1,0 +1,26 @@
+{
+  "id": "no-this-alias",
+  "title": "no-this-alias",
+  "description": "Disallow aliasing `this`.",
+  "source": "@site/../eslint-plugin/docs/rules/no-this-alias.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-this-alias",
+  "permalink": "/rules/no-this-alias",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-this-alias.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow aliasing `this`."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-shadow",
+    "permalink": "/rules/no-shadow"
+  },
+  "next": {
+    "title": "no-type-alias",
+    "permalink": "/rules/no-type-alias"
+  }
+}

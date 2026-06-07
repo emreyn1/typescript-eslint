@@ -1,0 +1,15 @@
+{
+  "id": "packages/tsconfig-utils/generated/index",
+  "title": "index",
+  "description": "Functions",
+  "source": "@site/../../docs/packages/tsconfig-utils/generated/index.md",
+  "sourceDirName": "packages/tsconfig-utils/generated",
+  "slug": "/packages/tsconfig-utils/generated/",
+  "permalink": "/packages/tsconfig-utils/generated/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/packages/tsconfig-utils/generated/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

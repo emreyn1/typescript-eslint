@@ -1,0 +1,26 @@
+{
+  "id": "max-params",
+  "title": "max-params",
+  "description": "Enforce a maximum number of parameters in function definitions.",
+  "source": "@site/../eslint-plugin/docs/rules/max-params.mdx",
+  "sourceDirName": ".",
+  "slug": "/max-params",
+  "permalink": "/rules/max-params",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/max-params.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce a maximum number of parameters in function definitions."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "init-declarations",
+    "permalink": "/rules/init-declarations"
+  },
+  "next": {
+    "title": "member-ordering",
+    "permalink": "/rules/member-ordering"
+  }
+}

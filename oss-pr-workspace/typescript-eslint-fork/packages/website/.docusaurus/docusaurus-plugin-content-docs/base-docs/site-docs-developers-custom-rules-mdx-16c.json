@@ -1,0 +1,28 @@
+{
+  "id": "developers/custom-rules",
+  "title": "Custom Rules",
+  "description": "This page describes how to write your own custom ESLint rules using typescript-eslint.",
+  "source": "@site/../../docs/developers/Custom_Rules.mdx",
+  "sourceDirName": "developers",
+  "slug": "/developers/custom-rules",
+  "permalink": "/developers/custom-rules",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/developers/Custom_Rules.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "custom-rules",
+    "sidebar_label": "Building Custom Rules",
+    "title": "Custom Rules"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Developers",
+    "permalink": "/developers"
+  },
+  "next": {
+    "title": "Building ESLint Plugins",
+    "permalink": "/developers/eslint-plugins"
+  }
+}

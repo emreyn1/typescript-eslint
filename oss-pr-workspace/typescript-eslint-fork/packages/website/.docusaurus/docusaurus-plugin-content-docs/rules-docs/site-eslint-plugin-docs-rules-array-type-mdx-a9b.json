@@ -1,0 +1,26 @@
+{
+  "id": "array-type",
+  "title": "array-type",
+  "description": "Require consistently using either `T[]` or `Array<T>` for arrays.",
+  "source": "@site/../eslint-plugin/docs/rules/array-type.mdx",
+  "sourceDirName": ".",
+  "slug": "/array-type",
+  "permalink": "/rules/array-type",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/array-type.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Require consistently using either `T[]` or `Array<T>` for arrays."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "adjacent-overload-signatures",
+    "permalink": "/rules/adjacent-overload-signatures"
+  },
+  "next": {
+    "title": "await-thenable",
+    "permalink": "/rules/await-thenable"
+  }
+}

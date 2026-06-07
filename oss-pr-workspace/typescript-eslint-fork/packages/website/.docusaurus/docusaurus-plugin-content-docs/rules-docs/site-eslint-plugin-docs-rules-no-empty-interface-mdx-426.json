@@ -1,0 +1,26 @@
+{
+  "id": "no-empty-interface",
+  "title": "no-empty-interface",
+  "description": "Disallow the declaration of empty interfaces.",
+  "source": "@site/../eslint-plugin/docs/rules/no-empty-interface.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-empty-interface",
+  "permalink": "/rules/no-empty-interface",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-empty-interface.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow the declaration of empty interfaces."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-empty-function",
+    "permalink": "/rules/no-empty-function"
+  },
+  "next": {
+    "title": "no-empty-object-type",
+    "permalink": "/rules/no-empty-object-type"
+  }
+}

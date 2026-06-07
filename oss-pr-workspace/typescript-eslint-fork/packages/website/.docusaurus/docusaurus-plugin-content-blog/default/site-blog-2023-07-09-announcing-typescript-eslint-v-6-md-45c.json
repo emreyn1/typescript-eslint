@@ -1,0 +1,62 @@
+{
+  "permalink": "/blog/announcing-typescript-eslint-v6",
+  "source": "@site/blog/2023-07-09-announcing-typescript-eslint-v6.md",
+  "title": "Announcing typescript-eslint v6",
+  "description": "Announcing the release of typescript-eslint's stable v6 release, including its changes and timeline.",
+  "date": "2023-07-09T00:00:00.000Z",
+  "tags": [
+    {
+      "inline": true,
+      "label": "breaking changes",
+      "permalink": "/blog/tags/breaking-changes"
+    },
+    {
+      "inline": true,
+      "label": "typescript-eslint",
+      "permalink": "/blog/tags/typescript-eslint"
+    },
+    {
+      "inline": true,
+      "label": "v5",
+      "permalink": "/blog/tags/v-5"
+    },
+    {
+      "inline": true,
+      "label": "v6",
+      "permalink": "/blog/tags/v-6"
+    }
+  ],
+  "readingTime": 17.095,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Josh Goldberg",
+      "title": "typescript-eslint Maintainer",
+      "url": "https://github.com/JoshuaKGoldberg",
+      "imageURL": "/img/team/joshuakgoldberg.jpg",
+      "key": "joshuakgoldberg",
+      "page": null
+    }
+  ],
+  "frontMatter": {
+    "authors": "joshuakgoldberg",
+    "description": "Announcing the release of typescript-eslint's stable v6 release, including its changes and timeline.",
+    "slug": "announcing-typescript-eslint-v6",
+    "tags": [
+      "breaking changes",
+      "typescript-eslint",
+      "v5",
+      "v6"
+    ],
+    "title": "Announcing typescript-eslint v6"
+  },
+  "unlisted": false,
+  "prevItem": {
+    "title": "Relative TSConfig Projects with `parserOptions.project = true`",
+    "permalink": "/blog/parser-options-project-true"
+  },
+  "nextItem": {
+    "title": "Announcing typescript-eslint v6 Beta",
+    "permalink": "/blog/announcing-typescript-eslint-v6-beta"
+  }
+}

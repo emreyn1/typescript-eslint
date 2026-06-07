@@ -1,0 +1,23 @@
+{
+  "id": "maintenance/team",
+  "title": "Team",
+  "description": "The typescript-eslint organization is an independent open source project.",
+  "source": "@site/../../docs/maintenance/Team.mdx",
+  "sourceDirName": "maintenance",
+  "slug": "/maintenance/team",
+  "permalink": "/maintenance/team",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/maintenance/Team.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "team",
+    "title": "Team"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Dependency Version Upgrades",
+    "permalink": "/maintenance/pull-requests/dependency-version-upgrades"
+  }
+}

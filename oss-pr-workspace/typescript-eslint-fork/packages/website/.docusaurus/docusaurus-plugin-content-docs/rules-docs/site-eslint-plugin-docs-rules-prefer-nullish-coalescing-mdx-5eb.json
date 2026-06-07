@@ -1,0 +1,26 @@
+{
+  "id": "prefer-nullish-coalescing",
+  "title": "prefer-nullish-coalescing",
+  "description": "Enforce using the nullish coalescing operator instead of logical assignments or chaining.",
+  "source": "@site/../eslint-plugin/docs/rules/prefer-nullish-coalescing.mdx",
+  "sourceDirName": ".",
+  "slug": "/prefer-nullish-coalescing",
+  "permalink": "/rules/prefer-nullish-coalescing",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/prefer-nullish-coalescing.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce using the nullish coalescing operator instead of logical assignments or chaining."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "prefer-namespace-keyword",
+    "permalink": "/rules/prefer-namespace-keyword"
+  },
+  "next": {
+    "title": "prefer-optional-chain",
+    "permalink": "/rules/prefer-optional-chain"
+  }
+}

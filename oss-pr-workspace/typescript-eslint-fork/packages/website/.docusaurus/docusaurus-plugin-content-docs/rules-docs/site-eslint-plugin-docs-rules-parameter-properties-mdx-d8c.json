@@ -1,0 +1,26 @@
+{
+  "id": "parameter-properties",
+  "title": "parameter-properties",
+  "description": "Require or disallow parameter properties in class constructors.",
+  "source": "@site/../eslint-plugin/docs/rules/parameter-properties.mdx",
+  "sourceDirName": ".",
+  "slug": "/parameter-properties",
+  "permalink": "/rules/parameter-properties",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/parameter-properties.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Require or disallow parameter properties in class constructors."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "only-throw-error",
+    "permalink": "/rules/only-throw-error"
+  },
+  "next": {
+    "title": "prefer-as-const",
+    "permalink": "/rules/prefer-as-const"
+  }
+}

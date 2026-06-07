@@ -1,0 +1,26 @@
+{
+  "id": "no-magic-numbers",
+  "title": "no-magic-numbers",
+  "description": "Disallow magic numbers.",
+  "source": "@site/../eslint-plugin/docs/rules/no-magic-numbers.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-magic-numbers",
+  "permalink": "/rules/no-magic-numbers",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-magic-numbers.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow magic numbers."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-loss-of-precision",
+    "permalink": "/rules/no-loss-of-precision"
+  },
+  "next": {
+    "title": "no-meaningless-void-operator",
+    "permalink": "/rules/no-meaningless-void-operator"
+  }
+}

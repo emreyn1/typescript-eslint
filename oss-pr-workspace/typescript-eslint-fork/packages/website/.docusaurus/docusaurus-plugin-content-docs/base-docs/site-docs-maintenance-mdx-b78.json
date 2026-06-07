@@ -1,0 +1,28 @@
+{
+  "id": "maintenance",
+  "title": "Maintenance Guide",
+  "description": "This is the maintainers guide to working on typescript-eslint.",
+  "source": "@site/../../docs/Maintenance.mdx",
+  "sourceDirName": ".",
+  "slug": "/maintenance",
+  "permalink": "/maintenance",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/Maintenance.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "maintenance",
+    "sidebar_label": "Maintenance Guide",
+    "title": "Maintenance Guide"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "AI Contribution Policy",
+    "permalink": "/contributing/ai-policy"
+  },
+  "next": {
+    "title": "Branding",
+    "permalink": "/maintenance/branding"
+  }
+}

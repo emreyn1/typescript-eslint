@@ -1,0 +1,15 @@
+{
+  "id": "packages/type-utils/generated/index",
+  "title": "index",
+  "description": "Functions",
+  "source": "@site/../../docs/packages/type-utils/generated/index.md",
+  "sourceDirName": "packages/type-utils/generated",
+  "slug": "/packages/type-utils/generated/",
+  "permalink": "/packages/type-utils/generated/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/packages/type-utils/generated/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

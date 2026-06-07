@@ -1,0 +1,26 @@
+{
+  "id": "no-unnecessary-type-assertion",
+  "title": "no-unnecessary-type-assertion",
+  "description": "Disallow type assertions that do not change the type of an expression.",
+  "source": "@site/../eslint-plugin/docs/rules/no-unnecessary-type-assertion.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-unnecessary-type-assertion",
+  "permalink": "/rules/no-unnecessary-type-assertion",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-unnecessary-type-assertion.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow type assertions that do not change the type of an expression."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-unnecessary-type-arguments",
+    "permalink": "/rules/no-unnecessary-type-arguments"
+  },
+  "next": {
+    "title": "no-unnecessary-type-constraint",
+    "permalink": "/rules/no-unnecessary-type-constraint"
+  }
+}

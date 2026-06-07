@@ -1,0 +1,26 @@
+{
+  "id": "promise-function-async",
+  "title": "promise-function-async",
+  "description": "Require any function or method that returns a Promise to be marked async.",
+  "source": "@site/../eslint-plugin/docs/rules/promise-function-async.mdx",
+  "sourceDirName": ".",
+  "slug": "/promise-function-async",
+  "permalink": "/rules/promise-function-async",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/promise-function-async.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Require any function or method that returns a Promise to be marked async."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "prefer-ts-expect-error",
+    "permalink": "/rules/prefer-ts-expect-error"
+  },
+  "next": {
+    "title": "related-getter-setter-pairs",
+    "permalink": "/rules/related-getter-setter-pairs"
+  }
+}

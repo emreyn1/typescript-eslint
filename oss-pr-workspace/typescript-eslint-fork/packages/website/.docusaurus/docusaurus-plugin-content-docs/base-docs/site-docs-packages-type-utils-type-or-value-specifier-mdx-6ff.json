@@ -1,0 +1,27 @@
+{
+  "id": "packages/type-utils/type-or-value-specifier",
+  "title": "TypeOrValueSpecifier",
+  "description": "Some lint rules include options to describe specific types and/or values.",
+  "source": "@site/../../docs/packages/type-utils/TypeOrValueSpecifier.mdx",
+  "sourceDirName": "packages/type-utils",
+  "slug": "/packages/type-utils/type-or-value-specifier",
+  "permalink": "/packages/type-utils/type-or-value-specifier",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/packages/type-utils/TypeOrValueSpecifier.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "type-or-value-specifier",
+    "title": "TypeOrValueSpecifier"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "type-utils",
+    "permalink": "/packages/type-utils"
+  },
+  "next": {
+    "title": "typescript-estree",
+    "permalink": "/packages/typescript-estree"
+  }
+}

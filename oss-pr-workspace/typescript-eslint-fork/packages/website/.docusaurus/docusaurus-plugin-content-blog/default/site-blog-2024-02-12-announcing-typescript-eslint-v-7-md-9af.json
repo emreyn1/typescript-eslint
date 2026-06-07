@@ -1,0 +1,68 @@
+{
+  "permalink": "/blog/announcing-typescript-eslint-v7",
+  "source": "@site/blog/2024-02-12-announcing-typescript-eslint-v7.md",
+  "title": "Announcing typescript-eslint v7",
+  "description": "Announcing the release of typescript-eslint's stable v7 release",
+  "date": "2024-02-12T00:00:00.000Z",
+  "tags": [
+    {
+      "inline": true,
+      "label": "breaking changes",
+      "permalink": "/blog/tags/breaking-changes"
+    },
+    {
+      "inline": true,
+      "label": "typescript-eslint",
+      "permalink": "/blog/tags/typescript-eslint"
+    },
+    {
+      "inline": true,
+      "label": "v6",
+      "permalink": "/blog/tags/v-6"
+    },
+    {
+      "inline": true,
+      "label": "v7",
+      "permalink": "/blog/tags/v-7"
+    },
+    {
+      "inline": true,
+      "label": "flat configs",
+      "permalink": "/blog/tags/flat-configs"
+    }
+  ],
+  "readingTime": 2.71,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Brad Zacher",
+      "title": "typescript-eslint Maintainer",
+      "url": "https://github.com/bradzacher",
+      "imageURL": "/img/team/bradzacher.jpg",
+      "key": "bradzacher",
+      "page": null
+    }
+  ],
+  "frontMatter": {
+    "authors": "bradzacher",
+    "description": "Announcing the release of typescript-eslint's stable v7 release",
+    "slug": "announcing-typescript-eslint-v7",
+    "tags": [
+      "breaking changes",
+      "typescript-eslint",
+      "v6",
+      "v7",
+      "flat configs"
+    ],
+    "title": "Announcing typescript-eslint v7"
+  },
+  "unlisted": false,
+  "prevItem": {
+    "title": "Changes to `consistent-type-imports` with Legacy Decorators and Decorator Metadata",
+    "permalink": "/blog/changes-to-consistent-type-imports-with-decorators"
+  },
+  "nextItem": {
+    "title": "Deprecating Formatting Rules",
+    "permalink": "/blog/deprecating-formatting-rules"
+  }
+}

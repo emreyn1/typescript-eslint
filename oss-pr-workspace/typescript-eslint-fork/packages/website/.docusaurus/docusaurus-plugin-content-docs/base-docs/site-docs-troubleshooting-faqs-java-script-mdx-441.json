@@ -1,0 +1,28 @@
+{
+  "id": "troubleshooting/faqs/javascript",
+  "title": "JavaScript FAQs",
+  "description": "One of my lint rules isn't working correctly on a pure JavaScript file",
+  "source": "@site/../../docs/troubleshooting/faqs/JavaScript.mdx",
+  "sourceDirName": "troubleshooting/faqs",
+  "slug": "/troubleshooting/faqs/javascript",
+  "permalink": "/troubleshooting/faqs/javascript",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/troubleshooting/faqs/JavaScript.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "javascript",
+    "sidebar_label": "JavaScript",
+    "title": "JavaScript FAQs"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Frameworks",
+    "permalink": "/troubleshooting/faqs/frameworks"
+  },
+  "next": {
+    "title": "TypeScript",
+    "permalink": "/troubleshooting/faqs/typescript"
+  }
+}

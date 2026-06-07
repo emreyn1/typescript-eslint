@@ -1,0 +1,18 @@
+{
+  "id": "padding-line-between-statements",
+  "title": "padding-line-between-statements",
+  "description": "This rule has been moved to the ESLint stylistic plugin.",
+  "source": "@site/../eslint-plugin/docs/rules/padding-line-between-statements.md",
+  "sourceDirName": ".",
+  "slug": "/padding-line-between-statements",
+  "permalink": "/rules/padding-line-between-statements",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/padding-line-between-statements.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "displayed_sidebar": "rulesSidebar"
+  },
+  "sidebar": "rulesSidebar"
+}

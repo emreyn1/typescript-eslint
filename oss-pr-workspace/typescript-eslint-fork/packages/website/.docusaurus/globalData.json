@@ -1,0 +1,1146 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "rules-docs": {
+      "path": "/rules",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/rules",
+          "mainDocId": "README",
+          "docs": [
+            {
+              "id": "adjacent-overload-signatures",
+              "path": "/rules/adjacent-overload-signatures",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "array-type",
+              "path": "/rules/array-type",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "await-thenable",
+              "path": "/rules/await-thenable",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "ban-ts-comment",
+              "path": "/rules/ban-ts-comment",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "ban-tslint-comment",
+              "path": "/rules/ban-tslint-comment",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "ban-types",
+              "path": "/rules/ban-types",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "block-spacing",
+              "path": "/rules/block-spacing",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "brace-style",
+              "path": "/rules/brace-style",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "camelcase",
+              "path": "/rules/camelcase",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "class-literal-property-style",
+              "path": "/rules/class-literal-property-style",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "class-methods-use-this",
+              "path": "/rules/class-methods-use-this",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "comma-dangle",
+              "path": "/rules/comma-dangle",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "comma-spacing",
+              "path": "/rules/comma-spacing",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "consistent-generic-constructors",
+              "path": "/rules/consistent-generic-constructors",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "consistent-indexed-object-style",
+              "path": "/rules/consistent-indexed-object-style",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "consistent-return",
+              "path": "/rules/consistent-return",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "consistent-type-assertions",
+              "path": "/rules/consistent-type-assertions",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "consistent-type-definitions",
+              "path": "/rules/consistent-type-definitions",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "consistent-type-exports",
+              "path": "/rules/consistent-type-exports",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "consistent-type-imports",
+              "path": "/rules/consistent-type-imports",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "default-param-last",
+              "path": "/rules/default-param-last",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "dot-notation",
+              "path": "/rules/dot-notation",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "explicit-function-return-type",
+              "path": "/rules/explicit-function-return-type",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "explicit-member-accessibility",
+              "path": "/rules/explicit-member-accessibility",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "explicit-module-boundary-types",
+              "path": "/rules/explicit-module-boundary-types",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "func-call-spacing",
+              "path": "/rules/func-call-spacing",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "indent",
+              "path": "/rules/indent",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "init-declarations",
+              "path": "/rules/init-declarations",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "key-spacing",
+              "path": "/rules/key-spacing",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "keyword-spacing",
+              "path": "/rules/keyword-spacing",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "lines-around-comment",
+              "path": "/rules/lines-around-comment",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "lines-between-class-members",
+              "path": "/rules/lines-between-class-members",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "max-params",
+              "path": "/rules/max-params",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "member-delimiter-style",
+              "path": "/rules/member-delimiter-style",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "member-ordering",
+              "path": "/rules/member-ordering",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "method-signature-style",
+              "path": "/rules/method-signature-style",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "naming-convention",
+              "path": "/rules/naming-convention",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-array-constructor",
+              "path": "/rules/no-array-constructor",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-array-delete",
+              "path": "/rules/no-array-delete",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-base-to-string",
+              "path": "/rules/no-base-to-string",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-confusing-non-null-assertion",
+              "path": "/rules/no-confusing-non-null-assertion",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-confusing-void-expression",
+              "path": "/rules/no-confusing-void-expression",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-deprecated",
+              "path": "/rules/no-deprecated",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-dupe-class-members",
+              "path": "/rules/no-dupe-class-members",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-duplicate-enum-values",
+              "path": "/rules/no-duplicate-enum-values",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-duplicate-imports",
+              "path": "/rules/no-duplicate-imports",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-duplicate-type-constituents",
+              "path": "/rules/no-duplicate-type-constituents",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-dynamic-delete",
+              "path": "/rules/no-dynamic-delete",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-empty-function",
+              "path": "/rules/no-empty-function",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-empty-interface",
+              "path": "/rules/no-empty-interface",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-empty-object-type",
+              "path": "/rules/no-empty-object-type",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-explicit-any",
+              "path": "/rules/no-explicit-any",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-extra-non-null-assertion",
+              "path": "/rules/no-extra-non-null-assertion",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-extra-parens",
+              "path": "/rules/no-extra-parens",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-extra-semi",
+              "path": "/rules/no-extra-semi",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-extraneous-class",
+              "path": "/rules/no-extraneous-class",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-floating-promises",
+              "path": "/rules/no-floating-promises",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-for-in-array",
+              "path": "/rules/no-for-in-array",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-implied-eval",
+              "path": "/rules/no-implied-eval",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-import-type-side-effects",
+              "path": "/rules/no-import-type-side-effects",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-inferrable-types",
+              "path": "/rules/no-inferrable-types",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-invalid-this",
+              "path": "/rules/no-invalid-this",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-invalid-void-type",
+              "path": "/rules/no-invalid-void-type",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-loop-func",
+              "path": "/rules/no-loop-func",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-loss-of-precision",
+              "path": "/rules/no-loss-of-precision",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-magic-numbers",
+              "path": "/rules/no-magic-numbers",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-meaningless-void-operator",
+              "path": "/rules/no-meaningless-void-operator",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-misused-new",
+              "path": "/rules/no-misused-new",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-misused-promises",
+              "path": "/rules/no-misused-promises",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-misused-spread",
+              "path": "/rules/no-misused-spread",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-mixed-enums",
+              "path": "/rules/no-mixed-enums",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-namespace",
+              "path": "/rules/no-namespace",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-non-null-asserted-nullish-coalescing",
+              "path": "/rules/no-non-null-asserted-nullish-coalescing",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-non-null-asserted-optional-chain",
+              "path": "/rules/no-non-null-asserted-optional-chain",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-non-null-assertion",
+              "path": "/rules/no-non-null-assertion",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-parameter-properties",
+              "path": "/rules/no-parameter-properties",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-redeclare",
+              "path": "/rules/no-redeclare",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-redundant-type-constituents",
+              "path": "/rules/no-redundant-type-constituents",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-require-imports",
+              "path": "/rules/no-require-imports",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-restricted-imports",
+              "path": "/rules/no-restricted-imports",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-restricted-types",
+              "path": "/rules/no-restricted-types",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-shadow",
+              "path": "/rules/no-shadow",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-this-alias",
+              "path": "/rules/no-this-alias",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-type-alias",
+              "path": "/rules/no-type-alias",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-unnecessary-boolean-literal-compare",
+              "path": "/rules/no-unnecessary-boolean-literal-compare",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-unnecessary-condition",
+              "path": "/rules/no-unnecessary-condition",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-unnecessary-parameter-property-assignment",
+              "path": "/rules/no-unnecessary-parameter-property-assignment",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-unnecessary-qualifier",
+              "path": "/rules/no-unnecessary-qualifier",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-unnecessary-template-expression",
+              "path": "/rules/no-unnecessary-template-expression",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-unnecessary-type-arguments",
+              "path": "/rules/no-unnecessary-type-arguments",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-unnecessary-type-assertion",
+              "path": "/rules/no-unnecessary-type-assertion",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-unnecessary-type-constraint",
+              "path": "/rules/no-unnecessary-type-constraint",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-unnecessary-type-conversion",
+              "path": "/rules/no-unnecessary-type-conversion",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-unnecessary-type-parameters",
+              "path": "/rules/no-unnecessary-type-parameters",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-unsafe-argument",
+              "path": "/rules/no-unsafe-argument",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-unsafe-assignment",
+              "path": "/rules/no-unsafe-assignment",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-unsafe-call",
+              "path": "/rules/no-unsafe-call",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-unsafe-declaration-merging",
+              "path": "/rules/no-unsafe-declaration-merging",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-unsafe-enum-comparison",
+              "path": "/rules/no-unsafe-enum-comparison",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-unsafe-function-type",
+              "path": "/rules/no-unsafe-function-type",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-unsafe-member-access",
+              "path": "/rules/no-unsafe-member-access",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-unsafe-return",
+              "path": "/rules/no-unsafe-return",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-unsafe-type-assertion",
+              "path": "/rules/no-unsafe-type-assertion",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-unsafe-unary-minus",
+              "path": "/rules/no-unsafe-unary-minus",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-unused-expressions",
+              "path": "/rules/no-unused-expressions",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-unused-private-class-members",
+              "path": "/rules/no-unused-private-class-members",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-unused-vars",
+              "path": "/rules/no-unused-vars",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-use-before-define",
+              "path": "/rules/no-use-before-define",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-useless-constructor",
+              "path": "/rules/no-useless-constructor",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-useless-default-assignment",
+              "path": "/rules/no-useless-default-assignment",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-useless-empty-export",
+              "path": "/rules/no-useless-empty-export",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-useless-template-literals",
+              "path": "/rules/no-useless-template-literals",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-var-requires",
+              "path": "/rules/no-var-requires",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "no-wrapper-object-types",
+              "path": "/rules/no-wrapper-object-types",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "non-nullable-type-assertion-style",
+              "path": "/rules/non-nullable-type-assertion-style",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "object-curly-spacing",
+              "path": "/rules/object-curly-spacing",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "only-throw-error",
+              "path": "/rules/only-throw-error",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "padding-line-between-statements",
+              "path": "/rules/padding-line-between-statements",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "parameter-properties",
+              "path": "/rules/parameter-properties",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "prefer-as-const",
+              "path": "/rules/prefer-as-const",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "prefer-destructuring",
+              "path": "/rules/prefer-destructuring",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "prefer-enum-initializers",
+              "path": "/rules/prefer-enum-initializers",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "prefer-find",
+              "path": "/rules/prefer-find",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "prefer-for-of",
+              "path": "/rules/prefer-for-of",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "prefer-function-type",
+              "path": "/rules/prefer-function-type",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "prefer-includes",
+              "path": "/rules/prefer-includes",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "prefer-literal-enum-member",
+              "path": "/rules/prefer-literal-enum-member",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "prefer-namespace-keyword",
+              "path": "/rules/prefer-namespace-keyword",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "prefer-nullish-coalescing",
+              "path": "/rules/prefer-nullish-coalescing",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "prefer-optional-chain",
+              "path": "/rules/prefer-optional-chain",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "prefer-promise-reject-errors",
+              "path": "/rules/prefer-promise-reject-errors",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "prefer-readonly",
+              "path": "/rules/prefer-readonly",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "prefer-readonly-parameter-types",
+              "path": "/rules/prefer-readonly-parameter-types",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "prefer-reduce-type-parameter",
+              "path": "/rules/prefer-reduce-type-parameter",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "prefer-regexp-exec",
+              "path": "/rules/prefer-regexp-exec",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "prefer-return-this-type",
+              "path": "/rules/prefer-return-this-type",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "prefer-string-starts-ends-with",
+              "path": "/rules/prefer-string-starts-ends-with",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "prefer-ts-expect-error",
+              "path": "/rules/prefer-ts-expect-error",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "promise-function-async",
+              "path": "/rules/promise-function-async",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "quotes",
+              "path": "/rules/quotes",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "README",
+              "path": "/rules/",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "related-getter-setter-pairs",
+              "path": "/rules/related-getter-setter-pairs",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "require-array-sort-compare",
+              "path": "/rules/require-array-sort-compare",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "require-await",
+              "path": "/rules/require-await",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "restrict-plus-operands",
+              "path": "/rules/restrict-plus-operands",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "restrict-template-expressions",
+              "path": "/rules/restrict-template-expressions",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "return-await",
+              "path": "/rules/return-await",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "semi",
+              "path": "/rules/semi",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "sort-type-constituents",
+              "path": "/rules/sort-type-constituents",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "sort-type-union-intersection-members",
+              "path": "/rules/sort-type-union-intersection-members",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "space-before-blocks",
+              "path": "/rules/space-before-blocks",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "space-before-function-paren",
+              "path": "/rules/space-before-function-paren",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "space-infix-ops",
+              "path": "/rules/space-infix-ops",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "strict-boolean-expressions",
+              "path": "/rules/strict-boolean-expressions",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "strict-void-return",
+              "path": "/rules/strict-void-return",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "switch-exhaustiveness-check",
+              "path": "/rules/switch-exhaustiveness-check",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "triple-slash-reference",
+              "path": "/rules/triple-slash-reference",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "type-annotation-spacing",
+              "path": "/rules/type-annotation-spacing",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "typedef",
+              "path": "/rules/typedef",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "unbound-method",
+              "path": "/rules/unbound-method",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "unified-signatures",
+              "path": "/rules/unified-signatures",
+              "sidebar": "rulesSidebar"
+            },
+            {
+              "id": "use-unknown-in-catch-callback-variable",
+              "path": "/rules/use-unknown-in-catch-callback-variable",
+              "sidebar": "rulesSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "rulesSidebar": {
+              "link": {
+                "path": "/rules/",
+                "label": "README"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": false
+    },
+    "base-docs": {
+      "path": "/",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/",
+          "mainDocId": "getting-started/quickstart",
+          "docs": [
+            {
+              "id": "contributing",
+              "path": "/contributing",
+              "sidebar": "docs"
+            },
+            {
+              "id": "contributing/ai-policy",
+              "path": "/contributing/ai-policy",
+              "sidebar": "docs"
+            },
+            {
+              "id": "contributing/discussions",
+              "path": "/contributing/discussions",
+              "sidebar": "docs"
+            },
+            {
+              "id": "contributing/issues",
+              "path": "/contributing/issues",
+              "sidebar": "docs"
+            },
+            {
+              "id": "contributing/local-development",
+              "path": "/contributing/local-development",
+              "sidebar": "docs"
+            },
+            {
+              "id": "contributing/local-development/local-linking",
+              "path": "/contributing/local-development/local-linking",
+              "sidebar": "docs"
+            },
+            {
+              "id": "contributing/pull-requests",
+              "path": "/contributing/pull-requests",
+              "sidebar": "docs"
+            },
+            {
+              "id": "developers",
+              "path": "/developers",
+              "sidebar": "docs"
+            },
+            {
+              "id": "developers/custom-rules",
+              "path": "/developers/custom-rules",
+              "sidebar": "docs"
+            },
+            {
+              "id": "developers/eslint-plugins",
+              "path": "/developers/eslint-plugins",
+              "sidebar": "docs"
+            },
+            {
+              "id": "getting-started/legacy-eslint-setup",
+              "path": "/getting-started/legacy-eslint-setup",
+              "sidebar": "docs"
+            },
+            {
+              "id": "getting-started/quickstart",
+              "path": "/getting-started/",
+              "sidebar": "docs"
+            },
+            {
+              "id": "getting-started/typed-linting",
+              "path": "/getting-started/typed-linting",
+              "sidebar": "docs"
+            },
+            {
+              "id": "maintenance",
+              "path": "/maintenance",
+              "sidebar": "docs"
+            },
+            {
+              "id": "maintenance/branding",
+              "path": "/maintenance/branding",
+              "sidebar": "docs"
+            },
+            {
+              "id": "maintenance/contributor-tiers",
+              "path": "/maintenance/contributor-tiers",
+              "sidebar": "docs"
+            },
+            {
+              "id": "maintenance/governance",
+              "path": "/maintenance/governance"
+            },
+            {
+              "id": "maintenance/issues",
+              "path": "/maintenance/issues",
+              "sidebar": "docs"
+            },
+            {
+              "id": "maintenance/issues/rule-deprecations-and-deletions",
+              "path": "/maintenance/issues/rule-deprecations-and-deletions",
+              "sidebar": "docs"
+            },
+            {
+              "id": "maintenance/pull-requests",
+              "path": "/maintenance/pull-requests",
+              "sidebar": "docs"
+            },
+            {
+              "id": "maintenance/pull-requests/dependency-version-upgrades",
+              "path": "/maintenance/pull-requests/dependency-version-upgrades",
+              "sidebar": "docs"
+            },
+            {
+              "id": "maintenance/releases",
+              "path": "/maintenance/releases",
+              "sidebar": "docs"
+            },
+            {
+              "id": "maintenance/team",
+              "path": "/maintenance/team",
+              "sidebar": "docs"
+            },
+            {
+              "id": "packages",
+              "path": "/packages",
+              "sidebar": "docs"
+            },
+            {
+              "id": "packages/ast-spec/generated/index",
+              "path": "/packages/ast-spec/generated/"
+            },
+            {
+              "id": "packages/eslint-plugin",
+              "path": "/packages/eslint-plugin",
+              "sidebar": "docs"
+            },
+            {
+              "id": "packages/eslint-plugin-tslint",
+              "path": "/packages/eslint-plugin-tslint",
+              "sidebar": "docs"
+            },
+            {
+              "id": "packages/parser",
+              "path": "/packages/parser",
+              "sidebar": "docs"
+            },
+            {
+              "id": "packages/project-service",
+              "path": "/packages/project-service",
+              "sidebar": "docs"
+            },
+            {
+              "id": "packages/project-service/generated/index",
+              "path": "/packages/project-service/generated/"
+            },
+            {
+              "id": "packages/rule-schema-to-typescript-types",
+              "path": "/packages/rule-schema-to-typescript-types",
+              "sidebar": "docs"
+            },
+            {
+              "id": "packages/rule-schema-to-typescript-types/generated/index",
+              "path": "/packages/rule-schema-to-typescript-types/generated/"
+            },
+            {
+              "id": "packages/rule-tester",
+              "path": "/packages/rule-tester",
+              "sidebar": "docs"
+            },
+            {
+              "id": "packages/scope-manager",
+              "path": "/packages/scope-manager",
+              "sidebar": "docs"
+            },
+            {
+              "id": "packages/tsconfig-utils",
+              "path": "/packages/tsconfig-utils",
+              "sidebar": "docs"
+            },
+            {
+              "id": "packages/tsconfig-utils/generated/index",
+              "path": "/packages/tsconfig-utils/generated/"
+            },
+            {
+              "id": "packages/type-utils",
+              "path": "/packages/type-utils",
+              "sidebar": "docs"
+            },
+            {
+              "id": "packages/type-utils/generated/index",
+              "path": "/packages/type-utils/generated/"
+            },
+            {
+              "id": "packages/type-utils/type-or-value-specifier",
+              "path": "/packages/type-utils/type-or-value-specifier",
+              "sidebar": "docs"
+            },
+            {
+              "id": "packages/typescript-eslint",
+              "path": "/packages/typescript-eslint",
+              "sidebar": "docs"
+            },
+            {
+              "id": "packages/typescript-estree",
+              "path": "/packages/typescript-estree",
+              "sidebar": "docs"
+            },
+            {
+              "id": "packages/typescript-estree/ast-spec",
+              "path": "/packages/typescript-estree/ast-spec",
+              "sidebar": "docs"
+            },
+            {
+              "id": "packages/utils",
+              "path": "/packages/utils",
+              "sidebar": "docs"
+            },
+            {
+              "id": "troubleshooting/faqs/eslint",
+              "path": "/troubleshooting/faqs/eslint",
+              "sidebar": "docs"
+            },
+            {
+              "id": "troubleshooting/faqs/frameworks",
+              "path": "/troubleshooting/faqs/frameworks",
+              "sidebar": "docs"
+            },
+            {
+              "id": "troubleshooting/faqs/general",
+              "path": "/troubleshooting/faqs/general",
+              "sidebar": "docs"
+            },
+            {
+              "id": "troubleshooting/faqs/javascript",
+              "path": "/troubleshooting/faqs/javascript",
+              "sidebar": "docs"
+            },
+            {
+              "id": "troubleshooting/faqs/typescript",
+              "path": "/troubleshooting/faqs/typescript",
+              "sidebar": "docs"
+            },
+            {
+              "id": "troubleshooting/typed-linting/index",
+              "path": "/troubleshooting/typed-linting",
+              "sidebar": "docs"
+            },
+            {
+              "id": "troubleshooting/typed-linting/monorepos",
+              "path": "/troubleshooting/typed-linting/monorepos",
+              "sidebar": "docs"
+            },
+            {
+              "id": "troubleshooting/typed-linting/performance",
+              "path": "/troubleshooting/typed-linting/performance",
+              "sidebar": "docs"
+            },
+            {
+              "id": "users/configs",
+              "path": "/users/configs",
+              "sidebar": "docs"
+            },
+            {
+              "id": "users/dependency-versions",
+              "path": "/users/dependency-versions",
+              "sidebar": "docs"
+            },
+            {
+              "id": "users/index",
+              "path": "/users/",
+              "sidebar": "docs"
+            },
+            {
+              "id": "users/releases",
+              "path": "/users/releases",
+              "sidebar": "docs"
+            },
+            {
+              "id": "users/versioning",
+              "path": "/users/versioning",
+              "sidebar": "docs"
+            },
+            {
+              "id": "users/what-about-formatting",
+              "path": "/users/what-about-formatting",
+              "sidebar": "docs"
+            },
+            {
+              "id": "users/what-about-tslint",
+              "path": "/users/what-about-tslint",
+              "sidebar": "docs"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "docs": {
+              "link": {
+                "path": "/getting-started/",
+                "label": "Getting Started"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": false
+    }
+  }
+}

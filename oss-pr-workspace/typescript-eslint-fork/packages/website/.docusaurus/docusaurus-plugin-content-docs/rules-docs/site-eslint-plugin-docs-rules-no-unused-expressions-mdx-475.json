@@ -1,0 +1,26 @@
+{
+  "id": "no-unused-expressions",
+  "title": "no-unused-expressions",
+  "description": "Disallow unused expressions.",
+  "source": "@site/../eslint-plugin/docs/rules/no-unused-expressions.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-unused-expressions",
+  "permalink": "/rules/no-unused-expressions",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-unused-expressions.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow unused expressions."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-unsafe-unary-minus",
+    "permalink": "/rules/no-unsafe-unary-minus"
+  },
+  "next": {
+    "title": "no-unused-private-class-members",
+    "permalink": "/rules/no-unused-private-class-members"
+  }
+}

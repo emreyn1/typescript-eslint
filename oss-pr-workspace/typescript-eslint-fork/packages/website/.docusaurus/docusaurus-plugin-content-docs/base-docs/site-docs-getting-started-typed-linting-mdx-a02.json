@@ -1,0 +1,27 @@
+{
+  "id": "getting-started/typed-linting",
+  "title": "Linting with Type Information",
+  "description": "Some typescript-eslint rules utilize TypeScript's type checking APIs to provide much deeper insights into your code.",
+  "source": "@site/../../docs/getting-started/Typed_Linting.mdx",
+  "sourceDirName": "getting-started",
+  "slug": "/getting-started/typed-linting",
+  "permalink": "/getting-started/typed-linting",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/getting-started/Typed_Linting.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "typed-linting",
+    "title": "Linting with Type Information"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Legacy ESLint Setup",
+    "permalink": "/getting-started/legacy-eslint-setup"
+  },
+  "next": {
+    "title": "General",
+    "permalink": "/troubleshooting/faqs/general"
+  }
+}

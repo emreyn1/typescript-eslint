@@ -1,0 +1,27 @@
+{
+  "id": "developers",
+  "title": "Developers",
+  "description": "These are the developer guides to working with the typescript-eslint tooling.",
+  "source": "@site/../../docs/Developers.mdx",
+  "sourceDirName": ".",
+  "slug": "/developers",
+  "permalink": "/developers",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/Developers.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "developers",
+    "title": "Developers"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "What About TSLint?",
+    "permalink": "/users/what-about-tslint"
+  },
+  "next": {
+    "title": "Building Custom Rules",
+    "permalink": "/developers/custom-rules"
+  }
+}

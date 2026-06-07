@@ -1,0 +1,27 @@
+{
+  "id": "packages/rule-tester",
+  "title": "@typescript-eslint/rule-tester",
+  "description": "A utility for testing ESLint rules",
+  "source": "@site/../../docs/packages/Rule_Tester.mdx",
+  "sourceDirName": "packages",
+  "slug": "/packages/rule-tester",
+  "permalink": "/packages/rule-tester",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/packages/Rule_Tester.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "rule-tester",
+    "sidebar_label": "rule-tester"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "rule-schema-to-typescript-types",
+    "permalink": "/packages/rule-schema-to-typescript-types"
+  },
+  "next": {
+    "title": "scope-manager",
+    "permalink": "/packages/scope-manager"
+  }
+}

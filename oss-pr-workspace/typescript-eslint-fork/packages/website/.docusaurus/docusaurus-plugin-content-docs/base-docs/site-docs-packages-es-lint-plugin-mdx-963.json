@@ -1,0 +1,27 @@
+{
+  "id": "packages/eslint-plugin",
+  "title": "@typescript-eslint/eslint-plugin",
+  "description": "The TypeScript plugin for ESLint. ✨",
+  "source": "@site/../../docs/packages/ESLint_Plugin.mdx",
+  "sourceDirName": "packages",
+  "slug": "/packages/eslint-plugin",
+  "permalink": "/packages/eslint-plugin",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/packages/ESLint_Plugin.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "eslint-plugin",
+    "sidebar_label": "eslint-plugin"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Packages",
+    "permalink": "/packages"
+  },
+  "next": {
+    "title": "eslint-plugin-tslint",
+    "permalink": "/packages/eslint-plugin-tslint"
+  }
+}

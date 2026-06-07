@@ -1,0 +1,26 @@
+{
+  "id": "no-useless-default-assignment",
+  "title": "no-useless-default-assignment",
+  "description": "Disallow default values that will never be used.",
+  "source": "@site/../eslint-plugin/docs/rules/no-useless-default-assignment.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-useless-default-assignment",
+  "permalink": "/rules/no-useless-default-assignment",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-useless-default-assignment.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow default values that will never be used."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-useless-constructor",
+    "permalink": "/rules/no-useless-constructor"
+  },
+  "next": {
+    "title": "no-useless-empty-export",
+    "permalink": "/rules/no-useless-empty-export"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "prefer-for-of",
+  "title": "prefer-for-of",
+  "description": "Enforce the use of `for-of` loop over the standard `for` loop where possible.",
+  "source": "@site/../eslint-plugin/docs/rules/prefer-for-of.mdx",
+  "sourceDirName": ".",
+  "slug": "/prefer-for-of",
+  "permalink": "/rules/prefer-for-of",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/prefer-for-of.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce the use of `for-of` loop over the standard `for` loop where possible."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "prefer-find",
+    "permalink": "/rules/prefer-find"
+  },
+  "next": {
+    "title": "prefer-function-type",
+    "permalink": "/rules/prefer-function-type"
+  }
+}

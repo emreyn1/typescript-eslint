@@ -1,0 +1,27 @@
+{
+  "id": "contributing/local-development/local-linking",
+  "title": "Local Linking",
+  "description": "It can sometimes be useful to try out your local typescript-eslint repository's changes in another local (\"downstream\") repository.",
+  "source": "@site/../../docs/contributing/local-development/Local_Linking.mdx",
+  "sourceDirName": "contributing/local-development",
+  "slug": "/contributing/local-development/local-linking",
+  "permalink": "/contributing/local-development/local-linking",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/contributing/local-development/Local_Linking.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "local-linking",
+    "title": "Local Linking"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Local Development",
+    "permalink": "/contributing/local-development"
+  },
+  "next": {
+    "title": "Pull Requests",
+    "permalink": "/contributing/pull-requests"
+  }
+}

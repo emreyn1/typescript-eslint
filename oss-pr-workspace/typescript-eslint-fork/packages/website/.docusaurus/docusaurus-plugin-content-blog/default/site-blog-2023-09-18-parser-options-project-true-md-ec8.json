@@ -1,0 +1,62 @@
+{
+  "permalink": "/blog/parser-options-project-true",
+  "source": "@site/blog/2023-09-18-parser-options-project-true.md",
+  "title": "Relative TSConfig Projects with `parserOptions.project = true`",
+  "description": "Simplifying how many projects resolve their",
+  "date": "2023-09-18T00:00:00.000Z",
+  "tags": [
+    {
+      "inline": true,
+      "label": "parser",
+      "permalink": "/blog/tags/parser"
+    },
+    {
+      "inline": true,
+      "label": "parser options",
+      "permalink": "/blog/tags/parser-options"
+    },
+    {
+      "inline": true,
+      "label": "project",
+      "permalink": "/blog/tags/project"
+    },
+    {
+      "inline": true,
+      "label": "tsconfig",
+      "permalink": "/blog/tags/tsconfig"
+    }
+  ],
+  "readingTime": 5.64,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Josh Goldberg",
+      "title": "typescript-eslint Maintainer",
+      "url": "https://github.com/JoshuaKGoldberg",
+      "imageURL": "/img/team/joshuakgoldberg.jpg",
+      "key": "joshuakgoldberg",
+      "page": null
+    }
+  ],
+  "frontMatter": {
+    "authors": "joshuakgoldberg",
+    "description": "Simplifying how many projects resolve their",
+    "slug": "parser-options-project-true",
+    "tags": [
+      "parser",
+      "parser options",
+      "project",
+      "tsconfig"
+    ],
+    "title": "Relative TSConfig Projects with `parserOptions.project = true`"
+  },
+  "unlisted": false,
+  "prevItem": {
+    "title": "Deprecating Formatting Rules",
+    "permalink": "/blog/deprecating-formatting-rules"
+  },
+  "nextItem": {
+    "title": "Announcing typescript-eslint v6",
+    "permalink": "/blog/announcing-typescript-eslint-v6"
+  }
+}

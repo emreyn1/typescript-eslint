@@ -1,0 +1,27 @@
+{
+  "id": "packages/typescript-estree",
+  "title": "@typescript-eslint/typescript-estree",
+  "description": "The underlying code used by @typescript-eslint/parser that converts TypeScript source code into an ESTree-compatible form. ✨",
+  "source": "@site/../../docs/packages/TypeScript_ESTree.mdx",
+  "sourceDirName": "packages",
+  "slug": "/packages/typescript-estree",
+  "permalink": "/packages/typescript-estree",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/packages/TypeScript_ESTree.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "typescript-estree",
+    "sidebar_label": "typescript-estree"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "TypeOrValueSpecifier",
+    "permalink": "/packages/type-utils/type-or-value-specifier"
+  },
+  "next": {
+    "title": "AST Specification",
+    "permalink": "/packages/typescript-estree/ast-spec"
+  }
+}

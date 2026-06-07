@@ -1,0 +1,26 @@
+{
+  "id": "prefer-function-type",
+  "title": "prefer-function-type",
+  "description": "Enforce using function types instead of interfaces with call signatures.",
+  "source": "@site/../eslint-plugin/docs/rules/prefer-function-type.mdx",
+  "sourceDirName": ".",
+  "slug": "/prefer-function-type",
+  "permalink": "/rules/prefer-function-type",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/prefer-function-type.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce using function types instead of interfaces with call signatures."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "prefer-for-of",
+    "permalink": "/rules/prefer-for-of"
+  },
+  "next": {
+    "title": "prefer-includes",
+    "permalink": "/rules/prefer-includes"
+  }
+}

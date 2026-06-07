@@ -88,3 +88,11 @@ tsconfig*.vitest-temp.json
 .cursor/mcp.json
 .cursor/rules/nx-rules.mdc
 .github/instructions/nx.instructions.md
+
+# Kiro MCP config may contain API keys — keep local, don't commit secrets
+.kiro/settings/mcp.json
+.kiro/logs/
+
+# Agent skills are installed via 'npx skills add' — treat as dependencies
+.agents/skills/
+.kiro/skills/

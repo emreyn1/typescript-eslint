@@ -1,0 +1,7 @@
+quick_setup = true
+compose_profiles = ["quick"]
+setup_database = true
+enable_rate_limiting = true
+su_password = "password"
+password = "password"
+setup_api_tokens = true

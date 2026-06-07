@@ -1,0 +1,27 @@
+{
+  "id": "contributing/local-development",
+  "title": "Local Development",
+  "description": "Thank you for your interest in developing on typescript-eslint! ❤️‍🔥",
+  "source": "@site/../../docs/contributing/Local_Development.mdx",
+  "sourceDirName": "contributing",
+  "slug": "/contributing/local-development",
+  "permalink": "/contributing/local-development",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/contributing/Local_Development.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "local-development",
+    "title": "Local Development"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Issues",
+    "permalink": "/contributing/issues"
+  },
+  "next": {
+    "title": "Local Linking",
+    "permalink": "/contributing/local-development/local-linking"
+  }
+}

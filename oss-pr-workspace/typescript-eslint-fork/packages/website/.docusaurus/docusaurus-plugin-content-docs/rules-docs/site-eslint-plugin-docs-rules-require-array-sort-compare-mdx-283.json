@@ -1,0 +1,26 @@
+{
+  "id": "require-array-sort-compare",
+  "title": "require-array-sort-compare",
+  "description": "Require `Array#sort` and `Array#toSorted` calls to always provide a `compareFunction`.",
+  "source": "@site/../eslint-plugin/docs/rules/require-array-sort-compare.mdx",
+  "sourceDirName": ".",
+  "slug": "/require-array-sort-compare",
+  "permalink": "/rules/require-array-sort-compare",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/require-array-sort-compare.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Require `Array#sort` and `Array#toSorted` calls to always provide a `compareFunction`."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "related-getter-setter-pairs",
+    "permalink": "/rules/related-getter-setter-pairs"
+  },
+  "next": {
+    "title": "require-await",
+    "permalink": "/rules/require-await"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "naming-convention",
+  "title": "naming-convention",
+  "description": "Enforce naming conventions for everything across a codebase.",
+  "source": "@site/../eslint-plugin/docs/rules/naming-convention.mdx",
+  "sourceDirName": ".",
+  "slug": "/naming-convention",
+  "permalink": "/rules/naming-convention",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/naming-convention.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce naming conventions for everything across a codebase."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "method-signature-style",
+    "permalink": "/rules/method-signature-style"
+  },
+  "next": {
+    "title": "no-array-constructor",
+    "permalink": "/rules/no-array-constructor"
+  }
+}

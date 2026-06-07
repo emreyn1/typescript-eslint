@@ -1,0 +1,27 @@
+{
+  "id": "users/dependency-versions",
+  "title": "Dependency Versions",
+  "description": "ESLint",
+  "source": "@site/../../docs/users/Dependency_Versions.mdx",
+  "sourceDirName": "users",
+  "slug": "/users/dependency-versions",
+  "permalink": "/users/dependency-versions",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/users/Dependency_Versions.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "dependency-versions",
+    "title": "Dependency Versions"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Shared Configs",
+    "permalink": "/users/configs"
+  },
+  "next": {
+    "title": "Releases",
+    "permalink": "/users/releases"
+  }
+}

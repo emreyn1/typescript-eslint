@@ -1,0 +1,26 @@
+{
+  "id": "default-param-last",
+  "title": "default-param-last",
+  "description": "Enforce default parameters to be last.",
+  "source": "@site/../eslint-plugin/docs/rules/default-param-last.mdx",
+  "sourceDirName": ".",
+  "slug": "/default-param-last",
+  "permalink": "/rules/default-param-last",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/default-param-last.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce default parameters to be last."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "consistent-type-imports",
+    "permalink": "/rules/consistent-type-imports"
+  },
+  "next": {
+    "title": "dot-notation",
+    "permalink": "/rules/dot-notation"
+  }
+}

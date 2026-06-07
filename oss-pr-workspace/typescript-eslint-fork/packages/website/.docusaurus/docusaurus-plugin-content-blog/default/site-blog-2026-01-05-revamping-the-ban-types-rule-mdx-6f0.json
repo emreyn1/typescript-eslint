@@ -1,0 +1,76 @@
+{
+  "permalink": "/blog/revamping-the-ban-types-rule",
+  "source": "@site/blog/2026-01-05-revamping-the-ban-types-rule.mdx",
+  "title": "Revamping the `ban-types` rule",
+  "description": "How the now-deprecated `ban-types` rule evolved over time to what is now several newer, targeted rules.",
+  "date": "2026-01-05T00:00:00.000Z",
+  "tags": [
+    {
+      "inline": true,
+      "label": "ban-types",
+      "permalink": "/blog/tags/ban-types"
+    },
+    {
+      "inline": true,
+      "label": "interfaces",
+      "permalink": "/blog/tags/interfaces"
+    },
+    {
+      "inline": true,
+      "label": "no-empty-object-type",
+      "permalink": "/blog/tags/no-empty-object-type"
+    },
+    {
+      "inline": true,
+      "label": "no-restricted-types",
+      "permalink": "/blog/tags/no-restricted-types"
+    },
+    {
+      "inline": true,
+      "label": "no-unsafe-function-type",
+      "permalink": "/blog/tags/no-unsafe-function-type"
+    },
+    {
+      "inline": true,
+      "label": "no-wrapper-object-types",
+      "permalink": "/blog/tags/no-wrapper-object-types"
+    },
+    {
+      "inline": true,
+      "label": "objects",
+      "permalink": "/blog/tags/objects"
+    }
+  ],
+  "readingTime": 5.075,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Josh Goldberg",
+      "title": "typescript-eslint Maintainer",
+      "url": "https://github.com/JoshuaKGoldberg",
+      "imageURL": "/img/team/joshuakgoldberg.jpg",
+      "key": "joshuakgoldberg",
+      "page": null
+    }
+  ],
+  "frontMatter": {
+    "authors": "joshuakgoldberg",
+    "description": "How the now-deprecated `ban-types` rule evolved over time to what is now several newer, targeted rules.",
+    "slug": "revamping-the-ban-types-rule",
+    "tags": [
+      "ban-types",
+      "interfaces",
+      "no-empty-object-type",
+      "no-restricted-types",
+      "no-unsafe-function-type",
+      "no-wrapper-object-types",
+      "objects"
+    ],
+    "title": "Revamping the `ban-types` rule"
+  },
+  "unlisted": false,
+  "nextItem": {
+    "title": "Typed Linting with Project Service",
+    "permalink": "/blog/project-service"
+  }
+}

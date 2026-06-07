@@ -1,0 +1,26 @@
+{
+  "id": "prefer-regexp-exec",
+  "title": "prefer-regexp-exec",
+  "description": "Enforce `RegExp#exec` over `String#match` if no global flag is provided.",
+  "source": "@site/../eslint-plugin/docs/rules/prefer-regexp-exec.mdx",
+  "sourceDirName": ".",
+  "slug": "/prefer-regexp-exec",
+  "permalink": "/rules/prefer-regexp-exec",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/prefer-regexp-exec.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce `RegExp#exec` over `String#match` if no global flag is provided."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "prefer-reduce-type-parameter",
+    "permalink": "/rules/prefer-reduce-type-parameter"
+  },
+  "next": {
+    "title": "prefer-return-this-type",
+    "permalink": "/rules/prefer-return-this-type"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "consistent-type-exports",
+  "title": "consistent-type-exports",
+  "description": "Enforce consistent usage of type exports.",
+  "source": "@site/../eslint-plugin/docs/rules/consistent-type-exports.mdx",
+  "sourceDirName": ".",
+  "slug": "/consistent-type-exports",
+  "permalink": "/rules/consistent-type-exports",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/consistent-type-exports.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce consistent usage of type exports."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "consistent-type-definitions",
+    "permalink": "/rules/consistent-type-definitions"
+  },
+  "next": {
+    "title": "consistent-type-imports",
+    "permalink": "/rules/consistent-type-imports"
+  }
+}

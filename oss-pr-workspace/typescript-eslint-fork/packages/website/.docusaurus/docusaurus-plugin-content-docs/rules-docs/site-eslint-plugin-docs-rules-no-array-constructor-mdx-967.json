@@ -1,0 +1,26 @@
+{
+  "id": "no-array-constructor",
+  "title": "no-array-constructor",
+  "description": "Disallow generic `Array` constructors.",
+  "source": "@site/../eslint-plugin/docs/rules/no-array-constructor.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-array-constructor",
+  "permalink": "/rules/no-array-constructor",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-array-constructor.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow generic `Array` constructors."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "naming-convention",
+    "permalink": "/rules/naming-convention"
+  },
+  "next": {
+    "title": "no-array-delete",
+    "permalink": "/rules/no-array-delete"
+  }
+}

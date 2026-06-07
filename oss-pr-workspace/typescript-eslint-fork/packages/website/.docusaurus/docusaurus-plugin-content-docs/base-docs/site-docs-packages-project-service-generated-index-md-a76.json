@@ -1,0 +1,15 @@
+{
+  "id": "packages/project-service/generated/index",
+  "title": "index",
+  "description": "Functions",
+  "source": "@site/../../docs/packages/project-service/generated/index.md",
+  "sourceDirName": "packages/project-service/generated",
+  "slug": "/packages/project-service/generated/",
+  "permalink": "/packages/project-service/generated/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/packages/project-service/generated/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

@@ -1,0 +1,26 @@
+{
+  "id": "no-unsafe-call",
+  "title": "no-unsafe-call",
+  "description": "Disallow calling a value with type `any`.",
+  "source": "@site/../eslint-plugin/docs/rules/no-unsafe-call.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-unsafe-call",
+  "permalink": "/rules/no-unsafe-call",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-unsafe-call.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow calling a value with type `any`."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-unsafe-assignment",
+    "permalink": "/rules/no-unsafe-assignment"
+  },
+  "next": {
+    "title": "no-unsafe-declaration-merging",
+    "permalink": "/rules/no-unsafe-declaration-merging"
+  }
+}

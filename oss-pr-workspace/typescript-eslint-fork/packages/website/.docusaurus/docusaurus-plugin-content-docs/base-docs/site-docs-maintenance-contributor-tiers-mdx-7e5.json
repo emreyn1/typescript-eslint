@@ -1,0 +1,27 @@
+{
+  "id": "maintenance/contributor-tiers",
+  "title": "Contributor Tiers",
+  "description": "These tiers of contributors, committers, and maintainers roughly reflect how we've worked the past several years.",
+  "source": "@site/../../docs/maintenance/Contributor_Tiers.mdx",
+  "sourceDirName": "maintenance",
+  "slug": "/maintenance/contributor-tiers",
+  "permalink": "/maintenance/contributor-tiers",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/maintenance/Contributor_Tiers.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "contributor-tiers",
+    "title": "Contributor Tiers"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Branding",
+    "permalink": "/maintenance/branding"
+  },
+  "next": {
+    "title": "Issues",
+    "permalink": "/maintenance/issues"
+  }
+}

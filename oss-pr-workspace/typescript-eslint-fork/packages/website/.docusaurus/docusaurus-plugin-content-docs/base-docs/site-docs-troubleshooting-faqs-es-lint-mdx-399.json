@@ -1,0 +1,28 @@
+{
+  "id": "troubleshooting/faqs/eslint",
+  "title": "ESLint FAQs",
+  "description": "Why is a rule from ESLint core not working correctly with TypeScript code?",
+  "source": "@site/../../docs/troubleshooting/faqs/ESLint.mdx",
+  "sourceDirName": "troubleshooting/faqs",
+  "slug": "/troubleshooting/faqs/eslint",
+  "permalink": "/troubleshooting/faqs/eslint",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/troubleshooting/faqs/ESLint.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "eslint",
+    "sidebar_label": "ESLint",
+    "title": "ESLint FAQs"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "General",
+    "permalink": "/troubleshooting/faqs/general"
+  },
+  "next": {
+    "title": "Frameworks",
+    "permalink": "/troubleshooting/faqs/frameworks"
+  }
+}

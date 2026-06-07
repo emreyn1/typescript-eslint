@@ -1,0 +1,27 @@
+{
+  "id": "users/index",
+  "title": "Users",
+  "description": "These are the user guides to consuming the typescript-eslint tooling.",
+  "source": "@site/../../docs/users/index.mdx",
+  "sourceDirName": "users",
+  "slug": "/users/",
+  "permalink": "/users/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/users/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "index",
+    "title": "Users"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Performance",
+    "permalink": "/troubleshooting/typed-linting/performance"
+  },
+  "next": {
+    "title": "Shared Configs",
+    "permalink": "/users/configs"
+  }
+}

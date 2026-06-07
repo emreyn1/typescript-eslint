@@ -1,0 +1,26 @@
+{
+  "id": "return-await",
+  "title": "return-await",
+  "description": "Enforce consistent awaiting of returned promises.",
+  "source": "@site/../eslint-plugin/docs/rules/return-await.mdx",
+  "sourceDirName": ".",
+  "slug": "/return-await",
+  "permalink": "/rules/return-await",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/return-await.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce consistent awaiting of returned promises."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "restrict-template-expressions",
+    "permalink": "/rules/restrict-template-expressions"
+  },
+  "next": {
+    "title": "sort-type-constituents",
+    "permalink": "/rules/sort-type-constituents"
+  }
+}

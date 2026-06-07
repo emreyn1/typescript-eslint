@@ -1,0 +1,26 @@
+{
+  "id": "consistent-type-assertions",
+  "title": "consistent-type-assertions",
+  "description": "Enforce consistent usage of type assertions.",
+  "source": "@site/../eslint-plugin/docs/rules/consistent-type-assertions.mdx",
+  "sourceDirName": ".",
+  "slug": "/consistent-type-assertions",
+  "permalink": "/rules/consistent-type-assertions",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/consistent-type-assertions.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce consistent usage of type assertions."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "consistent-return",
+    "permalink": "/rules/consistent-return"
+  },
+  "next": {
+    "title": "consistent-type-definitions",
+    "permalink": "/rules/consistent-type-definitions"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "packages/tsconfig-utils",
+  "title": "@typescript-eslint/tsconfig-utils",
+  "description": "Utilities for collecting TSConfigs for linting scenarios ✨",
+  "source": "@site/../../docs/packages/TSConfig_Utils.mdx",
+  "sourceDirName": "packages",
+  "slug": "/packages/tsconfig-utils",
+  "permalink": "/packages/tsconfig-utils",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/packages/TSConfig_Utils.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "tsconfig-utils",
+    "sidebar_label": "tsconfig-utils",
+    "toc_max_heading_level": 3
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "scope-manager",
+    "permalink": "/packages/scope-manager"
+  },
+  "next": {
+    "title": "type-utils",
+    "permalink": "/packages/type-utils"
+  }
+}

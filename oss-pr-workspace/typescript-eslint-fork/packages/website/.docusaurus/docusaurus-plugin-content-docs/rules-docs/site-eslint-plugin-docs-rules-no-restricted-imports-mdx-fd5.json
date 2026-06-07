@@ -1,0 +1,26 @@
+{
+  "id": "no-restricted-imports",
+  "title": "no-restricted-imports",
+  "description": "Disallow specified modules when loaded by `import`.",
+  "source": "@site/../eslint-plugin/docs/rules/no-restricted-imports.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-restricted-imports",
+  "permalink": "/rules/no-restricted-imports",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-restricted-imports.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow specified modules when loaded by `import`."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-require-imports",
+    "permalink": "/rules/no-require-imports"
+  },
+  "next": {
+    "title": "no-restricted-types",
+    "permalink": "/rules/no-restricted-types"
+  }
+}

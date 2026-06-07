@@ -1,0 +1,18 @@
+{
+  "id": "maintenance/governance",
+  "title": "Governance",
+  "description": "",
+  "source": "@site/../../docs/maintenance/Governance.mdx",
+  "sourceDirName": "maintenance",
+  "slug": "/maintenance/governance",
+  "permalink": "/maintenance/governance",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/maintenance/Governance.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "governance",
+    "title": "Governance"
+  }
+}

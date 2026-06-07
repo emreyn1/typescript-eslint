@@ -1,0 +1,18 @@
+{
+  "id": "no-useless-template-literals",
+  "title": "no-useless-template-literals",
+  "description": "This rule has been renamed to no-unnecessary-template-expression. See #8544 for more information.",
+  "source": "@site/../eslint-plugin/docs/rules/no-useless-template-literals.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-useless-template-literals",
+  "permalink": "/rules/no-useless-template-literals",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-useless-template-literals.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "displayed_sidebar": "rulesSidebar"
+  },
+  "sidebar": "rulesSidebar"
+}

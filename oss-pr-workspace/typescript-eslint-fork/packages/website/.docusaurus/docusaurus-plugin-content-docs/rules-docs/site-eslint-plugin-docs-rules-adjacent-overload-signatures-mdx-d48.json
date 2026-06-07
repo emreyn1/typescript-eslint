@@ -1,0 +1,26 @@
+{
+  "id": "adjacent-overload-signatures",
+  "title": "adjacent-overload-signatures",
+  "description": "Require that function overload signatures be consecutive.",
+  "source": "@site/../eslint-plugin/docs/rules/adjacent-overload-signatures.mdx",
+  "sourceDirName": ".",
+  "slug": "/adjacent-overload-signatures",
+  "permalink": "/rules/adjacent-overload-signatures",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/adjacent-overload-signatures.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Require that function overload signatures be consecutive."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/rules/"
+  },
+  "next": {
+    "title": "array-type",
+    "permalink": "/rules/array-type"
+  }
+}

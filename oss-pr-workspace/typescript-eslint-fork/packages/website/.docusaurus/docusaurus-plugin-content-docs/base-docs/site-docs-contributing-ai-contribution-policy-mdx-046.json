@@ -1,0 +1,27 @@
+{
+  "id": "contributing/ai-policy",
+  "title": "AI Contribution Policy",
+  "description": "With the rise of AI-assisted coding tools, it has become easier than ever to generate large amounts of low-quality contributions, for PRs and issues.",
+  "source": "@site/../../docs/contributing/AI_Contribution_Policy.mdx",
+  "sourceDirName": "contributing",
+  "slug": "/contributing/ai-policy",
+  "permalink": "/contributing/ai-policy",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/contributing/AI_Contribution_Policy.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "ai-policy",
+    "title": "AI Contribution Policy"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Pull Requests",
+    "permalink": "/contributing/pull-requests"
+  },
+  "next": {
+    "title": "Maintenance Guide",
+    "permalink": "/maintenance"
+  }
+}

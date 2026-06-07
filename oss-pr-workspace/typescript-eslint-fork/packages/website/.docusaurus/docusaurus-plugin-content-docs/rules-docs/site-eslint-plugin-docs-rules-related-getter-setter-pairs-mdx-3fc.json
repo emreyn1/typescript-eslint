@@ -1,0 +1,26 @@
+{
+  "id": "related-getter-setter-pairs",
+  "title": "related-getter-setter-pairs",
+  "description": "Enforce that `get()` types should be assignable to their equivalent `set()` type.",
+  "source": "@site/../eslint-plugin/docs/rules/related-getter-setter-pairs.mdx",
+  "sourceDirName": ".",
+  "slug": "/related-getter-setter-pairs",
+  "permalink": "/rules/related-getter-setter-pairs",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/related-getter-setter-pairs.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce that `get()` types should be assignable to their equivalent `set()` type."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "promise-function-async",
+    "permalink": "/rules/promise-function-async"
+  },
+  "next": {
+    "title": "require-array-sort-compare",
+    "permalink": "/rules/require-array-sort-compare"
+  }
+}

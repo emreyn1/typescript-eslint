@@ -1,0 +1,52 @@
+{
+  "permalink": "/blog/automated-rule-docs-with-docusaurus-and-remark",
+  "source": "@site/blog/2022-09-18-automated-rule-docs-with-docusaurus-and-remark.md",
+  "title": "Automated Rule Docs With Docusaurus and Remark",
+  "description": "How typescript-eslint generates much of the docs pages for each of its lint rules.",
+  "date": "2022-09-18T00:00:00.000Z",
+  "tags": [
+    {
+      "inline": true,
+      "label": "documentation",
+      "permalink": "/blog/tags/documentation"
+    },
+    {
+      "inline": true,
+      "label": "docusaurus",
+      "permalink": "/blog/tags/docusaurus"
+    },
+    {
+      "inline": true,
+      "label": "remark",
+      "permalink": "/blog/tags/remark"
+    }
+  ],
+  "readingTime": 6.635,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Josh Goldberg",
+      "title": "typescript-eslint Maintainer",
+      "url": "https://github.com/JoshuaKGoldberg",
+      "imageURL": "/img/team/joshuakgoldberg.jpg",
+      "key": "joshuakgoldberg",
+      "page": null
+    }
+  ],
+  "frontMatter": {
+    "authors": "joshuakgoldberg",
+    "description": "How typescript-eslint generates much of the docs pages for each of its lint rules.",
+    "slug": "automated-rule-docs-with-docusaurus-and-remark",
+    "tags": [
+      "documentation",
+      "docusaurus",
+      "remark"
+    ],
+    "title": "Automated Rule Docs With Docusaurus and Remark"
+  },
+  "unlisted": false,
+  "prevItem": {
+    "title": "ASTs and typescript-eslint",
+    "permalink": "/blog/asts-and-typescript-eslint"
+  }
+}

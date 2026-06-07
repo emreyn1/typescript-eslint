@@ -1,0 +1,27 @@
+{
+  "id": "users/configs",
+  "title": "Shared Configs",
+  "description": "ESLint shareable configurations exist to provide a comprehensive list of rules settings that you can start with.",
+  "source": "@site/../../docs/users/Shared_Configurations.mdx",
+  "sourceDirName": "users",
+  "slug": "/users/configs",
+  "permalink": "/users/configs",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/users/Shared_Configurations.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "configs",
+    "title": "Shared Configs"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Users",
+    "permalink": "/users/"
+  },
+  "next": {
+    "title": "Dependency Versions",
+    "permalink": "/users/dependency-versions"
+  }
+}

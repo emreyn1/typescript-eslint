@@ -1,0 +1,18 @@
+{
+  "id": "sort-type-union-intersection-members",
+  "title": "sort-type-union-intersection-members",
+  "description": "This rule has been renamed to sort-type-constituents.",
+  "source": "@site/../eslint-plugin/docs/rules/sort-type-union-intersection-members.mdx",
+  "sourceDirName": ".",
+  "slug": "/sort-type-union-intersection-members",
+  "permalink": "/rules/sort-type-union-intersection-members",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/sort-type-union-intersection-members.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "displayed_sidebar": "rulesSidebar"
+  },
+  "sidebar": "rulesSidebar"
+}

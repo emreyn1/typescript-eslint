@@ -1,0 +1,26 @@
+{
+  "id": "consistent-type-definitions",
+  "title": "consistent-type-definitions",
+  "description": "Enforce type definitions to consistently use either `interface` or `type`.",
+  "source": "@site/../eslint-plugin/docs/rules/consistent-type-definitions.mdx",
+  "sourceDirName": ".",
+  "slug": "/consistent-type-definitions",
+  "permalink": "/rules/consistent-type-definitions",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/consistent-type-definitions.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce type definitions to consistently use either `interface` or `type`."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "consistent-type-assertions",
+    "permalink": "/rules/consistent-type-assertions"
+  },
+  "next": {
+    "title": "consistent-type-exports",
+    "permalink": "/rules/consistent-type-exports"
+  }
+}

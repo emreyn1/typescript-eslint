@@ -1,0 +1,26 @@
+{
+  "id": "prefer-destructuring",
+  "title": "prefer-destructuring",
+  "description": "Require destructuring from arrays and/or objects.",
+  "source": "@site/../eslint-plugin/docs/rules/prefer-destructuring.mdx",
+  "sourceDirName": ".",
+  "slug": "/prefer-destructuring",
+  "permalink": "/rules/prefer-destructuring",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/prefer-destructuring.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Require destructuring from arrays and/or objects."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "prefer-as-const",
+    "permalink": "/rules/prefer-as-const"
+  },
+  "next": {
+    "title": "prefer-enum-initializers",
+    "permalink": "/rules/prefer-enum-initializers"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "sort-type-constituents",
+  "title": "sort-type-constituents",
+  "description": "Enforce constituents of a type union/intersection to be sorted alphabetically.",
+  "source": "@site/../eslint-plugin/docs/rules/sort-type-constituents.mdx",
+  "sourceDirName": ".",
+  "slug": "/sort-type-constituents",
+  "permalink": "/rules/sort-type-constituents",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/sort-type-constituents.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce constituents of a type union/intersection to be sorted alphabetically."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "return-await",
+    "permalink": "/rules/return-await"
+  },
+  "next": {
+    "title": "strict-boolean-expressions",
+    "permalink": "/rules/strict-boolean-expressions"
+  }
+}

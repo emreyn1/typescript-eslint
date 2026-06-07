@@ -1,0 +1,55 @@
+---
+description: Project context for kart-site - prepaid Visa/Mastercard platform
+alwaysApply: true
+---
+
+# kart-site Context
+
+## Project
+- **Type:** Fintech (prepaid debit card platform)
+- **Product:** Real bank cards — Visa & Mastercard (INSTANT delivery, virtual + physical)
+- **Stack:** Next.js 14, Prisma, Tailwind, Radix UI, bcryptjs
+- **Revenue:** Tier-based subscription (Basic/Smart/Enterprise)
+- **State:** MVP exists, needs CRO improvements
+
+## CRO Focus (Primary Goal)
+- **Funnel:** Landing → Signup → KYC → Card Order → Activation → Usage
+- **Trust signals:** CRITICAL (banking = high skepticism, users need to trust with money)
+- **Social proof:** User count, testimonials, security badges, bank partnerships
+- **Urgency:** Limited card stock, tier upgrade benefits
+
+## Conversion Priorities
+1. Hero: Clear value prop (real Visa/MC, not crypto)
+2. Trust: Bank logos, security certifications, SSL, PCI badge
+3. Signup: Minimal friction (email → verify → KYC later)
+4. Pricing: Tier comparison with clear benefits
+5. Card order: Instant virtual card, physical optional
+6. Mobile-first (60%+ traffic)
+
+## Competitor Reference
+- **Primary:** pryvero.cards — study their trust signals, pricing layout, hero messaging
+- Use `/hallmark study https://pryvero.cards` to extract design DNA
+
+## Technical Constraints
+- **PCI-DSS MANDATORY** — real card data, strict compliance
+- Card issuer integration (BIN sponsor bank)
+- KYC/AML verification required
+- 3D Secure for transactions
+
+## Anti-Slop Rules
+- NO generic hero text ("Welcome to our platform")
+- NO stock photos of fake cards
+- NO vague benefits ("Best card ever")
+- MUST show: real card images, specific fees, INSTANT delivery, supported countries
+- MUST have: FAQ, terms, privacy policy links visible
+- Copy must be specific: "Visa debit card delivered in 5-7 days" not "Get your card fast"
+
+## Do NOT
+- Add features without CRO justification
+- Ignore mobile experience
+- Skip trust signals on ANY page
+- Use placeholder copy
+- Hide fees (kills trust instantly)
+
+## Skills to Use
+`cro` `copywriting` `marketing-psychology` `paywalls` `pricing` `signup` `ab-testing` `hallmark`

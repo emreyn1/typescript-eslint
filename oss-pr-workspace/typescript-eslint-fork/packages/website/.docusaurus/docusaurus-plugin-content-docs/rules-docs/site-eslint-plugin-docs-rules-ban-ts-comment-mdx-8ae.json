@@ -1,0 +1,26 @@
+{
+  "id": "ban-ts-comment",
+  "title": "ban-ts-comment",
+  "description": "Disallow `@ts-<directive>` comments or require descriptions after directives.",
+  "source": "@site/../eslint-plugin/docs/rules/ban-ts-comment.mdx",
+  "sourceDirName": ".",
+  "slug": "/ban-ts-comment",
+  "permalink": "/rules/ban-ts-comment",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/ban-ts-comment.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow `@ts-<directive>` comments or require descriptions after directives."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "await-thenable",
+    "permalink": "/rules/await-thenable"
+  },
+  "next": {
+    "title": "ban-tslint-comment",
+    "permalink": "/rules/ban-tslint-comment"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "comma-spacing",
+  "title": "comma-spacing",
+  "description": "This rule has been moved to the ESLint stylistic plugin.",
+  "source": "@site/../eslint-plugin/docs/rules/comma-spacing.md",
+  "sourceDirName": ".",
+  "slug": "/comma-spacing",
+  "permalink": "/rules/comma-spacing",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/comma-spacing.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "displayed_sidebar": "rulesSidebar"
+  },
+  "sidebar": "rulesSidebar"
+}

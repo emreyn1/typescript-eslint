@@ -1,0 +1,28 @@
+{
+  "id": "packages/project-service",
+  "title": "@typescript-eslint/project-service",
+  "description": "Standalone TypeScript project service wrapper for linting ✨",
+  "source": "@site/../../docs/packages/Project_Service.mdx",
+  "sourceDirName": "packages",
+  "slug": "/packages/project-service",
+  "permalink": "/packages/project-service",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/packages/Project_Service.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "project-service",
+    "sidebar_label": "project-service",
+    "toc_max_heading_level": 3
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "parser",
+    "permalink": "/packages/parser"
+  },
+  "next": {
+    "title": "rule-schema-to-typescript-types",
+    "permalink": "/packages/rule-schema-to-typescript-types"
+  }
+}

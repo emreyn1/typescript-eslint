@@ -1,0 +1,28 @@
+{
+  "id": "packages/rule-schema-to-typescript-types",
+  "title": "@typescript-eslint/rule-schema-to-typescript-types",
+  "description": "<PackageLink",
+  "source": "@site/../../docs/packages/RuleSchemaToTypeScriptTypes.mdx",
+  "sourceDirName": "packages",
+  "slug": "/packages/rule-schema-to-typescript-types",
+  "permalink": "/packages/rule-schema-to-typescript-types",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/packages/RuleSchemaToTypeScriptTypes.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "rule-schema-to-typescript-types",
+    "sidebar_label": "rule-schema-to-typescript-types",
+    "toc_max_heading_level": 3
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "project-service",
+    "permalink": "/packages/project-service"
+  },
+  "next": {
+    "title": "rule-tester",
+    "permalink": "/packages/rule-tester"
+  }
+}

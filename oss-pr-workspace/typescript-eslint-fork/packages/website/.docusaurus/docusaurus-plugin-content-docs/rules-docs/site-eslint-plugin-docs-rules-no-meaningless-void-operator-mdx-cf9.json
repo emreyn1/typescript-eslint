@@ -1,0 +1,26 @@
+{
+  "id": "no-meaningless-void-operator",
+  "title": "no-meaningless-void-operator",
+  "description": "Disallow the `void` operator except when used to discard a value.",
+  "source": "@site/../eslint-plugin/docs/rules/no-meaningless-void-operator.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-meaningless-void-operator",
+  "permalink": "/rules/no-meaningless-void-operator",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-meaningless-void-operator.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow the `void` operator except when used to discard a value."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-magic-numbers",
+    "permalink": "/rules/no-magic-numbers"
+  },
+  "next": {
+    "title": "no-misused-new",
+    "permalink": "/rules/no-misused-new"
+  }
+}

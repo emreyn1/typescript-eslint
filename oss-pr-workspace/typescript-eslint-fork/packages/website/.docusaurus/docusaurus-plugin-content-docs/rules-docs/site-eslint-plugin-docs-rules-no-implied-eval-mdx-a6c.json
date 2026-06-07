@@ -1,0 +1,26 @@
+{
+  "id": "no-implied-eval",
+  "title": "no-implied-eval",
+  "description": "Disallow the use of `eval()`-like functions.",
+  "source": "@site/../eslint-plugin/docs/rules/no-implied-eval.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-implied-eval",
+  "permalink": "/rules/no-implied-eval",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-implied-eval.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow the use of `eval()`-like functions."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-for-in-array",
+    "permalink": "/rules/no-for-in-array"
+  },
+  "next": {
+    "title": "no-import-type-side-effects",
+    "permalink": "/rules/no-import-type-side-effects"
+  }
+}

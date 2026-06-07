@@ -1,0 +1,26 @@
+{
+  "id": "typedef",
+  "title": "typedef",
+  "description": "Require type annotations in certain places.",
+  "source": "@site/../eslint-plugin/docs/rules/typedef.mdx",
+  "sourceDirName": ".",
+  "slug": "/typedef",
+  "permalink": "/rules/typedef",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/typedef.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Require type annotations in certain places."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "triple-slash-reference",
+    "permalink": "/rules/triple-slash-reference"
+  },
+  "next": {
+    "title": "unbound-method",
+    "permalink": "/rules/unbound-method"
+  }
+}

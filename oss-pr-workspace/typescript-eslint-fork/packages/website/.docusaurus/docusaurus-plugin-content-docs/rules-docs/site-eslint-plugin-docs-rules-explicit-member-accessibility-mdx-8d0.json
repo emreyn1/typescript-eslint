@@ -1,0 +1,26 @@
+{
+  "id": "explicit-member-accessibility",
+  "title": "explicit-member-accessibility",
+  "description": "Require explicit accessibility modifiers on class properties and methods.",
+  "source": "@site/../eslint-plugin/docs/rules/explicit-member-accessibility.mdx",
+  "sourceDirName": ".",
+  "slug": "/explicit-member-accessibility",
+  "permalink": "/rules/explicit-member-accessibility",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/explicit-member-accessibility.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Require explicit accessibility modifiers on class properties and methods."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "explicit-function-return-type",
+    "permalink": "/rules/explicit-function-return-type"
+  },
+  "next": {
+    "title": "explicit-module-boundary-types",
+    "permalink": "/rules/explicit-module-boundary-types"
+  }
+}

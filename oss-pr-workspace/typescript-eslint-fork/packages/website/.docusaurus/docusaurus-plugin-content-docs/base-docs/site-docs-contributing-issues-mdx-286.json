@@ -1,0 +1,27 @@
+{
+  "id": "contributing/issues",
+  "title": "Issues",
+  "description": "So you've got a bug report, documentation request, or feature suggestion?",
+  "source": "@site/../../docs/contributing/Issues.mdx",
+  "sourceDirName": "contributing",
+  "slug": "/contributing/issues",
+  "permalink": "/contributing/issues",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/contributing/Issues.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "issues",
+    "title": "Issues"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Discussions",
+    "permalink": "/contributing/discussions"
+  },
+  "next": {
+    "title": "Local Development",
+    "permalink": "/contributing/local-development"
+  }
+}

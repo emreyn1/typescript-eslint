@@ -1,0 +1,26 @@
+{
+  "id": "only-throw-error",
+  "title": "only-throw-error",
+  "description": "Disallow throwing non-`Error` values as exceptions.",
+  "source": "@site/../eslint-plugin/docs/rules/only-throw-error.mdx",
+  "sourceDirName": ".",
+  "slug": "/only-throw-error",
+  "permalink": "/rules/only-throw-error",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/only-throw-error.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow throwing non-`Error` values as exceptions."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "non-nullable-type-assertion-style",
+    "permalink": "/rules/non-nullable-type-assertion-style"
+  },
+  "next": {
+    "title": "parameter-properties",
+    "permalink": "/rules/parameter-properties"
+  }
+}

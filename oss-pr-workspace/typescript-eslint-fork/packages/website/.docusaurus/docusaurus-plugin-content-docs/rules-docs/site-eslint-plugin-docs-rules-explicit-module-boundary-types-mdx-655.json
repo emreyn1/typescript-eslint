@@ -1,0 +1,26 @@
+{
+  "id": "explicit-module-boundary-types",
+  "title": "explicit-module-boundary-types",
+  "description": "Require explicit return and argument types on exported functions' and classes' public class methods.",
+  "source": "@site/../eslint-plugin/docs/rules/explicit-module-boundary-types.mdx",
+  "sourceDirName": ".",
+  "slug": "/explicit-module-boundary-types",
+  "permalink": "/rules/explicit-module-boundary-types",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/explicit-module-boundary-types.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Require explicit return and argument types on exported functions' and classes' public class methods."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "explicit-member-accessibility",
+    "permalink": "/rules/explicit-member-accessibility"
+  },
+  "next": {
+    "title": "init-declarations",
+    "permalink": "/rules/init-declarations"
+  }
+}

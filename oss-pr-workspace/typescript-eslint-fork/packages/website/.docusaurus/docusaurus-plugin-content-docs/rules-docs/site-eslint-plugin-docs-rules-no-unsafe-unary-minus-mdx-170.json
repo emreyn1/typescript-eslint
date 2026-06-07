@@ -1,0 +1,26 @@
+{
+  "id": "no-unsafe-unary-minus",
+  "title": "no-unsafe-unary-minus",
+  "description": "Require unary negation to take a number.",
+  "source": "@site/../eslint-plugin/docs/rules/no-unsafe-unary-minus.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-unsafe-unary-minus",
+  "permalink": "/rules/no-unsafe-unary-minus",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-unsafe-unary-minus.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Require unary negation to take a number."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-unsafe-type-assertion",
+    "permalink": "/rules/no-unsafe-type-assertion"
+  },
+  "next": {
+    "title": "no-unused-expressions",
+    "permalink": "/rules/no-unused-expressions"
+  }
+}

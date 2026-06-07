@@ -1,0 +1,62 @@
+{
+  "permalink": "/blog/announcing-typescript-eslint-v6-beta",
+  "source": "@site/blog/2023-03-13-announcing-typescript-eslint-v6-beta.md",
+  "title": "Announcing typescript-eslint v6 Beta",
+  "description": "Announcing the release of typescript-eslint's v6 beta, including its changes and timeline.",
+  "date": "2023-03-13T00:00:00.000Z",
+  "tags": [
+    {
+      "inline": true,
+      "label": "breaking changes",
+      "permalink": "/blog/tags/breaking-changes"
+    },
+    {
+      "inline": true,
+      "label": "typescript-eslint",
+      "permalink": "/blog/tags/typescript-eslint"
+    },
+    {
+      "inline": true,
+      "label": "v5",
+      "permalink": "/blog/tags/v-5"
+    },
+    {
+      "inline": true,
+      "label": "v6",
+      "permalink": "/blog/tags/v-6"
+    }
+  ],
+  "readingTime": 14.325,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Josh Goldberg",
+      "title": "typescript-eslint Maintainer",
+      "url": "https://github.com/JoshuaKGoldberg",
+      "imageURL": "/img/team/joshuakgoldberg.jpg",
+      "key": "joshuakgoldberg",
+      "page": null
+    }
+  ],
+  "frontMatter": {
+    "authors": "joshuakgoldberg",
+    "description": "Announcing the release of typescript-eslint's v6 beta, including its changes and timeline.",
+    "slug": "announcing-typescript-eslint-v6-beta",
+    "tags": [
+      "breaking changes",
+      "typescript-eslint",
+      "v5",
+      "v6"
+    ],
+    "title": "Announcing typescript-eslint v6 Beta"
+  },
+  "unlisted": false,
+  "prevItem": {
+    "title": "Announcing typescript-eslint v6",
+    "permalink": "/blog/announcing-typescript-eslint-v6"
+  },
+  "nextItem": {
+    "title": "Consistent Type Imports and Exports: Why and How",
+    "permalink": "/blog/consistent-type-imports-and-exports-why-and-how"
+  }
+}

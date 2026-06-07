@@ -1,0 +1,18 @@
+{
+  "id": "func-call-spacing",
+  "title": "func-call-spacing",
+  "description": "This rule has been moved to the ESLint stylistic plugin.",
+  "source": "@site/../eslint-plugin/docs/rules/func-call-spacing.md",
+  "sourceDirName": ".",
+  "slug": "/func-call-spacing",
+  "permalink": "/rules/func-call-spacing",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/func-call-spacing.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "displayed_sidebar": "rulesSidebar"
+  },
+  "sidebar": "rulesSidebar"
+}

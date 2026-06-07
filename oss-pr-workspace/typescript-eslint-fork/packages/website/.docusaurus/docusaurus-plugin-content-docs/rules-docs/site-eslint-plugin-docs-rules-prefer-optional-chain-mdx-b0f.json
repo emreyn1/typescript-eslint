@@ -1,0 +1,26 @@
+{
+  "id": "prefer-optional-chain",
+  "title": "prefer-optional-chain",
+  "description": "Enforce using concise optional chain expressions instead of chained logical ands, negated logical ors, or empty objects.",
+  "source": "@site/../eslint-plugin/docs/rules/prefer-optional-chain.mdx",
+  "sourceDirName": ".",
+  "slug": "/prefer-optional-chain",
+  "permalink": "/rules/prefer-optional-chain",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/prefer-optional-chain.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce using concise optional chain expressions instead of chained logical ands, negated logical ors, or empty objects."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "prefer-nullish-coalescing",
+    "permalink": "/rules/prefer-nullish-coalescing"
+  },
+  "next": {
+    "title": "prefer-promise-reject-errors",
+    "permalink": "/rules/prefer-promise-reject-errors"
+  }
+}

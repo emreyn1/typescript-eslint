@@ -1,0 +1,28 @@
+{
+  "id": "troubleshooting/faqs/frameworks",
+  "title": "Framework FAQs",
+  "description": "I use a framework (like Vue) that requires custom file extensions, and I get errors like \"You should add parserOptions.extraFileExtensions to your config\"",
+  "source": "@site/../../docs/troubleshooting/faqs/Frameworks.mdx",
+  "sourceDirName": "troubleshooting/faqs",
+  "slug": "/troubleshooting/faqs/frameworks",
+  "permalink": "/troubleshooting/faqs/frameworks",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/troubleshooting/faqs/Frameworks.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "frameworks",
+    "sidebar_label": "Frameworks",
+    "title": "Framework FAQs"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "ESLint",
+    "permalink": "/troubleshooting/faqs/eslint"
+  },
+  "next": {
+    "title": "JavaScript",
+    "permalink": "/troubleshooting/faqs/javascript"
+  }
+}

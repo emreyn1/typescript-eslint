@@ -1,0 +1,26 @@
+{
+  "id": "no-namespace",
+  "title": "no-namespace",
+  "description": "Disallow TypeScript namespaces.",
+  "source": "@site/../eslint-plugin/docs/rules/no-namespace.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-namespace",
+  "permalink": "/rules/no-namespace",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-namespace.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow TypeScript namespaces."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-mixed-enums",
+    "permalink": "/rules/no-mixed-enums"
+  },
+  "next": {
+    "title": "no-non-null-asserted-nullish-coalescing",
+    "permalink": "/rules/no-non-null-asserted-nullish-coalescing"
+  }
+}

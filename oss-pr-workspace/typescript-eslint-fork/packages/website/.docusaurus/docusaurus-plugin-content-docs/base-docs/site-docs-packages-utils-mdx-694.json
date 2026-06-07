@@ -1,0 +1,28 @@
+{
+  "id": "packages/utils",
+  "title": "@typescript-eslint/utils",
+  "description": "Utilities for working with TypeScript + ESLint together. ✨",
+  "source": "@site/../../docs/packages/Utils.mdx",
+  "sourceDirName": "packages",
+  "slug": "/packages/utils",
+  "permalink": "/packages/utils",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/packages/Utils.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "utils",
+    "sidebar_label": "utils",
+    "toc_max_heading_level": 3
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "typescript-eslint",
+    "permalink": "/packages/typescript-eslint"
+  },
+  "next": {
+    "title": "Contributing",
+    "permalink": "/contributing"
+  }
+}

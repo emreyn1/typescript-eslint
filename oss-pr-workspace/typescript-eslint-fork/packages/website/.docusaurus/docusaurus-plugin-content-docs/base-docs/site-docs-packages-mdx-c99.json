@@ -1,0 +1,27 @@
+{
+  "id": "packages",
+  "title": "Packages",
+  "description": "The @typescript-eslint/* packages are all stored in our GitHub monorepo.",
+  "source": "@site/../../docs/Packages.mdx",
+  "sourceDirName": ".",
+  "slug": "/packages",
+  "permalink": "/packages",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/Packages.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "packages",
+    "title": "Packages"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Building ESLint Plugins",
+    "permalink": "/developers/eslint-plugins"
+  },
+  "next": {
+    "title": "eslint-plugin",
+    "permalink": "/packages/eslint-plugin"
+  }
+}

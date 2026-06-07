@@ -1,0 +1,2 @@
+# Holds player-v2.html and player-side assets. Template authored in task 1.2.
+# tsc ignores non-.ts files; the build copies/serves the HTML at runtime.

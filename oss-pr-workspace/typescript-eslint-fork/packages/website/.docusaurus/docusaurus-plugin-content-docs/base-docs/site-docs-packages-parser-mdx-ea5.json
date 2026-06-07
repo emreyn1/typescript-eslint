@@ -1,0 +1,27 @@
+{
+  "id": "packages/parser",
+  "title": "@typescript-eslint/parser",
+  "description": "An ESLint parser used to parse TypeScript code into ESLint-compatible nodes, as well as provide backing TypeScript programs. ✨",
+  "source": "@site/../../docs/packages/Parser.mdx",
+  "sourceDirName": "packages",
+  "slug": "/packages/parser",
+  "permalink": "/packages/parser",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/packages/Parser.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "parser",
+    "sidebar_label": "parser"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "eslint-plugin-tslint",
+    "permalink": "/packages/eslint-plugin-tslint"
+  },
+  "next": {
+    "title": "project-service",
+    "permalink": "/packages/project-service"
+  }
+}

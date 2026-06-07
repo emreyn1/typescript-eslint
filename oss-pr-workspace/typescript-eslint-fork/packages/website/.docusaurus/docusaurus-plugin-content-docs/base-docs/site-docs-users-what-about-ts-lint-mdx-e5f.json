@@ -1,0 +1,27 @@
+{
+  "id": "users/what-about-tslint",
+  "title": "What About TSLint?",
+  "description": "TSLint was a linter equivalent to ESLint that was written specifically to work directly on TypeScript code.",
+  "source": "@site/../../docs/users/What_About_TSLint.mdx",
+  "sourceDirName": "users",
+  "slug": "/users/what-about-tslint",
+  "permalink": "/users/what-about-tslint",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/users/What_About_TSLint.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "what-about-tslint",
+    "title": "What About TSLint?"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "What About Formatting?",
+    "permalink": "/users/what-about-formatting"
+  },
+  "next": {
+    "title": "Developers",
+    "permalink": "/developers"
+  }
+}

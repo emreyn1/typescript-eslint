@@ -1,0 +1,26 @@
+{
+  "id": "no-unnecessary-condition",
+  "title": "no-unnecessary-condition",
+  "description": "Disallow conditionals where the type is always truthy or always falsy.",
+  "source": "@site/../eslint-plugin/docs/rules/no-unnecessary-condition.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-unnecessary-condition",
+  "permalink": "/rules/no-unnecessary-condition",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-unnecessary-condition.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow conditionals where the type is always truthy or always falsy."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-unnecessary-boolean-literal-compare",
+    "permalink": "/rules/no-unnecessary-boolean-literal-compare"
+  },
+  "next": {
+    "title": "no-unnecessary-parameter-property-assignment",
+    "permalink": "/rules/no-unnecessary-parameter-property-assignment"
+  }
+}

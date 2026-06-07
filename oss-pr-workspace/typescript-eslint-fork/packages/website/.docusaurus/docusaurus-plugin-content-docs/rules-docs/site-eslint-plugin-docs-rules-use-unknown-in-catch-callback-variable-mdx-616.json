@@ -1,0 +1,22 @@
+{
+  "id": "use-unknown-in-catch-callback-variable",
+  "title": "use-unknown-in-catch-callback-variable",
+  "description": "Enforce typing arguments in Promise rejection callbacks as `unknown`.",
+  "source": "@site/../eslint-plugin/docs/rules/use-unknown-in-catch-callback-variable.mdx",
+  "sourceDirName": ".",
+  "slug": "/use-unknown-in-catch-callback-variable",
+  "permalink": "/rules/use-unknown-in-catch-callback-variable",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/use-unknown-in-catch-callback-variable.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce typing arguments in Promise rejection callbacks as `unknown`."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "unified-signatures",
+    "permalink": "/rules/unified-signatures"
+  }
+}

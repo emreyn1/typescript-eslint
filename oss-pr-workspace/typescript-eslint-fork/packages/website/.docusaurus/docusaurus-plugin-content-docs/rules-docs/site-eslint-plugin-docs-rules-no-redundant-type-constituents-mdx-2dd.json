@@ -1,0 +1,26 @@
+{
+  "id": "no-redundant-type-constituents",
+  "title": "no-redundant-type-constituents",
+  "description": "Disallow members of unions and intersections that do nothing or override type information.",
+  "source": "@site/../eslint-plugin/docs/rules/no-redundant-type-constituents.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-redundant-type-constituents",
+  "permalink": "/rules/no-redundant-type-constituents",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-redundant-type-constituents.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow members of unions and intersections that do nothing or override type information."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-redeclare",
+    "permalink": "/rules/no-redeclare"
+  },
+  "next": {
+    "title": "no-require-imports",
+    "permalink": "/rules/no-require-imports"
+  }
+}

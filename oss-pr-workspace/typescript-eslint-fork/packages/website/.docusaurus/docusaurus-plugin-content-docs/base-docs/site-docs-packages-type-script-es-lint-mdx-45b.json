@@ -1,0 +1,27 @@
+{
+  "id": "packages/typescript-eslint",
+  "title": "typescript-eslint",
+  "description": "Tooling which enables you to use TypeScript with ESLint",
+  "source": "@site/../../docs/packages/TypeScript_ESLint.mdx",
+  "sourceDirName": "packages",
+  "slug": "/packages/typescript-eslint",
+  "permalink": "/packages/typescript-eslint",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/packages/TypeScript_ESLint.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "typescript-eslint",
+    "sidebar_label": "typescript-eslint"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "AST Specification",
+    "permalink": "/packages/typescript-estree/ast-spec"
+  },
+  "next": {
+    "title": "utils",
+    "permalink": "/packages/utils"
+  }
+}

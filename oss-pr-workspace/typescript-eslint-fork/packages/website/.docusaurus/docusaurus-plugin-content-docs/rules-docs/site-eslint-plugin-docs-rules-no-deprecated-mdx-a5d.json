@@ -1,0 +1,26 @@
+{
+  "id": "no-deprecated",
+  "title": "no-deprecated",
+  "description": "Disallow using code marked as `@deprecated`.",
+  "source": "@site/../eslint-plugin/docs/rules/no-deprecated.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-deprecated",
+  "permalink": "/rules/no-deprecated",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-deprecated.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow using code marked as `@deprecated`."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-confusing-void-expression",
+    "permalink": "/rules/no-confusing-void-expression"
+  },
+  "next": {
+    "title": "no-dupe-class-members",
+    "permalink": "/rules/no-dupe-class-members"
+  }
+}

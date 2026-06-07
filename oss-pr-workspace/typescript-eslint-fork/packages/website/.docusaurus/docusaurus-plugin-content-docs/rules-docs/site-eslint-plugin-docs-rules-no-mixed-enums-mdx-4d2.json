@@ -1,0 +1,26 @@
+{
+  "id": "no-mixed-enums",
+  "title": "no-mixed-enums",
+  "description": "Disallow enums from having both number and string members.",
+  "source": "@site/../eslint-plugin/docs/rules/no-mixed-enums.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-mixed-enums",
+  "permalink": "/rules/no-mixed-enums",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-mixed-enums.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow enums from having both number and string members."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-misused-spread",
+    "permalink": "/rules/no-misused-spread"
+  },
+  "next": {
+    "title": "no-namespace",
+    "permalink": "/rules/no-namespace"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "permalink": "/blog/project-service",
+  "source": "@site/blog/2025-05-29-project-service.mdx",
+  "title": "Typed Linting with Project Service",
+  "description": "How typescript-eslint's new \"Project Service\" makes typed linting easier to configure, especially for large projects.",
+  "date": "2025-05-29T00:00:00.000Z",
+  "tags": [
+    {
+      "inline": true,
+      "label": "parser",
+      "permalink": "/blog/tags/parser"
+    },
+    {
+      "inline": true,
+      "label": "parser options",
+      "permalink": "/blog/tags/parser-options"
+    },
+    {
+      "inline": true,
+      "label": "project",
+      "permalink": "/blog/tags/project"
+    },
+    {
+      "inline": true,
+      "label": "project service",
+      "permalink": "/blog/tags/project-service"
+    },
+    {
+      "inline": true,
+      "label": "tsconfig",
+      "permalink": "/blog/tags/tsconfig"
+    }
+  ],
+  "readingTime": 7.25,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Josh Goldberg",
+      "title": "typescript-eslint Maintainer",
+      "url": "https://github.com/JoshuaKGoldberg",
+      "imageURL": "/img/team/joshuakgoldberg.jpg",
+      "key": "joshuakgoldberg",
+      "page": null
+    }
+  ],
+  "frontMatter": {
+    "authors": "joshuakgoldberg",
+    "description": "How typescript-eslint's new \"Project Service\" makes typed linting easier to configure, especially for large projects.",
+    "slug": "project-service",
+    "tags": [
+      "parser",
+      "parser options",
+      "project",
+      "project service",
+      "tsconfig"
+    ],
+    "title": "Typed Linting with Project Service"
+  },
+  "unlisted": false,
+  "prevItem": {
+    "title": "Revamping the `ban-types` rule",
+    "permalink": "/blog/revamping-the-ban-types-rule"
+  },
+  "nextItem": {
+    "title": "Avoiding `any`s with Linting and TypeScript",
+    "permalink": "/blog/avoiding-anys"
+  }
+}

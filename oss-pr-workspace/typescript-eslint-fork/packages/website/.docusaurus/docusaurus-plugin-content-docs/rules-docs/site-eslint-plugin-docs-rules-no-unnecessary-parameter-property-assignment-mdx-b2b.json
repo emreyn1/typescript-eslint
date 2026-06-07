@@ -1,0 +1,26 @@
+{
+  "id": "no-unnecessary-parameter-property-assignment",
+  "title": "no-unnecessary-parameter-property-assignment",
+  "description": "Disallow unnecessary assignment of constructor property parameter.",
+  "source": "@site/../eslint-plugin/docs/rules/no-unnecessary-parameter-property-assignment.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-unnecessary-parameter-property-assignment",
+  "permalink": "/rules/no-unnecessary-parameter-property-assignment",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-unnecessary-parameter-property-assignment.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow unnecessary assignment of constructor property parameter."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-unnecessary-condition",
+    "permalink": "/rules/no-unnecessary-condition"
+  },
+  "next": {
+    "title": "no-unnecessary-qualifier",
+    "permalink": "/rules/no-unnecessary-qualifier"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "camelcase",
+  "title": "camelcase",
+  "description": "This rule has been deprecated in favour of the naming-convention rule.",
+  "source": "@site/../eslint-plugin/docs/rules/camelcase.md",
+  "sourceDirName": ".",
+  "slug": "/camelcase",
+  "permalink": "/rules/camelcase",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/camelcase.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "displayed_sidebar": "rulesSidebar"
+  },
+  "sidebar": "rulesSidebar"
+}

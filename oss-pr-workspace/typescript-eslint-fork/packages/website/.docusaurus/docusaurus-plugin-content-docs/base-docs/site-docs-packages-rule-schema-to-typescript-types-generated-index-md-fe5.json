@@ -1,0 +1,15 @@
+{
+  "id": "packages/rule-schema-to-typescript-types/generated/index",
+  "title": "index",
+  "description": "Functions",
+  "source": "@site/../../docs/packages/rule-schema-to-typescript-types/generated/index.md",
+  "sourceDirName": "packages/rule-schema-to-typescript-types/generated",
+  "slug": "/packages/rule-schema-to-typescript-types/generated/",
+  "permalink": "/packages/rule-schema-to-typescript-types/generated/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/packages/rule-schema-to-typescript-types/generated/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

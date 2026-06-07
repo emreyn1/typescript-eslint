@@ -1,0 +1,26 @@
+{
+  "id": "await-thenable",
+  "title": "await-thenable",
+  "description": "Disallow awaiting a value that is not a Thenable.",
+  "source": "@site/../eslint-plugin/docs/rules/await-thenable.mdx",
+  "sourceDirName": ".",
+  "slug": "/await-thenable",
+  "permalink": "/rules/await-thenable",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/await-thenable.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow awaiting a value that is not a Thenable."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "array-type",
+    "permalink": "/rules/array-type"
+  },
+  "next": {
+    "title": "ban-ts-comment",
+    "permalink": "/rules/ban-ts-comment"
+  }
+}

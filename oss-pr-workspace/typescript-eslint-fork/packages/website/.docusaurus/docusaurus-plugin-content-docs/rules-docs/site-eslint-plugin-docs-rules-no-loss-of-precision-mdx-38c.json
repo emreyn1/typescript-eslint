@@ -1,0 +1,26 @@
+{
+  "id": "no-loss-of-precision",
+  "title": "no-loss-of-precision",
+  "description": "Disallow literal numbers that lose precision.",
+  "source": "@site/../eslint-plugin/docs/rules/no-loss-of-precision.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-loss-of-precision",
+  "permalink": "/rules/no-loss-of-precision",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-loss-of-precision.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow literal numbers that lose precision."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-loop-func",
+    "permalink": "/rules/no-loop-func"
+  },
+  "next": {
+    "title": "no-magic-numbers",
+    "permalink": "/rules/no-magic-numbers"
+  }
+}

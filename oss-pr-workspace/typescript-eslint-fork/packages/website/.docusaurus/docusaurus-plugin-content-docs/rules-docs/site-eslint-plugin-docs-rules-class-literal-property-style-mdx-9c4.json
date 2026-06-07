@@ -1,0 +1,26 @@
+{
+  "id": "class-literal-property-style",
+  "title": "class-literal-property-style",
+  "description": "Enforce that literals on classes are exposed in a consistent style.",
+  "source": "@site/../eslint-plugin/docs/rules/class-literal-property-style.mdx",
+  "sourceDirName": ".",
+  "slug": "/class-literal-property-style",
+  "permalink": "/rules/class-literal-property-style",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/class-literal-property-style.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce that literals on classes are exposed in a consistent style."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "ban-tslint-comment",
+    "permalink": "/rules/ban-tslint-comment"
+  },
+  "next": {
+    "title": "class-methods-use-this",
+    "permalink": "/rules/class-methods-use-this"
+  }
+}

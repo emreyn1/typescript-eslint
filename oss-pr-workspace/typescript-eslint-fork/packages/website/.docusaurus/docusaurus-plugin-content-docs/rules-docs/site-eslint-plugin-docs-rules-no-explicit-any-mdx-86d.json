@@ -1,0 +1,26 @@
+{
+  "id": "no-explicit-any",
+  "title": "no-explicit-any",
+  "description": "Disallow the `any` type.",
+  "source": "@site/../eslint-plugin/docs/rules/no-explicit-any.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-explicit-any",
+  "permalink": "/rules/no-explicit-any",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-explicit-any.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow the `any` type."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-empty-object-type",
+    "permalink": "/rules/no-empty-object-type"
+  },
+  "next": {
+    "title": "no-extra-non-null-assertion",
+    "permalink": "/rules/no-extra-non-null-assertion"
+  }
+}

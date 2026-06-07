@@ -1,0 +1,26 @@
+{
+  "id": "no-confusing-non-null-assertion",
+  "title": "no-confusing-non-null-assertion",
+  "description": "Disallow non-null assertion in locations that may be confusing.",
+  "source": "@site/../eslint-plugin/docs/rules/no-confusing-non-null-assertion.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-confusing-non-null-assertion",
+  "permalink": "/rules/no-confusing-non-null-assertion",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-confusing-non-null-assertion.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow non-null assertion in locations that may be confusing."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-base-to-string",
+    "permalink": "/rules/no-base-to-string"
+  },
+  "next": {
+    "title": "no-confusing-void-expression",
+    "permalink": "/rules/no-confusing-void-expression"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "non-nullable-type-assertion-style",
+  "title": "non-nullable-type-assertion-style",
+  "description": "Enforce non-null assertions over explicit type assertions.",
+  "source": "@site/../eslint-plugin/docs/rules/non-nullable-type-assertion-style.mdx",
+  "sourceDirName": ".",
+  "slug": "/non-nullable-type-assertion-style",
+  "permalink": "/rules/non-nullable-type-assertion-style",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/non-nullable-type-assertion-style.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce non-null assertions over explicit type assertions."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-wrapper-object-types",
+    "permalink": "/rules/no-wrapper-object-types"
+  },
+  "next": {
+    "title": "only-throw-error",
+    "permalink": "/rules/only-throw-error"
+  }
+}

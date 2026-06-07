@@ -1,0 +1,26 @@
+{
+  "id": "no-unnecessary-template-expression",
+  "title": "no-unnecessary-template-expression",
+  "description": "Disallow unnecessary template expressions.",
+  "source": "@site/../eslint-plugin/docs/rules/no-unnecessary-template-expression.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-unnecessary-template-expression",
+  "permalink": "/rules/no-unnecessary-template-expression",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-unnecessary-template-expression.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow unnecessary template expressions."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-unnecessary-qualifier",
+    "permalink": "/rules/no-unnecessary-qualifier"
+  },
+  "next": {
+    "title": "no-unnecessary-type-arguments",
+    "permalink": "/rules/no-unnecessary-type-arguments"
+  }
+}

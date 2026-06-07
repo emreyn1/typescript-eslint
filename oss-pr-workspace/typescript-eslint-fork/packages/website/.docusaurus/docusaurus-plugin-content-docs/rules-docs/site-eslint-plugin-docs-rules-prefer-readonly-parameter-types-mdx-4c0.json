@@ -1,0 +1,26 @@
+{
+  "id": "prefer-readonly-parameter-types",
+  "title": "prefer-readonly-parameter-types",
+  "description": "Require function parameters to be typed as `readonly` to prevent accidental mutation of inputs.",
+  "source": "@site/../eslint-plugin/docs/rules/prefer-readonly-parameter-types.mdx",
+  "sourceDirName": ".",
+  "slug": "/prefer-readonly-parameter-types",
+  "permalink": "/rules/prefer-readonly-parameter-types",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/prefer-readonly-parameter-types.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Require function parameters to be typed as `readonly` to prevent accidental mutation of inputs."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "prefer-readonly",
+    "permalink": "/rules/prefer-readonly"
+  },
+  "next": {
+    "title": "prefer-reduce-type-parameter",
+    "permalink": "/rules/prefer-reduce-type-parameter"
+  }
+}

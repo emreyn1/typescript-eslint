@@ -1,0 +1,68 @@
+{
+  "permalink": "/blog/avoiding-anys",
+  "source": "@site/blog/2025-01-21-avoiding-anys.mdx",
+  "title": "Avoiding `any`s with Linting and TypeScript",
+  "description": "How typescript-eslint expands on TypeScript's type safety to catch explicit and implicit `any`s.",
+  "date": "2025-01-21T00:00:00.000Z",
+  "tags": [
+    {
+      "inline": true,
+      "label": "any",
+      "permalink": "/blog/tags/any"
+    },
+    {
+      "inline": true,
+      "label": "no-explicit-any",
+      "permalink": "/blog/tags/no-explicit-any"
+    },
+    {
+      "inline": true,
+      "label": "no-unsafe",
+      "permalink": "/blog/tags/no-unsafe"
+    },
+    {
+      "inline": true,
+      "label": "noImplicitAny",
+      "permalink": "/blog/tags/no-implicit-any"
+    },
+    {
+      "inline": true,
+      "label": "typed linting",
+      "permalink": "/blog/tags/typed-linting"
+    }
+  ],
+  "readingTime": 8.97,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Josh Goldberg",
+      "title": "typescript-eslint Maintainer",
+      "url": "https://github.com/JoshuaKGoldberg",
+      "imageURL": "/img/team/joshuakgoldberg.jpg",
+      "key": "joshuakgoldberg",
+      "page": null
+    }
+  ],
+  "frontMatter": {
+    "authors": "joshuakgoldberg",
+    "description": "How typescript-eslint expands on TypeScript's type safety to catch explicit and implicit `any`s.",
+    "slug": "avoiding-anys",
+    "tags": [
+      "any",
+      "no-explicit-any",
+      "no-unsafe",
+      "noImplicitAny",
+      "typed linting"
+    ],
+    "title": "Avoiding `any`s with Linting and TypeScript"
+  },
+  "unlisted": false,
+  "prevItem": {
+    "title": "Typed Linting with Project Service",
+    "permalink": "/blog/project-service"
+  },
+  "nextItem": {
+    "title": "Typed Linting: The Most Powerful TypeScript Linting Ever",
+    "permalink": "/blog/typed-linting"
+  }
+}

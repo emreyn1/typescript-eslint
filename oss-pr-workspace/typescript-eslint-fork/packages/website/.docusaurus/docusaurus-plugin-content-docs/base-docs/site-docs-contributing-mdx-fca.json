@@ -1,0 +1,27 @@
+{
+  "id": "contributing",
+  "title": "Contributing",
+  "description": "Thank you for your interest in contributing to typescript-eslint! 💜",
+  "source": "@site/../../docs/Contributing.mdx",
+  "sourceDirName": ".",
+  "slug": "/contributing",
+  "permalink": "/contributing",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/Contributing.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "contributing",
+    "title": "Contributing"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "utils",
+    "permalink": "/packages/utils"
+  },
+  "next": {
+    "title": "Discussions",
+    "permalink": "/contributing/discussions"
+  }
+}

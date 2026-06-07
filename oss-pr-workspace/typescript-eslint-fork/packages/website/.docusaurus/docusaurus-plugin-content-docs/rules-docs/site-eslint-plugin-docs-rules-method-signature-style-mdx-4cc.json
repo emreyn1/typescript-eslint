@@ -1,0 +1,26 @@
+{
+  "id": "method-signature-style",
+  "title": "method-signature-style",
+  "description": "Enforce using a particular method signature syntax.",
+  "source": "@site/../eslint-plugin/docs/rules/method-signature-style.mdx",
+  "sourceDirName": ".",
+  "slug": "/method-signature-style",
+  "permalink": "/rules/method-signature-style",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/method-signature-style.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce using a particular method signature syntax."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "member-ordering",
+    "permalink": "/rules/member-ordering"
+  },
+  "next": {
+    "title": "naming-convention",
+    "permalink": "/rules/naming-convention"
+  }
+}

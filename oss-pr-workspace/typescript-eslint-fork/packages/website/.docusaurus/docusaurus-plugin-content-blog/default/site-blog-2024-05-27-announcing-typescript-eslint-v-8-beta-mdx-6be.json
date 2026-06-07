@@ -1,0 +1,62 @@
+{
+  "permalink": "/blog/announcing-typescript-eslint-v8-beta",
+  "source": "@site/blog/2024-05-27-announcing-typescript-eslint-v8-beta.mdx",
+  "title": "Announcing typescript-eslint v8 Beta",
+  "description": "Announcing the release of typescript-eslint's v8 beta, including its changes and timeline.",
+  "date": "2024-05-27T00:00:00.000Z",
+  "tags": [
+    {
+      "inline": true,
+      "label": "breaking changes",
+      "permalink": "/blog/tags/breaking-changes"
+    },
+    {
+      "inline": true,
+      "label": "typescript-eslint",
+      "permalink": "/blog/tags/typescript-eslint"
+    },
+    {
+      "inline": true,
+      "label": "v7",
+      "permalink": "/blog/tags/v-7"
+    },
+    {
+      "inline": true,
+      "label": "v8",
+      "permalink": "/blog/tags/v-8"
+    }
+  ],
+  "readingTime": 14.07,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Josh Goldberg",
+      "title": "typescript-eslint Maintainer",
+      "url": "https://github.com/JoshuaKGoldberg",
+      "imageURL": "/img/team/joshuakgoldberg.jpg",
+      "key": "joshuakgoldberg",
+      "page": null
+    }
+  ],
+  "frontMatter": {
+    "authors": "joshuakgoldberg",
+    "description": "Announcing the release of typescript-eslint's v8 beta, including its changes and timeline.",
+    "slug": "announcing-typescript-eslint-v8-beta",
+    "tags": [
+      "breaking changes",
+      "typescript-eslint",
+      "v7",
+      "v8"
+    ],
+    "title": "Announcing typescript-eslint v8 Beta"
+  },
+  "unlisted": false,
+  "prevItem": {
+    "title": "Announcing typescript-eslint v8",
+    "permalink": "/blog/announcing-typescript-eslint-v8"
+  },
+  "nextItem": {
+    "title": "Changes to `consistent-type-imports` with Legacy Decorators and Decorator Metadata",
+    "permalink": "/blog/changes-to-consistent-type-imports-with-decorators"
+  }
+}

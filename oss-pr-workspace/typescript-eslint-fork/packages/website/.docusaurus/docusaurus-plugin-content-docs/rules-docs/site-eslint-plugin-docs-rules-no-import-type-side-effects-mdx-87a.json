@@ -1,0 +1,26 @@
+{
+  "id": "no-import-type-side-effects",
+  "title": "no-import-type-side-effects",
+  "description": "Enforce the use of top-level import type qualifier when an import only has specifiers with inline type qualifiers.",
+  "source": "@site/../eslint-plugin/docs/rules/no-import-type-side-effects.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-import-type-side-effects",
+  "permalink": "/rules/no-import-type-side-effects",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-import-type-side-effects.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce the use of top-level import type qualifier when an import only has specifiers with inline type qualifiers."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-implied-eval",
+    "permalink": "/rules/no-implied-eval"
+  },
+  "next": {
+    "title": "no-inferrable-types",
+    "permalink": "/rules/no-inferrable-types"
+  }
+}

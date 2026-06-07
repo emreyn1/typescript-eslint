@@ -1,0 +1,26 @@
+{
+  "id": "consistent-return",
+  "title": "consistent-return",
+  "description": "Require `return` statements to either always or never specify values.",
+  "source": "@site/../eslint-plugin/docs/rules/consistent-return.mdx",
+  "sourceDirName": ".",
+  "slug": "/consistent-return",
+  "permalink": "/rules/consistent-return",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/consistent-return.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Require `return` statements to either always or never specify values."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "consistent-indexed-object-style",
+    "permalink": "/rules/consistent-indexed-object-style"
+  },
+  "next": {
+    "title": "consistent-type-assertions",
+    "permalink": "/rules/consistent-type-assertions"
+  }
+}

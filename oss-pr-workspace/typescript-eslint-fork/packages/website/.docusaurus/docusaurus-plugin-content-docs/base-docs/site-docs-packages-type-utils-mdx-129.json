@@ -1,0 +1,28 @@
+{
+  "id": "packages/type-utils",
+  "title": "@typescript-eslint/type-utils",
+  "description": "Type utilities for working with TypeScript types ✨",
+  "source": "@site/../../docs/packages/Type_Utils.mdx",
+  "sourceDirName": "packages",
+  "slug": "/packages/type-utils",
+  "permalink": "/packages/type-utils",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/packages/Type_Utils.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "type-utils",
+    "sidebar_label": "type-utils",
+    "toc_max_heading_level": 3
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "tsconfig-utils",
+    "permalink": "/packages/tsconfig-utils"
+  },
+  "next": {
+    "title": "TypeOrValueSpecifier",
+    "permalink": "/packages/type-utils/type-or-value-specifier"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "README",
+  "title": "Overview",
+  "description": "@typescript-eslint/eslint-plugin includes over 100 rules that detect best practice violations, bugs, and/or stylistic issues specifically for TypeScript code. All of our rules are listed below.",
+  "source": "@site/../eslint-plugin/docs/rules/README.md",
+  "sourceDirName": ".",
+  "slug": "/",
+  "permalink": "/rules/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Overview",
+    "sidebar_label": "Overview",
+    "pagination_next": null,
+    "pagination_prev": null,
+    "slug": "/"
+  },
+  "sidebar": "rulesSidebar"
+}

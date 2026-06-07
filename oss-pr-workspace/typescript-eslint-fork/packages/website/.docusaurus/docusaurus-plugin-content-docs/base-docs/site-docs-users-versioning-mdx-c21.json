@@ -1,0 +1,27 @@
+{
+  "id": "users/versioning",
+  "title": "Versioning",
+  "description": "We follow semantic versioning (semver).",
+  "source": "@site/../../docs/users/Versioning.mdx",
+  "sourceDirName": "users",
+  "slug": "/users/versioning",
+  "permalink": "/users/versioning",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/users/Versioning.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "versioning",
+    "title": "Versioning"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Releases",
+    "permalink": "/users/releases"
+  },
+  "next": {
+    "title": "What About Formatting?",
+    "permalink": "/users/what-about-formatting"
+  }
+}

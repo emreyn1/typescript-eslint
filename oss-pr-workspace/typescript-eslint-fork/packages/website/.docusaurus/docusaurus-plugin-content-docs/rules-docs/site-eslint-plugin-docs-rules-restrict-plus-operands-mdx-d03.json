@@ -1,0 +1,26 @@
+{
+  "id": "restrict-plus-operands",
+  "title": "restrict-plus-operands",
+  "description": "Require both operands of addition to be the same type and be `bigint`, `number`, or `string`.",
+  "source": "@site/../eslint-plugin/docs/rules/restrict-plus-operands.mdx",
+  "sourceDirName": ".",
+  "slug": "/restrict-plus-operands",
+  "permalink": "/rules/restrict-plus-operands",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/restrict-plus-operands.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Require both operands of addition to be the same type and be `bigint`, `number`, or `string`."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "require-await",
+    "permalink": "/rules/require-await"
+  },
+  "next": {
+    "title": "restrict-template-expressions",
+    "permalink": "/rules/restrict-template-expressions"
+  }
+}

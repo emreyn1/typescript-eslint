@@ -1,0 +1,28 @@
+{
+  "id": "troubleshooting/faqs/typescript",
+  "title": "TypeScript FAQs",
+  "description": "Should TypeScript be installed globally or locally?",
+  "source": "@site/../../docs/troubleshooting/faqs/TypeScript.mdx",
+  "sourceDirName": "troubleshooting/faqs",
+  "slug": "/troubleshooting/faqs/typescript",
+  "permalink": "/troubleshooting/faqs/typescript",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/troubleshooting/faqs/TypeScript.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "typescript",
+    "sidebar_label": "TypeScript",
+    "title": "TypeScript FAQs"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "JavaScript",
+    "permalink": "/troubleshooting/faqs/javascript"
+  },
+  "next": {
+    "title": "Typed Linting",
+    "permalink": "/troubleshooting/typed-linting"
+  }
+}

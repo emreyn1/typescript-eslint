@@ -1,0 +1,26 @@
+{
+  "id": "class-methods-use-this",
+  "title": "class-methods-use-this",
+  "description": "Enforce that class methods utilize `this`.",
+  "source": "@site/../eslint-plugin/docs/rules/class-methods-use-this.mdx",
+  "sourceDirName": ".",
+  "slug": "/class-methods-use-this",
+  "permalink": "/rules/class-methods-use-this",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/class-methods-use-this.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce that class methods utilize `this`."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "class-literal-property-style",
+    "permalink": "/rules/class-literal-property-style"
+  },
+  "next": {
+    "title": "consistent-generic-constructors",
+    "permalink": "/rules/consistent-generic-constructors"
+  }
+}

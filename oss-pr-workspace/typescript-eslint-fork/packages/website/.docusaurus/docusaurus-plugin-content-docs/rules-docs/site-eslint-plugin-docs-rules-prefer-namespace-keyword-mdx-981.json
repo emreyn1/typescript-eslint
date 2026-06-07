@@ -1,0 +1,26 @@
+{
+  "id": "prefer-namespace-keyword",
+  "title": "prefer-namespace-keyword",
+  "description": "Require using `namespace` keyword over `module` keyword to declare custom TypeScript modules.",
+  "source": "@site/../eslint-plugin/docs/rules/prefer-namespace-keyword.mdx",
+  "sourceDirName": ".",
+  "slug": "/prefer-namespace-keyword",
+  "permalink": "/rules/prefer-namespace-keyword",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/prefer-namespace-keyword.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Require using `namespace` keyword over `module` keyword to declare custom TypeScript modules."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "prefer-literal-enum-member",
+    "permalink": "/rules/prefer-literal-enum-member"
+  },
+  "next": {
+    "title": "prefer-nullish-coalescing",
+    "permalink": "/rules/prefer-nullish-coalescing"
+  }
+}

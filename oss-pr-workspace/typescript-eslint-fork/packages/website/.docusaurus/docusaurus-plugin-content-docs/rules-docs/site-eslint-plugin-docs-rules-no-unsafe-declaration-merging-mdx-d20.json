@@ -1,0 +1,26 @@
+{
+  "id": "no-unsafe-declaration-merging",
+  "title": "no-unsafe-declaration-merging",
+  "description": "Disallow unsafe declaration merging.",
+  "source": "@site/../eslint-plugin/docs/rules/no-unsafe-declaration-merging.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-unsafe-declaration-merging",
+  "permalink": "/rules/no-unsafe-declaration-merging",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-unsafe-declaration-merging.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow unsafe declaration merging."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-unsafe-call",
+    "permalink": "/rules/no-unsafe-call"
+  },
+  "next": {
+    "title": "no-unsafe-enum-comparison",
+    "permalink": "/rules/no-unsafe-enum-comparison"
+  }
+}

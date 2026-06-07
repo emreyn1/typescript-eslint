@@ -1,0 +1,26 @@
+{
+  "id": "no-unsafe-member-access",
+  "title": "no-unsafe-member-access",
+  "description": "Disallow member access on a value with type `any`.",
+  "source": "@site/../eslint-plugin/docs/rules/no-unsafe-member-access.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-unsafe-member-access",
+  "permalink": "/rules/no-unsafe-member-access",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-unsafe-member-access.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow member access on a value with type `any`."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-unsafe-function-type",
+    "permalink": "/rules/no-unsafe-function-type"
+  },
+  "next": {
+    "title": "no-unsafe-return",
+    "permalink": "/rules/no-unsafe-return"
+  }
+}

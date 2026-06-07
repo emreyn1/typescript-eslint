@@ -1,0 +1,26 @@
+{
+  "id": "no-confusing-void-expression",
+  "title": "no-confusing-void-expression",
+  "description": "Require expressions of type void to appear in statement position.",
+  "source": "@site/../eslint-plugin/docs/rules/no-confusing-void-expression.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-confusing-void-expression",
+  "permalink": "/rules/no-confusing-void-expression",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-confusing-void-expression.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Require expressions of type void to appear in statement position."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-confusing-non-null-assertion",
+    "permalink": "/rules/no-confusing-non-null-assertion"
+  },
+  "next": {
+    "title": "no-deprecated",
+    "permalink": "/rules/no-deprecated"
+  }
+}

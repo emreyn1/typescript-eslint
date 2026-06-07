@@ -1,0 +1,28 @@
+{
+  "id": "developers/eslint-plugins",
+  "title": "ESLint Plugins",
+  "description": "This page describes how to write your own custom ESLint plugins using typescript-eslint.",
+  "source": "@site/../../docs/developers/ESLint_Plugins.mdx",
+  "sourceDirName": "developers",
+  "slug": "/developers/eslint-plugins",
+  "permalink": "/developers/eslint-plugins",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/developers/ESLint_Plugins.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "eslint-plugins",
+    "sidebar_label": "Building ESLint Plugins",
+    "title": "ESLint Plugins"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Building Custom Rules",
+    "permalink": "/developers/custom-rules"
+  },
+  "next": {
+    "title": "Packages",
+    "permalink": "/packages"
+  }
+}

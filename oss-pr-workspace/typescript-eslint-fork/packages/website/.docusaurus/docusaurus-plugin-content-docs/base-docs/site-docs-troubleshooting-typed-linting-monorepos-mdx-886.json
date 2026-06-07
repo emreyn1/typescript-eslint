@@ -1,0 +1,28 @@
+{
+  "id": "troubleshooting/typed-linting/monorepos",
+  "title": "Monorepo Configuration",
+  "description": "The new \"project service\" in v8 requires no additional configuration for monorepos.",
+  "source": "@site/../../docs/troubleshooting/typed-linting/Monorepos.mdx",
+  "sourceDirName": "troubleshooting/typed-linting",
+  "slug": "/troubleshooting/typed-linting/monorepos",
+  "permalink": "/troubleshooting/typed-linting/monorepos",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/troubleshooting/typed-linting/Monorepos.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "monorepos",
+    "slug": "/troubleshooting/typed-linting/monorepos",
+    "title": "Monorepo Configuration"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Typed Linting",
+    "permalink": "/troubleshooting/typed-linting"
+  },
+  "next": {
+    "title": "Performance",
+    "permalink": "/troubleshooting/typed-linting/performance"
+  }
+}

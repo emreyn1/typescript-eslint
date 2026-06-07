@@ -1,0 +1,18 @@
+{
+  "id": "no-duplicate-imports",
+  "title": "no-duplicate-imports",
+  "description": "This rule has been deprecated in favour of the import/no-duplicates rule.",
+  "source": "@site/../eslint-plugin/docs/rules/no-duplicate-imports.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-duplicate-imports",
+  "permalink": "/rules/no-duplicate-imports",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-duplicate-imports.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "displayed_sidebar": "rulesSidebar"
+  },
+  "sidebar": "rulesSidebar"
+}

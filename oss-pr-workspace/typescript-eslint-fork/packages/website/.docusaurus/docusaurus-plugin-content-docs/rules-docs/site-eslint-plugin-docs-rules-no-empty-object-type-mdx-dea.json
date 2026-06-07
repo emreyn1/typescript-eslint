@@ -1,0 +1,26 @@
+{
+  "id": "no-empty-object-type",
+  "title": "no-empty-object-type",
+  "description": "Disallow accidentally using the \"empty object\" type.",
+  "source": "@site/../eslint-plugin/docs/rules/no-empty-object-type.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-empty-object-type",
+  "permalink": "/rules/no-empty-object-type",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-empty-object-type.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow accidentally using the \"empty object\" type."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-empty-interface",
+    "permalink": "/rules/no-empty-interface"
+  },
+  "next": {
+    "title": "no-explicit-any",
+    "permalink": "/rules/no-explicit-any"
+  }
+}

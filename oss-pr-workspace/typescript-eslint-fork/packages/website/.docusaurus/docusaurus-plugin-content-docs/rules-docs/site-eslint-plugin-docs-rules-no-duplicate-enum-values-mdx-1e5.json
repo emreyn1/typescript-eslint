@@ -1,0 +1,26 @@
+{
+  "id": "no-duplicate-enum-values",
+  "title": "no-duplicate-enum-values",
+  "description": "Disallow duplicate enum member values.",
+  "source": "@site/../eslint-plugin/docs/rules/no-duplicate-enum-values.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-duplicate-enum-values",
+  "permalink": "/rules/no-duplicate-enum-values",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-duplicate-enum-values.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow duplicate enum member values."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-dupe-class-members",
+    "permalink": "/rules/no-dupe-class-members"
+  },
+  "next": {
+    "title": "no-duplicate-type-constituents",
+    "permalink": "/rules/no-duplicate-type-constituents"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "maintenance/issues",
+  "title": "Issues",
+  "description": "This document serves as a guide for how you might manage our GitHub Issues, also known as issue triaging.",
+  "source": "@site/../../docs/maintenance/Issues.mdx",
+  "sourceDirName": "maintenance",
+  "slug": "/maintenance/issues",
+  "permalink": "/maintenance/issues",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/maintenance/Issues.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "issues",
+    "title": "Issues"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Contributor Tiers",
+    "permalink": "/maintenance/contributor-tiers"
+  },
+  "next": {
+    "title": "Rule Deprecations, Renames, And Deletions",
+    "permalink": "/maintenance/issues/rule-deprecations-and-deletions"
+  }
+}

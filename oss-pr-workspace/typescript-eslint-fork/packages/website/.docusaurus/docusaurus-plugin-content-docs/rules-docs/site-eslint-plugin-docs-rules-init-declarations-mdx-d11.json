@@ -1,0 +1,26 @@
+{
+  "id": "init-declarations",
+  "title": "init-declarations",
+  "description": "Require or disallow initialization in variable declarations.",
+  "source": "@site/../eslint-plugin/docs/rules/init-declarations.mdx",
+  "sourceDirName": ".",
+  "slug": "/init-declarations",
+  "permalink": "/rules/init-declarations",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/init-declarations.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Require or disallow initialization in variable declarations."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "explicit-module-boundary-types",
+    "permalink": "/rules/explicit-module-boundary-types"
+  },
+  "next": {
+    "title": "max-params",
+    "permalink": "/rules/max-params"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "no-unsafe-assignment",
+  "title": "no-unsafe-assignment",
+  "description": "Disallow assigning a value with type `any` to variables and properties.",
+  "source": "@site/../eslint-plugin/docs/rules/no-unsafe-assignment.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-unsafe-assignment",
+  "permalink": "/rules/no-unsafe-assignment",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-unsafe-assignment.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow assigning a value with type `any` to variables and properties."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-unsafe-argument",
+    "permalink": "/rules/no-unsafe-argument"
+  },
+  "next": {
+    "title": "no-unsafe-call",
+    "permalink": "/rules/no-unsafe-call"
+  }
+}

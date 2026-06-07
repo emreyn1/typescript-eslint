@@ -1,0 +1,26 @@
+{
+  "id": "no-var-requires",
+  "title": "no-var-requires",
+  "description": "Disallow `require` statements except in import statements.",
+  "source": "@site/../eslint-plugin/docs/rules/no-var-requires.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-var-requires",
+  "permalink": "/rules/no-var-requires",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-var-requires.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow `require` statements except in import statements."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-useless-empty-export",
+    "permalink": "/rules/no-useless-empty-export"
+  },
+  "next": {
+    "title": "no-wrapper-object-types",
+    "permalink": "/rules/no-wrapper-object-types"
+  }
+}

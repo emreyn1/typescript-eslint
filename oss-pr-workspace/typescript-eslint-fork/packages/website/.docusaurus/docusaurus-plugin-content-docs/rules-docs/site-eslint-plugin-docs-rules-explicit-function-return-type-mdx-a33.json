@@ -1,0 +1,26 @@
+{
+  "id": "explicit-function-return-type",
+  "title": "explicit-function-return-type",
+  "description": "Require explicit return types on functions and class methods.",
+  "source": "@site/../eslint-plugin/docs/rules/explicit-function-return-type.mdx",
+  "sourceDirName": ".",
+  "slug": "/explicit-function-return-type",
+  "permalink": "/rules/explicit-function-return-type",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/explicit-function-return-type.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Require explicit return types on functions and class methods."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "dot-notation",
+    "permalink": "/rules/dot-notation"
+  },
+  "next": {
+    "title": "explicit-member-accessibility",
+    "permalink": "/rules/explicit-member-accessibility"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "embed-api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Thin player + proxy layer in front of CinePro Core (OMSS aggregator). Public ad-supported /embed surface + ad-free cinex /watch surface.",
+  "type": "module",
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && mkdir -p dist/player && cp src/player/player-v2.html dist/player/player-v2.html",
+    "server": "node dist/server.js",
+    "clean": "rm -rf dist",
+    "health:check": "npm run build && node dist/cli/health.js",
+    "health:cron": "npm run build && node dist/cli/scheduler.js",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/server.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@fastify/cors": "9.0.1",
+    "@fastify/rate-limit": "9.1.0",
+    "dotenv": "16.4.5",
+    "fastify": "4.28.1",
+    "m3u8-parser": "7.1.0"
+  },
+  "optionalDependencies": {
+    "better-sqlite3": "11.3.0",
+    "pg": "8.12.0",
+    "redis": "4.7.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "7.6.11",
+    "@types/node": "20.14.15",
+    "@types/pg": "8.11.6",
+    "fast-check": "3.22.0",
+    "tsx": "4.16.2",
+    "typescript": "5.5.4",
+    "vitest": "2.0.5"
+  }
+}

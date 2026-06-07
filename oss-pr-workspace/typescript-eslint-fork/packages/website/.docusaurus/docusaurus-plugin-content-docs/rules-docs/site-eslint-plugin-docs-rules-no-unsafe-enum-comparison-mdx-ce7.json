@@ -1,0 +1,26 @@
+{
+  "id": "no-unsafe-enum-comparison",
+  "title": "no-unsafe-enum-comparison",
+  "description": "Disallow comparing an enum value with a non-enum value.",
+  "source": "@site/../eslint-plugin/docs/rules/no-unsafe-enum-comparison.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-unsafe-enum-comparison",
+  "permalink": "/rules/no-unsafe-enum-comparison",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-unsafe-enum-comparison.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow comparing an enum value with a non-enum value."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-unsafe-declaration-merging",
+    "permalink": "/rules/no-unsafe-declaration-merging"
+  },
+  "next": {
+    "title": "no-unsafe-function-type",
+    "permalink": "/rules/no-unsafe-function-type"
+  }
+}

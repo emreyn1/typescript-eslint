@@ -1,0 +1,26 @@
+{
+  "id": "strict-boolean-expressions",
+  "title": "strict-boolean-expressions",
+  "description": "Disallow certain types in boolean expressions.",
+  "source": "@site/../eslint-plugin/docs/rules/strict-boolean-expressions.mdx",
+  "sourceDirName": ".",
+  "slug": "/strict-boolean-expressions",
+  "permalink": "/rules/strict-boolean-expressions",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/strict-boolean-expressions.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow certain types in boolean expressions."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "sort-type-constituents",
+    "permalink": "/rules/sort-type-constituents"
+  },
+  "next": {
+    "title": "strict-void-return",
+    "permalink": "/rules/strict-void-return"
+  }
+}

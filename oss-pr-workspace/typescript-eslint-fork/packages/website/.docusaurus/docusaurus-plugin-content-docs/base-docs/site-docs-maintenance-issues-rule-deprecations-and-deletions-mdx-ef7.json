@@ -1,0 +1,27 @@
+{
+  "id": "maintenance/issues/rule-deprecations-and-deletions",
+  "title": "Rule Deprecations, Renames, And Deletions",
+  "description": "Sometimes a rule that used to be 👍 does not age well and becomes 👎.",
+  "source": "@site/../../docs/maintenance/issues/Rule_Deprecations_And_Deletions.mdx",
+  "sourceDirName": "maintenance/issues",
+  "slug": "/maintenance/issues/rule-deprecations-and-deletions",
+  "permalink": "/maintenance/issues/rule-deprecations-and-deletions",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/maintenance/issues/Rule_Deprecations_And_Deletions.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "rule-deprecations-and-deletions",
+    "title": "Rule Deprecations, Renames, And Deletions"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Issues",
+    "permalink": "/maintenance/issues"
+  },
+  "next": {
+    "title": "Releases",
+    "permalink": "/maintenance/releases"
+  }
+}

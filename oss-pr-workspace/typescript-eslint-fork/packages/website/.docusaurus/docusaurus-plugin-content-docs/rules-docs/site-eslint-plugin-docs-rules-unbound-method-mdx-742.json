@@ -1,0 +1,26 @@
+{
+  "id": "unbound-method",
+  "title": "unbound-method",
+  "description": "Enforce unbound methods are called with their expected scope.",
+  "source": "@site/../eslint-plugin/docs/rules/unbound-method.mdx",
+  "sourceDirName": ".",
+  "slug": "/unbound-method",
+  "permalink": "/rules/unbound-method",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/unbound-method.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce unbound methods are called with their expected scope."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "typedef",
+    "permalink": "/rules/typedef"
+  },
+  "next": {
+    "title": "unified-signatures",
+    "permalink": "/rules/unified-signatures"
+  }
+}

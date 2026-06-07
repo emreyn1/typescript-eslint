@@ -1,0 +1,27 @@
+{
+  "id": "maintenance/branding",
+  "title": "Branding",
+  "description": "This document serves as a guide for how we generally describe or represent typescript-eslint.",
+  "source": "@site/../../docs/maintenance/Branding.mdx",
+  "sourceDirName": "maintenance",
+  "slug": "/maintenance/branding",
+  "permalink": "/maintenance/branding",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/maintenance/Branding.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "branding",
+    "title": "Branding"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Maintenance Guide",
+    "permalink": "/maintenance"
+  },
+  "next": {
+    "title": "Contributor Tiers",
+    "permalink": "/maintenance/contributor-tiers"
+  }
+}

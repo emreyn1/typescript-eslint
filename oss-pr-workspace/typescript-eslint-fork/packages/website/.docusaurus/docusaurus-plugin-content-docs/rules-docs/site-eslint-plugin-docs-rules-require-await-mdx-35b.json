@@ -1,0 +1,26 @@
+{
+  "id": "require-await",
+  "title": "require-await",
+  "description": "Disallow async functions which do not return promises and have no `await` expression.",
+  "source": "@site/../eslint-plugin/docs/rules/require-await.mdx",
+  "sourceDirName": ".",
+  "slug": "/require-await",
+  "permalink": "/rules/require-await",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/require-await.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow async functions which do not return promises and have no `await` expression."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "require-array-sort-compare",
+    "permalink": "/rules/require-array-sort-compare"
+  },
+  "next": {
+    "title": "restrict-plus-operands",
+    "permalink": "/rules/restrict-plus-operands"
+  }
+}

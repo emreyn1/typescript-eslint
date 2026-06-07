@@ -1,0 +1,26 @@
+{
+  "id": "no-unnecessary-type-constraint",
+  "title": "no-unnecessary-type-constraint",
+  "description": "Disallow unnecessary constraints on generic types.",
+  "source": "@site/../eslint-plugin/docs/rules/no-unnecessary-type-constraint.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-unnecessary-type-constraint",
+  "permalink": "/rules/no-unnecessary-type-constraint",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-unnecessary-type-constraint.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow unnecessary constraints on generic types."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-unnecessary-type-assertion",
+    "permalink": "/rules/no-unnecessary-type-assertion"
+  },
+  "next": {
+    "title": "no-unnecessary-type-conversion",
+    "permalink": "/rules/no-unnecessary-type-conversion"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "no-unnecessary-boolean-literal-compare",
+  "title": "no-unnecessary-boolean-literal-compare",
+  "description": "Disallow unnecessary equality comparisons against boolean literals.",
+  "source": "@site/../eslint-plugin/docs/rules/no-unnecessary-boolean-literal-compare.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-unnecessary-boolean-literal-compare",
+  "permalink": "/rules/no-unnecessary-boolean-literal-compare",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-unnecessary-boolean-literal-compare.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow unnecessary equality comparisons against boolean literals."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-type-alias",
+    "permalink": "/rules/no-type-alias"
+  },
+  "next": {
+    "title": "no-unnecessary-condition",
+    "permalink": "/rules/no-unnecessary-condition"
+  }
+}

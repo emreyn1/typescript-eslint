@@ -1,0 +1,68 @@
+{
+  "permalink": "/blog/consistent-type-imports-and-exports-why-and-how",
+  "source": "@site/blog/2023-02-24-consistent-type-exports-and-imports-why-and-how.md",
+  "title": "Consistent Type Imports and Exports: Why and How",
+  "description": "Why enforcing TypeScript imports use the `type` modifier when possible benefits some project setups.",
+  "date": "2023-02-24T00:00:00.000Z",
+  "tags": [
+    {
+      "inline": true,
+      "label": "typescript",
+      "permalink": "/blog/tags/typescript"
+    },
+    {
+      "inline": true,
+      "label": "imports",
+      "permalink": "/blog/tags/imports"
+    },
+    {
+      "inline": true,
+      "label": "exports",
+      "permalink": "/blog/tags/exports"
+    },
+    {
+      "inline": true,
+      "label": "types",
+      "permalink": "/blog/tags/types"
+    },
+    {
+      "inline": true,
+      "label": "transpiling",
+      "permalink": "/blog/tags/transpiling"
+    }
+  ],
+  "readingTime": 5.545,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Josh Goldberg",
+      "title": "typescript-eslint Maintainer",
+      "url": "https://github.com/JoshuaKGoldberg",
+      "imageURL": "/img/team/joshuakgoldberg.jpg",
+      "key": "joshuakgoldberg",
+      "page": null
+    }
+  ],
+  "frontMatter": {
+    "authors": "joshuakgoldberg",
+    "description": "Why enforcing TypeScript imports use the `type` modifier when possible benefits some project setups.",
+    "slug": "consistent-type-imports-and-exports-why-and-how",
+    "tags": [
+      "typescript",
+      "imports",
+      "exports",
+      "types",
+      "transpiling"
+    ],
+    "title": "Consistent Type Imports and Exports: Why and How"
+  },
+  "unlisted": false,
+  "prevItem": {
+    "title": "Announcing typescript-eslint v6 Beta",
+    "permalink": "/blog/announcing-typescript-eslint-v6-beta"
+  },
+  "nextItem": {
+    "title": "ASTs and typescript-eslint",
+    "permalink": "/blog/asts-and-typescript-eslint"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "troubleshooting/faqs/general",
+  "title": "General",
+  "description": "How do I turn on a @typescript-eslint rule?",
+  "source": "@site/../../docs/troubleshooting/faqs/General.mdx",
+  "sourceDirName": "troubleshooting/faqs",
+  "slug": "/troubleshooting/faqs/general",
+  "permalink": "/troubleshooting/faqs/general",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/troubleshooting/faqs/General.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "general",
+    "title": "General",
+    "pagination_next": "troubleshooting/faqs/eslint"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Linting with Type Information",
+    "permalink": "/getting-started/typed-linting"
+  },
+  "next": {
+    "title": "ESLint",
+    "permalink": "/troubleshooting/faqs/eslint"
+  }
+}

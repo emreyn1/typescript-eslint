@@ -1,0 +1,26 @@
+{
+  "id": "no-non-null-asserted-optional-chain",
+  "title": "no-non-null-asserted-optional-chain",
+  "description": "Disallow non-null assertions after an optional chain expression.",
+  "source": "@site/../eslint-plugin/docs/rules/no-non-null-asserted-optional-chain.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-non-null-asserted-optional-chain",
+  "permalink": "/rules/no-non-null-asserted-optional-chain",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-non-null-asserted-optional-chain.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow non-null assertions after an optional chain expression."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-non-null-asserted-nullish-coalescing",
+    "permalink": "/rules/no-non-null-asserted-nullish-coalescing"
+  },
+  "next": {
+    "title": "no-non-null-assertion",
+    "permalink": "/rules/no-non-null-assertion"
+  }
+}

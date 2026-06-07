@@ -1,0 +1,27 @@
+{
+  "id": "packages/scope-manager",
+  "title": "@typescript-eslint/scope-manager",
+  "description": "A fork of eslint-scope, enhanced to support TypeScript functionality. ✨",
+  "source": "@site/../../docs/packages/Scope_Manager.mdx",
+  "sourceDirName": "packages",
+  "slug": "/packages/scope-manager",
+  "permalink": "/packages/scope-manager",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/packages/Scope_Manager.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "scope-manager",
+    "sidebar_label": "scope-manager"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "rule-tester",
+    "permalink": "/packages/rule-tester"
+  },
+  "next": {
+    "title": "tsconfig-utils",
+    "permalink": "/packages/tsconfig-utils"
+  }
+}

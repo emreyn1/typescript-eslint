@@ -1,0 +1,26 @@
+{
+  "id": "no-unsafe-return",
+  "title": "no-unsafe-return",
+  "description": "Disallow returning a value with type `any` from a function.",
+  "source": "@site/../eslint-plugin/docs/rules/no-unsafe-return.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-unsafe-return",
+  "permalink": "/rules/no-unsafe-return",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-unsafe-return.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow returning a value with type `any` from a function."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-unsafe-member-access",
+    "permalink": "/rules/no-unsafe-member-access"
+  },
+  "next": {
+    "title": "no-unsafe-type-assertion",
+    "permalink": "/rules/no-unsafe-type-assertion"
+  }
+}

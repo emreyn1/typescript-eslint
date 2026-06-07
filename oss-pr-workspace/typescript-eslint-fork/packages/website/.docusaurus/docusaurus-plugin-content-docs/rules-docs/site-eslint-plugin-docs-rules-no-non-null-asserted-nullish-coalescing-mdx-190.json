@@ -1,0 +1,26 @@
+{
+  "id": "no-non-null-asserted-nullish-coalescing",
+  "title": "no-non-null-asserted-nullish-coalescing",
+  "description": "Disallow non-null assertions in the left operand of a nullish coalescing operator.",
+  "source": "@site/../eslint-plugin/docs/rules/no-non-null-asserted-nullish-coalescing.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-non-null-asserted-nullish-coalescing",
+  "permalink": "/rules/no-non-null-asserted-nullish-coalescing",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-non-null-asserted-nullish-coalescing.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow non-null assertions in the left operand of a nullish coalescing operator."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-namespace",
+    "permalink": "/rules/no-namespace"
+  },
+  "next": {
+    "title": "no-non-null-asserted-optional-chain",
+    "permalink": "/rules/no-non-null-asserted-optional-chain"
+  }
+}

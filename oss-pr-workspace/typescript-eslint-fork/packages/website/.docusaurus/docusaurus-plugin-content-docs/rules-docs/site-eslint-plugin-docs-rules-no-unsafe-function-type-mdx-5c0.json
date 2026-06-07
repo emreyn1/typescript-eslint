@@ -1,0 +1,26 @@
+{
+  "id": "no-unsafe-function-type",
+  "title": "no-unsafe-function-type",
+  "description": "Disallow using the unsafe built-in Function type.",
+  "source": "@site/../eslint-plugin/docs/rules/no-unsafe-function-type.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-unsafe-function-type",
+  "permalink": "/rules/no-unsafe-function-type",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-unsafe-function-type.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow using the unsafe built-in Function type."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-unsafe-enum-comparison",
+    "permalink": "/rules/no-unsafe-enum-comparison"
+  },
+  "next": {
+    "title": "no-unsafe-member-access",
+    "permalink": "/rules/no-unsafe-member-access"
+  }
+}

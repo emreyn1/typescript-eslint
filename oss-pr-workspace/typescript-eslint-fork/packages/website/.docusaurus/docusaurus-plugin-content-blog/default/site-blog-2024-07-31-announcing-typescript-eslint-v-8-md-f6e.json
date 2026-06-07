@@ -1,0 +1,62 @@
+{
+  "permalink": "/blog/announcing-typescript-eslint-v8",
+  "source": "@site/blog/2024-07-31-announcing-typescript-eslint-v8.md",
+  "title": "Announcing typescript-eslint v8",
+  "description": "Announcing the stable release of typescript-eslint's v8.",
+  "date": "2024-07-31T00:00:00.000Z",
+  "tags": [
+    {
+      "inline": true,
+      "label": "breaking changes",
+      "permalink": "/blog/tags/breaking-changes"
+    },
+    {
+      "inline": true,
+      "label": "typescript-eslint",
+      "permalink": "/blog/tags/typescript-eslint"
+    },
+    {
+      "inline": true,
+      "label": "v7",
+      "permalink": "/blog/tags/v-7"
+    },
+    {
+      "inline": true,
+      "label": "v8",
+      "permalink": "/blog/tags/v-8"
+    }
+  ],
+  "readingTime": 16.655,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Josh Goldberg",
+      "title": "typescript-eslint Maintainer",
+      "url": "https://github.com/JoshuaKGoldberg",
+      "imageURL": "/img/team/joshuakgoldberg.jpg",
+      "key": "joshuakgoldberg",
+      "page": null
+    }
+  ],
+  "frontMatter": {
+    "authors": "joshuakgoldberg",
+    "description": "Announcing the stable release of typescript-eslint's v8.",
+    "slug": "announcing-typescript-eslint-v8",
+    "tags": [
+      "breaking changes",
+      "typescript-eslint",
+      "v7",
+      "v8"
+    ],
+    "title": "Announcing typescript-eslint v8"
+  },
+  "unlisted": false,
+  "prevItem": {
+    "title": "Typed Linting: The Most Powerful TypeScript Linting Ever",
+    "permalink": "/blog/typed-linting"
+  },
+  "nextItem": {
+    "title": "Announcing typescript-eslint v8 Beta",
+    "permalink": "/blog/announcing-typescript-eslint-v8-beta"
+  }
+}

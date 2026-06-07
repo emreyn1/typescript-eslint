@@ -1,0 +1,140 @@
+# Deployment manifest for the embed-omss-backend stack (task 19.1).
+#
+# Topology (Req 8.2, 8.3, 6.4, Resource Footprint §3/§4):
+#   - cinepro-core : the OMSS scraping engine. Bound to LOOPBACK ONLY
+#                    (127.0.0.1:8080); NEVER published to a public interface.
+#                    Heap-capped (NODE_OPTIONS=--max-old-space-size=512) and
+#                    hard memory-limited (768m) so it cannot OOM-kill embed-api
+#                    on a small VPS.
+#   - embed-api    : the thin player + proxy. The ONLY publicly published
+#                    service. Reaches Core over the private bridge at
+#                    http://cinepro-core:8080.
+#   - health-cron  : runs the provider health sweep off-peak on
+#                    HEALTH_CRON_SCHEDULE (default 04:00). Never per request.
+#                    Shares embed-api's image and data volume; publishes no port.
+#
+# A documented single-container `docker run` for Core (loopback-only) is also
+# provided at the bottom of this file for hosts not using compose.
+
+services:
+  cinepro-core:
+    image: ghcr.io/cinepro-org/core:latest        # Req 8.3
+    container_name: cinepro-core
+    restart: unless-stopped
+    environment:
+      TMDB_API_KEY: ${TMDB_API_KEY:?set TMDB_API_KEY in .env}   # Req 8.2
+      # Cap the Node heap (config.coreMaxOldSpaceMb, default 512) — Resource Footprint §3.
+      NODE_OPTIONS: "--max-old-space-size=512"
+    # Publish Core on LOOPBACK ONLY — never 0.0.0.0 (Req 6.4, 8.3). embed-api
+    # reaches it over the internal `backend` network; this mapping is just for
+    # host-side debugging and stays bound to 127.0.0.1.
+    ports:
+      - "127.0.0.1:8080:8080"
+    # Hard container memory limit (cushion over the 512m heap) — Resource Footprint §3.
+    mem_limit: 768m
+    memswap_limit: 768m
+    networks:
+      - backend
+
+  embed-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: embed-api:latest
+    container_name: embed-api
+    restart: unless-stopped
+    depends_on:
+      - cinepro-core
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      PORT: "3001"
+      HOST: "0.0.0.0"
+      # Core is addressed over the private compose network, not the host.
+      CINEPRO_BASE_URL: "http://cinepro-core:8080"
+      TMDB_API_KEY: ${TMDB_API_KEY:?set TMDB_API_KEY in .env}
+      STORAGE_BACKEND: "sqlite"
+      SQLITE_PATH: "/app/data/embed.db"
+    # ONLY embed-api is published publicly (Core is never exposed). Front this
+    # with Cloudflare/CDN + reverse proxy in production (task 19.2).
+    ports:
+      - "3001:3001"
+    volumes:
+      - embed-data:/app/data
+    networks:
+      - backend
+
+  # Off-peak health sweep (Resource Footprint §4): same image as embed-api, but
+  # its command is the cron scheduler instead of the server. Runs the sweep on
+  # HEALTH_CRON_SCHEDULE and persists the report to the shared data volume.
+  health-cron:
+    image: embed-api:latest
+    container_name: embed-api-health-cron
+    restart: unless-stopped
+    depends_on:
+      - embed-api
+      - cinepro-core
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      CINEPRO_BASE_URL: "http://cinepro-core:8080"
+      TMDB_API_KEY: ${TMDB_API_KEY:?set TMDB_API_KEY in .env}
+      STORAGE_BACKEND: "sqlite"
+      SQLITE_PATH: "/app/data/embed.db"
+      HEALTH_CRON_SCHEDULE: ${HEALTH_CRON_SCHEDULE:-0 4 * * *}
+      HEALTH_TEST_TITLES_PATH: "/app/data/test-titles.json"
+    command: ["node", "dist/cli/scheduler.js"]
+    volumes:
+      - embed-data:/app/data
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
+
+volumes:
+  embed-data:
+
+# ---------------------------------------------------------------------------
+# Alternative: run CinePro Core standalone with `docker run` (loopback-only),
+# equivalent to the cinepro-core service above (Req 6.4, 8.2, 8.3,
+# Resource Footprint §3):
+#
+#   docker run -d --name cinepro-core \
+#     --restart unless-stopped \
+#     -e TMDB_API_KEY="$TMDB_API_KEY" \
+#     -e NODE_OPTIONS=--max-old-space-size=512 \
+#     --memory=768m --memory-swap=768m \
+#     -p 127.0.0.1:8080:8080 \
+#     ghcr.io/cinepro-org/core:latest
+#
+# Then run embed-api pointing at the loopback Core:
+#
+#   docker run -d --name embed-api \
+#     --restart unless-stopped \
+#     --env-file .env \
+#     -e CINEPRO_BASE_URL=http://127.0.0.1:8080 \
+#     -e STORAGE_BACKEND=sqlite -e SQLITE_PATH=/app/data/embed.db \
+#     -v embed-data:/app/data \
+#     -p 3001:3001 \
+#     --network host \
+#     embed-api:latest
+#
+# And the off-peak health scheduler (no published port):
+#
+#   docker run -d --name embed-api-health-cron \
+#     --restart unless-stopped \
+#     --env-file .env \
+#     -e CINEPRO_BASE_URL=http://127.0.0.1:8080 \
+#     -e HEALTH_CRON_SCHEDULE="0 4 * * *" \
+#     -v embed-data:/app/data \
+#     --network host \
+#     embed-api:latest node dist/cli/scheduler.js
+#
+# OS crontab alternative (instead of the health-cron container) — run the
+# one-shot CLI off-peak from the host:
+#   0 4 * * *  docker exec embed-api node dist/cli/health.js --titles /app/data/test-titles.json
+# ---------------------------------------------------------------------------

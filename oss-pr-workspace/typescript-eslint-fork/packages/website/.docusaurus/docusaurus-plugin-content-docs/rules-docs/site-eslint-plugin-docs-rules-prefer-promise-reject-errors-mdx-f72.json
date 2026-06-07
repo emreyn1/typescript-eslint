@@ -1,0 +1,26 @@
+{
+  "id": "prefer-promise-reject-errors",
+  "title": "prefer-promise-reject-errors",
+  "description": "Require using Error objects as Promise rejection reasons.",
+  "source": "@site/../eslint-plugin/docs/rules/prefer-promise-reject-errors.mdx",
+  "sourceDirName": ".",
+  "slug": "/prefer-promise-reject-errors",
+  "permalink": "/rules/prefer-promise-reject-errors",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/prefer-promise-reject-errors.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Require using Error objects as Promise rejection reasons."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "prefer-optional-chain",
+    "permalink": "/rules/prefer-optional-chain"
+  },
+  "next": {
+    "title": "prefer-readonly",
+    "permalink": "/rules/prefer-readonly"
+  }
+}

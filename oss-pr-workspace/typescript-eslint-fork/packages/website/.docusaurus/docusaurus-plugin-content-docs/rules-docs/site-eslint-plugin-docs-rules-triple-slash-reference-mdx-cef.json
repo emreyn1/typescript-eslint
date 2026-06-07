@@ -1,0 +1,26 @@
+{
+  "id": "triple-slash-reference",
+  "title": "triple-slash-reference",
+  "description": "Disallow certain triple slash directives in favor of ES6-style import declarations.",
+  "source": "@site/../eslint-plugin/docs/rules/triple-slash-reference.mdx",
+  "sourceDirName": ".",
+  "slug": "/triple-slash-reference",
+  "permalink": "/rules/triple-slash-reference",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/triple-slash-reference.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow certain triple slash directives in favor of ES6-style import declarations."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "switch-exhaustiveness-check",
+    "permalink": "/rules/switch-exhaustiveness-check"
+  },
+  "next": {
+    "title": "typedef",
+    "permalink": "/rules/typedef"
+  }
+}

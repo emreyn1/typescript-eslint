@@ -1,0 +1,27 @@
+{
+  "id": "contributing/discussions",
+  "title": "Discussions",
+  "description": "Most proposals in the typescript-eslint repository happen in GitHub Issues.",
+  "source": "@site/../../docs/contributing/Discussions.mdx",
+  "sourceDirName": "contributing",
+  "slug": "/contributing/discussions",
+  "permalink": "/contributing/discussions",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/contributing/Discussions.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "discussions",
+    "title": "Discussions"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Contributing",
+    "permalink": "/contributing"
+  },
+  "next": {
+    "title": "Issues",
+    "permalink": "/contributing/issues"
+  }
+}

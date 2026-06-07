@@ -1,0 +1,26 @@
+{
+  "id": "no-duplicate-type-constituents",
+  "title": "no-duplicate-type-constituents",
+  "description": "Disallow duplicate constituents of union or intersection types.",
+  "source": "@site/../eslint-plugin/docs/rules/no-duplicate-type-constituents.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-duplicate-type-constituents",
+  "permalink": "/rules/no-duplicate-type-constituents",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-duplicate-type-constituents.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow duplicate constituents of union or intersection types."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-duplicate-enum-values",
+    "permalink": "/rules/no-duplicate-enum-values"
+  },
+  "next": {
+    "title": "no-dynamic-delete",
+    "permalink": "/rules/no-dynamic-delete"
+  }
+}

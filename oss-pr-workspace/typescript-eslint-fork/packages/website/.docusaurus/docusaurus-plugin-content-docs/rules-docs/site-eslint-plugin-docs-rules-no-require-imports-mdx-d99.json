@@ -1,0 +1,26 @@
+{
+  "id": "no-require-imports",
+  "title": "no-require-imports",
+  "description": "Disallow invocation of `require()`.",
+  "source": "@site/../eslint-plugin/docs/rules/no-require-imports.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-require-imports",
+  "permalink": "/rules/no-require-imports",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-require-imports.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow invocation of `require()`."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-redundant-type-constituents",
+    "permalink": "/rules/no-redundant-type-constituents"
+  },
+  "next": {
+    "title": "no-restricted-imports",
+    "permalink": "/rules/no-restricted-imports"
+  }
+}

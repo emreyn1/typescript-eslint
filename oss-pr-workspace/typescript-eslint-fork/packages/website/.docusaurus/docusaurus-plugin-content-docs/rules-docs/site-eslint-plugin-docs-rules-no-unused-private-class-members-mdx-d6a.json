@@ -1,0 +1,26 @@
+{
+  "id": "no-unused-private-class-members",
+  "title": "no-unused-private-class-members",
+  "description": "Disallow unused private class members.",
+  "source": "@site/../eslint-plugin/docs/rules/no-unused-private-class-members.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-unused-private-class-members",
+  "permalink": "/rules/no-unused-private-class-members",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-unused-private-class-members.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow unused private class members."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-unused-expressions",
+    "permalink": "/rules/no-unused-expressions"
+  },
+  "next": {
+    "title": "no-unused-vars",
+    "permalink": "/rules/no-unused-vars"
+  }
+}

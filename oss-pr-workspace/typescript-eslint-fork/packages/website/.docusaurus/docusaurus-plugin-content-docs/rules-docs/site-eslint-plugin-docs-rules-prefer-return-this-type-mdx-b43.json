@@ -1,0 +1,26 @@
+{
+  "id": "prefer-return-this-type",
+  "title": "prefer-return-this-type",
+  "description": "Enforce that `this` is used when only `this` type is returned.",
+  "source": "@site/../eslint-plugin/docs/rules/prefer-return-this-type.mdx",
+  "sourceDirName": ".",
+  "slug": "/prefer-return-this-type",
+  "permalink": "/rules/prefer-return-this-type",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/prefer-return-this-type.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce that `this` is used when only `this` type is returned."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "prefer-regexp-exec",
+    "permalink": "/rules/prefer-regexp-exec"
+  },
+  "next": {
+    "title": "prefer-string-starts-ends-with",
+    "permalink": "/rules/prefer-string-starts-ends-with"
+  }
+}

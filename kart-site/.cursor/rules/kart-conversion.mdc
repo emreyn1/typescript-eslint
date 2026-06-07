@@ -1,0 +1,42 @@
+---
+description: Kart site conversion rules. Always apply for this project.
+alwaysApply: true
+---
+
+# Kart Site Conversion Rules
+
+## Stack (Locked)
+- Next.js 15 + `output: 'export'` (static only)
+- Tailwind + shadcn/ui
+- NO auth, NO database, NO API routes
+
+## Anti-Slop (Mandatory)
+Before writing ANY copy, check:
+- ❌ Generic → ✅ Specific numbers
+- ❌ "Fast" → ✅ "30 seconds"
+- ❌ "Affordable" → ✅ "€4.99/month"
+- ❌ Stock images → ✅ Card renders
+- ❌ Emoji overload
+
+## Conversion Checklist (Every Page)
+- [ ] Single, clear CTA per section
+- [ ] Trust signals visible without scroll
+- [ ] Mobile-first layout
+- [ ] < 100KB JS bundle
+- [ ] LCP < 2.5s
+
+## Competitor Reference
+pryvero.cards — Match quality, beat conversion
+
+## Skills to Use
+- `cro` for page optimization
+- `copywriting` for all text
+- `pricing` for tier structure
+- `hallmark` for design review
+
+## Build Order (Do Not Change)
+1. Hero (instant gratification messaging)
+2. Trust (Visa/MC, security badges)
+3. Pricing (3 tiers, transparent)
+4. FAQ (objection handling)
+5. Polish (performance, mobile)

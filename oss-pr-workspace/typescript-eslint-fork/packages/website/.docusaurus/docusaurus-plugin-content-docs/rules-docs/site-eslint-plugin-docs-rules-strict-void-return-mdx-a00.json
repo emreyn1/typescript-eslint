@@ -1,0 +1,26 @@
+{
+  "id": "strict-void-return",
+  "title": "strict-void-return",
+  "description": "Disallow passing a value-returning function in a position accepting a void function.",
+  "source": "@site/../eslint-plugin/docs/rules/strict-void-return.mdx",
+  "sourceDirName": ".",
+  "slug": "/strict-void-return",
+  "permalink": "/rules/strict-void-return",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/strict-void-return.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow passing a value-returning function in a position accepting a void function."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "strict-boolean-expressions",
+    "permalink": "/rules/strict-boolean-expressions"
+  },
+  "next": {
+    "title": "switch-exhaustiveness-check",
+    "permalink": "/rules/switch-exhaustiveness-check"
+  }
+}

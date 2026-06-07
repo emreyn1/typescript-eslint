@@ -1,0 +1,26 @@
+{
+  "id": "no-unnecessary-qualifier",
+  "title": "no-unnecessary-qualifier",
+  "description": "Disallow unnecessary namespace qualifiers.",
+  "source": "@site/../eslint-plugin/docs/rules/no-unnecessary-qualifier.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-unnecessary-qualifier",
+  "permalink": "/rules/no-unnecessary-qualifier",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-unnecessary-qualifier.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow unnecessary namespace qualifiers."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-unnecessary-parameter-property-assignment",
+    "permalink": "/rules/no-unnecessary-parameter-property-assignment"
+  },
+  "next": {
+    "title": "no-unnecessary-template-expression",
+    "permalink": "/rules/no-unnecessary-template-expression"
+  }
+}

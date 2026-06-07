@@ -1,0 +1,26 @@
+{
+  "id": "no-base-to-string",
+  "title": "no-base-to-string",
+  "description": "Require `.toString()` and `.toLocaleString()` to only be called on objects which provide useful information when stringified.",
+  "source": "@site/../eslint-plugin/docs/rules/no-base-to-string.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-base-to-string",
+  "permalink": "/rules/no-base-to-string",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-base-to-string.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Require `.toString()` and `.toLocaleString()` to only be called on objects which provide useful information when stringified."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-array-delete",
+    "permalink": "/rules/no-array-delete"
+  },
+  "next": {
+    "title": "no-confusing-non-null-assertion",
+    "permalink": "/rules/no-confusing-non-null-assertion"
+  }
+}

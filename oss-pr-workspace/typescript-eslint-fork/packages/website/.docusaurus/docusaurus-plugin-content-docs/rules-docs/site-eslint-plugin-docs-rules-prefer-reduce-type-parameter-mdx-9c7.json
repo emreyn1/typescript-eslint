@@ -1,0 +1,26 @@
+{
+  "id": "prefer-reduce-type-parameter",
+  "title": "prefer-reduce-type-parameter",
+  "description": "Enforce using type parameter when calling `Array#reduce` instead of using a type assertion.",
+  "source": "@site/../eslint-plugin/docs/rules/prefer-reduce-type-parameter.mdx",
+  "sourceDirName": ".",
+  "slug": "/prefer-reduce-type-parameter",
+  "permalink": "/rules/prefer-reduce-type-parameter",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/prefer-reduce-type-parameter.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce using type parameter when calling `Array#reduce` instead of using a type assertion."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "prefer-readonly-parameter-types",
+    "permalink": "/rules/prefer-readonly-parameter-types"
+  },
+  "next": {
+    "title": "prefer-regexp-exec",
+    "permalink": "/rules/prefer-regexp-exec"
+  }
+}

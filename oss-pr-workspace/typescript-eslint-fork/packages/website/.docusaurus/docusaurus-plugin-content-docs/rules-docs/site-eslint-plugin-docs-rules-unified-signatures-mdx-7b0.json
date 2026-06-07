@@ -1,0 +1,26 @@
+{
+  "id": "unified-signatures",
+  "title": "unified-signatures",
+  "description": "Disallow two overloads that could be unified into one with a union or an optional/rest parameter.",
+  "source": "@site/../eslint-plugin/docs/rules/unified-signatures.mdx",
+  "sourceDirName": ".",
+  "slug": "/unified-signatures",
+  "permalink": "/rules/unified-signatures",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/unified-signatures.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow two overloads that could be unified into one with a union or an optional/rest parameter."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "unbound-method",
+    "permalink": "/rules/unbound-method"
+  },
+  "next": {
+    "title": "use-unknown-in-catch-callback-variable",
+    "permalink": "/rules/use-unknown-in-catch-callback-variable"
+  }
+}

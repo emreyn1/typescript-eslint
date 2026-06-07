@@ -1,0 +1,26 @@
+{
+  "id": "no-invalid-this",
+  "title": "no-invalid-this",
+  "description": "Disallow `this` keywords outside of classes or class-like objects.",
+  "source": "@site/../eslint-plugin/docs/rules/no-invalid-this.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-invalid-this",
+  "permalink": "/rules/no-invalid-this",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-invalid-this.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow `this` keywords outside of classes or class-like objects."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-inferrable-types",
+    "permalink": "/rules/no-inferrable-types"
+  },
+  "next": {
+    "title": "no-invalid-void-type",
+    "permalink": "/rules/no-invalid-void-type"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "no-for-in-array",
+  "title": "no-for-in-array",
+  "description": "Disallow iterating over an array with a for-in loop.",
+  "source": "@site/../eslint-plugin/docs/rules/no-for-in-array.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-for-in-array",
+  "permalink": "/rules/no-for-in-array",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-for-in-array.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow iterating over an array with a for-in loop."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-floating-promises",
+    "permalink": "/rules/no-floating-promises"
+  },
+  "next": {
+    "title": "no-implied-eval",
+    "permalink": "/rules/no-implied-eval"
+  }
+}

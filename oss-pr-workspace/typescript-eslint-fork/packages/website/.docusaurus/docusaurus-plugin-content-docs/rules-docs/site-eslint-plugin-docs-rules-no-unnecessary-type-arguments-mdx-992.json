@@ -1,0 +1,26 @@
+{
+  "id": "no-unnecessary-type-arguments",
+  "title": "no-unnecessary-type-arguments",
+  "description": "Disallow type arguments that are equal to the default.",
+  "source": "@site/../eslint-plugin/docs/rules/no-unnecessary-type-arguments.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-unnecessary-type-arguments",
+  "permalink": "/rules/no-unnecessary-type-arguments",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-unnecessary-type-arguments.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow type arguments that are equal to the default."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-unnecessary-template-expression",
+    "permalink": "/rules/no-unnecessary-template-expression"
+  },
+  "next": {
+    "title": "no-unnecessary-type-assertion",
+    "permalink": "/rules/no-unnecessary-type-assertion"
+  }
+}

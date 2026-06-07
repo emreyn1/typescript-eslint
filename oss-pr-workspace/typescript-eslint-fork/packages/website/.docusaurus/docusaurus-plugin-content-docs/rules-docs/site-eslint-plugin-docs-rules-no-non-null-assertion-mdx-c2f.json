@@ -1,0 +1,26 @@
+{
+  "id": "no-non-null-assertion",
+  "title": "no-non-null-assertion",
+  "description": "Disallow non-null assertions using the `!` postfix operator.",
+  "source": "@site/../eslint-plugin/docs/rules/no-non-null-assertion.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-non-null-assertion",
+  "permalink": "/rules/no-non-null-assertion",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-non-null-assertion.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow non-null assertions using the `!` postfix operator."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-non-null-asserted-optional-chain",
+    "permalink": "/rules/no-non-null-asserted-optional-chain"
+  },
+  "next": {
+    "title": "no-redeclare",
+    "permalink": "/rules/no-redeclare"
+  }
+}

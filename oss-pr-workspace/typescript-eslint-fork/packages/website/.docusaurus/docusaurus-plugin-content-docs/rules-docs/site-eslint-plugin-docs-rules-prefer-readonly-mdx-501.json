@@ -1,0 +1,26 @@
+{
+  "id": "prefer-readonly",
+  "title": "prefer-readonly",
+  "description": "Require private members to be marked as `readonly` if they're never modified outside of the constructor.",
+  "source": "@site/../eslint-plugin/docs/rules/prefer-readonly.mdx",
+  "sourceDirName": ".",
+  "slug": "/prefer-readonly",
+  "permalink": "/rules/prefer-readonly",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/prefer-readonly.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Require private members to be marked as `readonly` if they're never modified outside of the constructor."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "prefer-promise-reject-errors",
+    "permalink": "/rules/prefer-promise-reject-errors"
+  },
+  "next": {
+    "title": "prefer-readonly-parameter-types",
+    "permalink": "/rules/prefer-readonly-parameter-types"
+  }
+}

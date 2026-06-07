@@ -1,0 +1,26 @@
+{
+  "id": "no-useless-empty-export",
+  "title": "no-useless-empty-export",
+  "description": "Disallow empty exports that don't change anything in a module file.",
+  "source": "@site/../eslint-plugin/docs/rules/no-useless-empty-export.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-useless-empty-export",
+  "permalink": "/rules/no-useless-empty-export",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-useless-empty-export.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow empty exports that don't change anything in a module file."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-useless-default-assignment",
+    "permalink": "/rules/no-useless-default-assignment"
+  },
+  "next": {
+    "title": "no-var-requires",
+    "permalink": "/rules/no-var-requires"
+  }
+}

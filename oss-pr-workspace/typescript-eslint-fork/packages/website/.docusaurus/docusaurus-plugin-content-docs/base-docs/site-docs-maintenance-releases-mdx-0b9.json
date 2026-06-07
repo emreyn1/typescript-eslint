@@ -1,0 +1,27 @@
+{
+  "id": "maintenance/releases",
+  "title": "Releases",
+  "description": "Users > Releases describes how our automatic releases are done.",
+  "source": "@site/../../docs/maintenance/Releases.mdx",
+  "sourceDirName": "maintenance",
+  "slug": "/maintenance/releases",
+  "permalink": "/maintenance/releases",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/maintenance/Releases.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "releases",
+    "title": "Releases"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Rule Deprecations, Renames, And Deletions",
+    "permalink": "/maintenance/issues/rule-deprecations-and-deletions"
+  },
+  "next": {
+    "title": "Pull Requests",
+    "permalink": "/maintenance/pull-requests"
+  }
+}

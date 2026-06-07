@@ -1,0 +1,26 @@
+{
+  "id": "no-use-before-define",
+  "title": "no-use-before-define",
+  "description": "Disallow the use of variables before they are defined.",
+  "source": "@site/../eslint-plugin/docs/rules/no-use-before-define.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-use-before-define",
+  "permalink": "/rules/no-use-before-define",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-use-before-define.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow the use of variables before they are defined."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-unused-vars",
+    "permalink": "/rules/no-unused-vars"
+  },
+  "next": {
+    "title": "no-useless-constructor",
+    "permalink": "/rules/no-useless-constructor"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "maintenance/pull-requests",
+  "title": "Pull Requests",
+  "description": "This document serves as a guide for how you might review pull requests.",
+  "source": "@site/../../docs/maintenance/Pull_Requests.mdx",
+  "sourceDirName": "maintenance",
+  "slug": "/maintenance/pull-requests",
+  "permalink": "/maintenance/pull-requests",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/maintenance/Pull_Requests.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "pull-requests",
+    "title": "Pull Requests"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Releases",
+    "permalink": "/maintenance/releases"
+  },
+  "next": {
+    "title": "Dependency Version Upgrades",
+    "permalink": "/maintenance/pull-requests/dependency-version-upgrades"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "contributing/pull-requests",
+  "title": "Pull Requests",
+  "description": "See Local Development for details on how to get started developing locally.",
+  "source": "@site/../../docs/contributing/Pull_Requests.mdx",
+  "sourceDirName": "contributing",
+  "slug": "/contributing/pull-requests",
+  "permalink": "/contributing/pull-requests",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/contributing/Pull_Requests.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "pull-requests",
+    "title": "Pull Requests"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Local Linking",
+    "permalink": "/contributing/local-development/local-linking"
+  },
+  "next": {
+    "title": "AI Contribution Policy",
+    "permalink": "/contributing/ai-policy"
+  }
+}

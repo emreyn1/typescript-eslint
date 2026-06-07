@@ -1,0 +1,26 @@
+{
+  "id": "no-dupe-class-members",
+  "title": "no-dupe-class-members",
+  "description": "Disallow duplicate class members.",
+  "source": "@site/../eslint-plugin/docs/rules/no-dupe-class-members.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-dupe-class-members",
+  "permalink": "/rules/no-dupe-class-members",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-dupe-class-members.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow duplicate class members."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-deprecated",
+    "permalink": "/rules/no-deprecated"
+  },
+  "next": {
+    "title": "no-duplicate-enum-values",
+    "permalink": "/rules/no-duplicate-enum-values"
+  }
+}

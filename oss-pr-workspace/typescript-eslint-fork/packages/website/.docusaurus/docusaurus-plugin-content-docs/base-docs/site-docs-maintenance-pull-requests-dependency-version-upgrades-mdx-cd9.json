@@ -1,0 +1,27 @@
+{
+  "id": "maintenance/pull-requests/dependency-version-upgrades",
+  "title": "Dependency Version Upgrades",
+  "description": "Renovate",
+  "source": "@site/../../docs/maintenance/pull-requests/Dependency_Version_Upgrades.mdx",
+  "sourceDirName": "maintenance/pull-requests",
+  "slug": "/maintenance/pull-requests/dependency-version-upgrades",
+  "permalink": "/maintenance/pull-requests/dependency-version-upgrades",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/maintenance/pull-requests/Dependency_Version_Upgrades.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "dependency-version-upgrades",
+    "title": "Dependency Version Upgrades"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Pull Requests",
+    "permalink": "/maintenance/pull-requests"
+  },
+  "next": {
+    "title": "Team",
+    "permalink": "/maintenance/team"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "member-ordering",
+  "title": "member-ordering",
+  "description": "Require a consistent member declaration order.",
+  "source": "@site/../eslint-plugin/docs/rules/member-ordering.mdx",
+  "sourceDirName": ".",
+  "slug": "/member-ordering",
+  "permalink": "/rules/member-ordering",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/member-ordering.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Require a consistent member declaration order."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "max-params",
+    "permalink": "/rules/max-params"
+  },
+  "next": {
+    "title": "method-signature-style",
+    "permalink": "/rules/method-signature-style"
+  }
+}

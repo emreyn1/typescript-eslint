@@ -1,0 +1,68 @@
+{
+  "permalink": "/blog/deprecating-formatting-rules",
+  "source": "@site/blog/2023-12-25-deprecating-formatting-rules.md",
+  "title": "Deprecating Formatting Rules",
+  "description": "We're following ESLint's lead in moving our formatting lint rules to the ESLint Stylistic project.",
+  "date": "2023-12-25T00:00:00.000Z",
+  "tags": [
+    {
+      "inline": true,
+      "label": "formatter",
+      "permalink": "/blog/tags/formatter"
+    },
+    {
+      "inline": true,
+      "label": "formatting",
+      "permalink": "/blog/tags/formatting"
+    },
+    {
+      "inline": true,
+      "label": "prettier",
+      "permalink": "/blog/tags/prettier"
+    },
+    {
+      "inline": true,
+      "label": "style",
+      "permalink": "/blog/tags/style"
+    },
+    {
+      "inline": true,
+      "label": "stylistic",
+      "permalink": "/blog/tags/stylistic"
+    }
+  ],
+  "readingTime": 1.78,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Josh Goldberg",
+      "title": "typescript-eslint Maintainer",
+      "url": "https://github.com/JoshuaKGoldberg",
+      "imageURL": "/img/team/joshuakgoldberg.jpg",
+      "key": "joshuakgoldberg",
+      "page": null
+    }
+  ],
+  "frontMatter": {
+    "authors": "joshuakgoldberg",
+    "description": "We're following ESLint's lead in moving our formatting lint rules to the ESLint Stylistic project.",
+    "slug": "deprecating-formatting-rules",
+    "tags": [
+      "formatter",
+      "formatting",
+      "prettier",
+      "style",
+      "stylistic"
+    ],
+    "title": "Deprecating Formatting Rules"
+  },
+  "unlisted": false,
+  "prevItem": {
+    "title": "Announcing typescript-eslint v7",
+    "permalink": "/blog/announcing-typescript-eslint-v7"
+  },
+  "nextItem": {
+    "title": "Relative TSConfig Projects with `parserOptions.project = true`",
+    "permalink": "/blog/parser-options-project-true"
+  }
+}

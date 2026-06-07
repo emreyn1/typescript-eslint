@@ -1,0 +1,27 @@
+{
+  "id": "getting-started/legacy-eslint-setup",
+  "title": "Legacy ESLint Setup",
+  "description": "Quickstart",
+  "source": "@site/../../docs/getting-started/Legacy_ESLint_Setup.mdx",
+  "sourceDirName": "getting-started",
+  "slug": "/getting-started/legacy-eslint-setup",
+  "permalink": "/getting-started/legacy-eslint-setup",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/getting-started/Legacy_ESLint_Setup.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "legacy-eslint-setup",
+    "title": "Legacy ESLint Setup"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Getting Started",
+    "permalink": "/getting-started/"
+  },
+  "next": {
+    "title": "Linting with Type Information",
+    "permalink": "/getting-started/typed-linting"
+  }
+}

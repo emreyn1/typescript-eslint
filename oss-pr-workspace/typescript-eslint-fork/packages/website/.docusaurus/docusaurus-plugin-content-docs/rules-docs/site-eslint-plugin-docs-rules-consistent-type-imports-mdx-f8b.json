@@ -1,0 +1,26 @@
+{
+  "id": "consistent-type-imports",
+  "title": "consistent-type-imports",
+  "description": "Enforce consistent usage of type imports.",
+  "source": "@site/../eslint-plugin/docs/rules/consistent-type-imports.mdx",
+  "sourceDirName": ".",
+  "slug": "/consistent-type-imports",
+  "permalink": "/rules/consistent-type-imports",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/consistent-type-imports.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce consistent usage of type imports."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "consistent-type-exports",
+    "permalink": "/rules/consistent-type-exports"
+  },
+  "next": {
+    "title": "default-param-last",
+    "permalink": "/rules/default-param-last"
+  }
+}

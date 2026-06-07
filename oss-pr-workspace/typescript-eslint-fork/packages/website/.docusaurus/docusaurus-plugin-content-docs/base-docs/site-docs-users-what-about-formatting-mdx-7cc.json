@@ -1,0 +1,27 @@
+{
+  "id": "users/what-about-formatting",
+  "title": "What About Formatting?",
+  "description": "We recommend against using ESLint for formatting.",
+  "source": "@site/../../docs/users/What_About_Formatting.mdx",
+  "sourceDirName": "users",
+  "slug": "/users/what-about-formatting",
+  "permalink": "/users/what-about-formatting",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/users/What_About_Formatting.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "what-about-formatting",
+    "title": "What About Formatting?"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Versioning",
+    "permalink": "/users/versioning"
+  },
+  "next": {
+    "title": "What About TSLint?",
+    "permalink": "/users/what-about-tslint"
+  }
+}

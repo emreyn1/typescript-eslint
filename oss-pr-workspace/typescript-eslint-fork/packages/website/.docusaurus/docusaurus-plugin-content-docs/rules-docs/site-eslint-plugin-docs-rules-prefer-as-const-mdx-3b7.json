@@ -1,0 +1,26 @@
+{
+  "id": "prefer-as-const",
+  "title": "prefer-as-const",
+  "description": "Enforce the use of `as const` over literal type.",
+  "source": "@site/../eslint-plugin/docs/rules/prefer-as-const.mdx",
+  "sourceDirName": ".",
+  "slug": "/prefer-as-const",
+  "permalink": "/rules/prefer-as-const",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/prefer-as-const.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Enforce the use of `as const` over literal type."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "parameter-properties",
+    "permalink": "/rules/parameter-properties"
+  },
+  "next": {
+    "title": "prefer-destructuring",
+    "permalink": "/rules/prefer-destructuring"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "getting-started/quickstart",
+  "title": "Getting Started",
+  "description": "Quickstart",
+  "source": "@site/../../docs/getting-started/Quickstart.mdx",
+  "sourceDirName": "getting-started",
+  "slug": "/getting-started/",
+  "permalink": "/getting-started/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../../docs/getting-started/Quickstart.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "quickstart",
+    "title": "Getting Started",
+    "slug": "/getting-started/",
+    "pagination_next": "getting-started/typed-linting"
+  },
+  "sidebar": "docs",
+  "next": {
+    "title": "Linting with Type Information",
+    "permalink": "/getting-started/typed-linting"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "no-dynamic-delete",
+  "title": "no-dynamic-delete",
+  "description": "Disallow using the `delete` operator on computed key expressions.",
+  "source": "@site/../eslint-plugin/docs/rules/no-dynamic-delete.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-dynamic-delete",
+  "permalink": "/rules/no-dynamic-delete",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-dynamic-delete.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow using the `delete` operator on computed key expressions."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-duplicate-type-constituents",
+    "permalink": "/rules/no-duplicate-type-constituents"
+  },
+  "next": {
+    "title": "no-empty-function",
+    "permalink": "/rules/no-empty-function"
+  }
+}

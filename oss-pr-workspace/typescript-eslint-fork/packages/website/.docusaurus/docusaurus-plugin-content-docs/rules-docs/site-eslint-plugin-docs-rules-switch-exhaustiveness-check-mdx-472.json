@@ -1,0 +1,26 @@
+{
+  "id": "switch-exhaustiveness-check",
+  "title": "switch-exhaustiveness-check",
+  "description": "Require switch-case statements to be exhaustive.",
+  "source": "@site/../eslint-plugin/docs/rules/switch-exhaustiveness-check.mdx",
+  "sourceDirName": ".",
+  "slug": "/switch-exhaustiveness-check",
+  "permalink": "/rules/switch-exhaustiveness-check",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/switch-exhaustiveness-check.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Require switch-case statements to be exhaustive."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "strict-void-return",
+    "permalink": "/rules/strict-void-return"
+  },
+  "next": {
+    "title": "triple-slash-reference",
+    "permalink": "/rules/triple-slash-reference"
+  }
+}

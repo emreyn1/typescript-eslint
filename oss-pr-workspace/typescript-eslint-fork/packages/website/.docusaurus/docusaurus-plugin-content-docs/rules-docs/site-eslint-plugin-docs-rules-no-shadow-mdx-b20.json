@@ -1,0 +1,26 @@
+{
+  "id": "no-shadow",
+  "title": "no-shadow",
+  "description": "Disallow variable declarations from shadowing variables declared in the outer scope.",
+  "source": "@site/../eslint-plugin/docs/rules/no-shadow.mdx",
+  "sourceDirName": ".",
+  "slug": "/no-shadow",
+  "permalink": "/rules/no-shadow",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/typescript-eslint/typescript-eslint/edit/main/packages/website/../eslint-plugin/docs/rules/no-shadow.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "description": "Disallow variable declarations from shadowing variables declared in the outer scope."
+  },
+  "sidebar": "rulesSidebar",
+  "previous": {
+    "title": "no-restricted-types",
+    "permalink": "/rules/no-restricted-types"
+  },
+  "next": {
+    "title": "no-this-alias",
+    "permalink": "/rules/no-this-alias"
+  }
+}
